@@ -61,16 +61,11 @@ bool Numerical::game_is_over(Player<int>* player)  {
 Player<int>** Numerical_UI::setup_players() {
     Player<int>** players = new Player<int>*[2];
 
-    string name1, name2;
-    cout << "Enter Player 1 name: ";
-    cin >> name1;
-    cout << "Enter Player 2 name: ";
-    cin >> name2;
+    string nameOdd = get_player_name("Odd Player");
+    players[0] = create_player(nameOdd, 1,PlayerType::HUMAN);
 
-    cout << "Both players are Human in Numerical Game.\n";
-    
-    players[0] = create_player(name1, 1, PlayerType::HUMAN);
-    players[1] = create_player(name2, 2, PlayerType::HUMAN);
+    string nameEven = get_player_name("Even Player");
+    players[1] = create_player(nameEven, 0,PlayerType::HUMAN);
 
     return players;
 }
@@ -78,14 +73,21 @@ Numerical_UI::Numerical_UI() : UI<int>("Weclome to Numerical Game", 3) {}
 
 
 Player<int>* Numerical_UI::create_player(string& name, int symbol, PlayerType type) {
-    cout << "Creating player: " << name << " (" << symbol << ")\n";
+    // Create player based on type
+    cout << "Creating player: " << name;
+    if (symbol == 1)
+        cout << " (Odd numbers)\n";
+    else
+        cout << " (Even numbers)\n";
+
     return new Player<int>(name, symbol, PlayerType::HUMAN);
 }
 
 Move<int>* Numerical_UI::get_move(Player<int>* player)  {
+    cout << "\n" << player->get_name()<<" ";
     int x, y, num;
     if (player->get_type() == PlayerType::HUMAN) {
-        cout << "\nEnter your move coordinates (x y): ";
+        cout<<"Enter your Move position x,y (0,2) : ";
         cin >> x >> y;
         cout << "Enter your number from (";
         if (player->get_symbol() % 2) {
