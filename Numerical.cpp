@@ -9,8 +9,10 @@
 #include <algorithm>
 using namespace std;
 #include "Numerical.h"
+
 vector<int> even={2,4,6,8};
 vector<int> odd={1,3,5,7,9};
+
 //------------------------------------------------------
 
 Numerical::Numerical() : Board<int>(3, 3) {
@@ -18,6 +20,7 @@ Numerical::Numerical() : Board<int>(3, 3) {
         for (auto &cell : row)
             cell = blank_symbol;
 }
+
 bool Numerical::update_board(Move<int>* move)  {
     int x = move->get_x();
     int y = move->get_y();
