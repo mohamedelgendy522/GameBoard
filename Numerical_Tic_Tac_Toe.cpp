@@ -2,12 +2,17 @@
 #include <iomanip>
 #include <set>
 #include "Numerical_Tic_Tac_Toe.h"
+#include "algorithm"
 
 using namespace std;
 Numerical_Board::Numerical_Board() : Board(3, 3) {
     board.assign(3, vector<int>(3, 0)); // initialize 3x3 with zeros
     used_numbers.clear();
 }
+
+vector<int> even = {2,4,6,8};
+vector<int> odd = {1,3,5,7,9};
+
 
 bool Numerical_Board::update_board(Move<int>* move) {
     int x = move->get_x();
@@ -70,16 +75,50 @@ Move<int>* Numerical_UI::get_move(Player<int>* player) {
     int sym = player->get_symbol();
 
     cout << "\n" << player->get_name();
-    if (sym == 1)
-        cout << " (Odd player) - Enter an odd number (1,3,5,7,9): ";
-    else
-        cout << " (Even player) - Enter an even number (2,4,6,8): ";
-
-    cin >> num;
 
     cout << "Enter your move position x,y (0-2):\n";
     cin >> x >> y;
-
+    cout<<"Enter number from (";
+    if (sym) {
+        for (int i = 0; i < odd.size(); ++i) {
+            cout<<odd[i]<<",";
+        }
+        cout<<")";
+        cin>>num;
+        auto it = find(odd.begin(), odd.end(), num);
+        if (it != odd.end()) {
+            odd.erase(remove(odd.begin(), odd.end(), num), odd.end());
+        }
+        else {
+            cout<<"Enter another number from(";
+            for (int i = 0; i < odd.size(); ++i) {
+                cout<<odd[i]<<",";
+            }
+            cout<<")";
+            cin>>num;
+            odd.erase(remove(odd.begin(), odd.end(), num), odd.end());
+        }
+    }
+    else {
+        for (int i = 0; i < even.size(); ++i) {
+            cout<<even[i]<<",";
+        }
+        cout<<")";
+        cin>>num;
+        auto it = find(even.begin(), even.end(), num);
+        if (it != even.end()) {
+            even.erase(remove(even.begin(), even.end(), num), even.end());
+        }
+        else {
+            cout<<"Enter another number from(";
+            for (int i = 0; i < even.size(); ++i) {
+                cout<<even[i]<<",";
+            }
+            cout<<")";
+            cin>>num;
+            even.erase(remove(even.begin(), even.end(), num), even.end());
+        }
+    }
     return new Move<int>(x, y, num);
 }
 Player<int>** Numerical_UI::setup_players() {
