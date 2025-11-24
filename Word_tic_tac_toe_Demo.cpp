@@ -1,79 +1,46 @@
-﻿#include"Word_tic_tac_toe.h"
-
-#include<iostream>
-
-
-using namespace std;
-
-int main() {
-    Word_UI ui;
-    Word_Board board;
-
-    int mode;
-    cout << "Choose game mode:\n";
-    cout << "1) Player vs Player\n";
-    cout << "2) Player vs Computer\n";
-    cout << "Enter choice: ";
-    cin >> mode;
-
-    string name1, name2;
-    cout << "Enter Player 1 name: ";
-    cin >> name1;
-
-    PlayerType t2;
-
-    if (mode == 1) {
-        // Player vs Player
-        cout << "Enter Player 2 name: ";
-        cin >> name2;
-        t2 = PlayerType::HUMAN;
-    }
-    else {
-        // Player vs Computer
-        name2 = "Computer";
-        t2 = PlayerType::COMPUTER;
-    }
+#include"Word_tic_tac_toe.h"
+#include "BoardGame_Classes.h"
+#include <iostream> // Required for input/output operations (cout, cin)
+#include <string>   // Required for string
+#include <vector>   // Required for vector
+#include <memory>   // Required for unique_ptr
 
 
-    Player<char>* p1 = new Player<char>(name1, 'A', PlayerType::HUMAN);
-    Player<char>* p2 = new Player<char>(name2, 'B', t2);
 
-    p1->set_board_ptr(&board);
-    p2->set_board_ptr(&board);
+    using namespace std;
 
-    Player<char>* current = p1;
+    int main() {
 
-    while (!board.game_is_over(current)) {
-        ui.display_board(&board);
+        srand(static_cast<unsigned int>(time(0)));  // Seed the random number generator
 
-        Move<char>* move = ui.get_move(current);
-        if (!board.update_board(move)) {
-            cout << "Invalid move, try again.\n";
-            delete move;
-            continue;
+        // Create an instance of the specific UI for X-O using a pointer 
+        UI<char>* game_ui = new Word_UI();
+
+        // Create the game board. For X-O, this is an X_O_Board.
+        Board<char>* Word_board = new Word_Board();
+
+        // Use the UI to set up the players for the game.
+        // The UI returns a dynamically allocated array of Player pointers.
+        Player<char>** players = game_ui->setup_players();
+
+        // Create the game manager with the board and the array of players.
+        GameManager<char> Word_game(Word_board, players, game_ui);
+
+        // Run the game loop.
+        Word_game.run();
+
+        // --- Cleanup ---
+        // Delete the dynamically allocated board object.
+        delete Word_board;
+
+        // Delete the individual player objects.
+        for (int i = 0; i < 2; ++i) {
+            delete players[i];
         }
-        delete move;
+        // Delete the dynamically allocated array of player pointers itself.
+        delete[] players;
 
-        if (board.is_win(current)) {
-            ui.display_board(&board);
-            cout << current->get_name() << " wins!\n";
-            break;
-        }
-
-        if (board.is_draw(current)) {
-            ui.display_board(&board);
-            cout << "It's a draw!\n";
-            break;
-        }
-
-
-        current = (current == p1) ? p2 : p1;
+        return 0; // Exit successfully
     }
 
-    delete p1;
-    delete p2;
-
-
-
-    return 0;
-}
+ 
