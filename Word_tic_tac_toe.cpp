@@ -1,4 +1,4 @@
-﻿#include "Word_tic_tac_toe.h"
+#include "Word_tic_tac_toe.h"
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
@@ -33,16 +33,22 @@ bool Word_Board::update_board(Move<char>* move) {
     int y = move->get_y();
     char val = move->get_symbol();
 
-    if (x < 0 || x >= rows || y < 0 || y >= columns)
+    if (x < 0 || x >= rows || y < 0 || y >= columns) {
+        cout << "\n Invalid move! Position (" << x << ", " << y << ") is outside the board.\n";
         return false;
+    }
 
-    if (board[x][y] != '.')
+    if (board[x][y] != '.') {
+        cout << "\n Invalid move! Cell (" << x << ", " << y << ") is already filled.\n";
         return false;
+    }
 
     board[x][y] = val;
     n_moves++;
+
     return true;
 }
+
 
 bool Word_Board::is_win(Player<char>* player) {
     auto ValidWord = [&](char a, char b, char c) -> string {
@@ -90,16 +96,22 @@ Word_UI::Word_UI() : UI<char>("Welcome to Word Tic-tac-toe Game", 3) {
 }
 
 Player<char>* Word_UI::create_player(string& name, char symbol, PlayerType type) {
-    cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
-         << " player: " << name << " (" << symbol << ")\n";
+    static int playerNumber = 1;
+
+    cout << "Creating Player " << playerNumber
+        << " (" << (type == PlayerType::HUMAN ? "Human" : "Computer") << "): "
+        << name << "\n";
+
+    playerNumber++;
     return new Player<char>(name, symbol, type);
 }
+
 
 Move<char>* Word_UI::get_move(Player<char>* player) {
     int x, y;
     char val;
     if (player->get_type() == PlayerType::HUMAN) {
-        cout << "\n" << player->get_name() << ", please enter your move (x y char): ";
+        cout << "\n" << player->get_name() << ", please enter your move (x,y,char): ";
         cin >> x >> y >> val;
         val = toupper(val);
     } 
