@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <iomanip>
 #include "Big_XO_Tic_Tac_Toe.h"
 
@@ -15,27 +15,37 @@ X_O_Board::X_O_Board() : Board(5, 5) {
 bool X_O_Board::update_board(Move<char>* move) {
     int x = move->get_x();
     int y = move->get_y();
-    char mark = move->get_symbol();
+    char mark = toupper(move->get_symbol());
 
-    if (!(x < 0 || x >= rows || y < 0 || y >= columns) &&
-        (board[x][y] == blank_symbol || mark == 0)) {
+    if (x < 0 || x >= rows || y < 0 || y >= columns) {
+        cout << "Invalid move! Position outside the board.\n";
+        return false;
+    }
 
-        if (mark == 0) {
-            n_moves--;
-            board[x][y] = blank_symbol;
+    if (mark == 0) {
+        if (board[x][y] == blank_symbol) {
+            return false;
         }
-        else {
-            n_moves++;
-            board[x][y] = toupper(mark);
-        }
+        board[x][y] = blank_symbol;
+        n_moves = max(0, n_moves - 1);
         return true;
     }
-	//just 24 moves possible
+
+    if (board[x][y] != blank_symbol) {
+        cout << "Invalid move! Cell already filled.\n";
+        return false;
+    }
+
     if (n_moves >= 24) {
         return false;
     }
 
+    board[x][y] = mark;
+    n_moves++;
+
+    return true;
 }
+
 
 //count sequences of 3 same symbols in a row/column/diagonal
 int X_O_Board::count_sequences(char sym) {
