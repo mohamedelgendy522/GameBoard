@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <iomanip>
 #include <cctype>
 #include "Infinity.h"
@@ -20,8 +20,15 @@ bool X_O_Board::update_board(Move<char>* move)
     int y = move->get_y();
     char mark = toupper(move->get_symbol());
 
-	if (x < 0 || x >= rows || y < 0 || y >= columns)// Out of bounds
+    if (x < 0 || x >= rows || y < 0 || y >= columns) {
+        cout << "\n Invalid move! Position (" << x << ", " << y << ") is outside the board.\n";
         return false;
+    }
+
+    if (board[x][y] != blank_symbol) {
+        cout << "\n Invalid move! Cell (" << x << ", " << y << ") is already filled.\n";
+        return false;
+    }
 
 	if (mark == 0) {// Undo move
 		if (board[x][y] == blank_symbol) return false; 
@@ -38,8 +45,6 @@ bool X_O_Board::update_board(Move<char>* move)
         return true;
     }
 
-    if (board[x][y] != blank_symbol)
-        return false;
 
     static int moveCounter = 0;
 
@@ -116,7 +121,7 @@ Move<char>* XO_UI::get_move(Player<char>* player) {
     if (player->get_type() == PlayerType::HUMAN) {
         cout << "\n" << player->get_name()
             << " (" << player->get_symbol()
-            << ") enter your move x y (0 to 4): ";
+            << ") enter your move x y (0 to 2): ";
         cin >> x >> y;
     }
     else {
