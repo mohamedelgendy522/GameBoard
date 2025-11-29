@@ -110,8 +110,18 @@ Move<char>* Pyramid_UI::get_move(Player<char>* player) {
         cout << "\nPlease enter your move x and y";
         cin >> x >> y;
     }
-    // else if (player->get_type() == PlayerType::COMPUTER) {
-    //
-    // }
+     else if (player->get_type() == PlayerType::COMPUTER) {
+         Board<char>* b = player->get_board_ptr();
+
+         for (int i = 0; i < b->get_rows(); i++) {
+            for (int j = 0; j < b->get_columns(); j++) {
+
+                if (check[{i, j}] && b->get_cell(i, j) == '.') {
+                    return new Move<char>(i, j, player->get_symbol());
+                }
+
+            }
+        }
+     }
     return new Move<char>(x, y, player->get_symbol());
 }
