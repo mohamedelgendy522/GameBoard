@@ -23,6 +23,7 @@ int main() {
          << "5. Infinity Tic-Tac-Toe\n"
          << "6. 4 x 4 Tic-Tac-Toe\n"
          << "7. Misere Tic-Tac-Toe\n"
+         << "8. SUS\n"
          << "----------------------------------\n"
          << "Enter the number of the game u want to play: ";
     int choice;
@@ -198,6 +199,30 @@ int main() {
 
         break;
     }
+        case 8:
+{
+    srand(static_cast<unsigned int>(time(0)));
+
+    UI<char>* game_ui = new SUS_UI();
+
+    Board<char>* sus_board = new SUS_Board();
+
+    Player<char>** players = game_ui->setup_players();
+
+    GameManager<char> SUS_game(sus_board, players, game_ui);
+
+    SUS_game.run();
+
+    delete sus_board;
+
+    for (int i = 0; i < 2; ++i) {
+        delete players[i];
+    }
+
+    delete[] players;
+
+    break;
+}
     default:
         cout << "Invalid choice.\n";
         break;
