@@ -180,7 +180,9 @@ Move<char>* SUS_UI::get_move(Player<char>* player) {
         cin >> x >> y;
     }
     else if (player->get_type() == PlayerType::COMPUTER) {
-
+        x = rand() % player->get_board_ptr()->get_rows();
+        y = rand() % player->get_board_ptr()->get_columns();
+        
         // Playing safely (Defense)
 
         // Rows
