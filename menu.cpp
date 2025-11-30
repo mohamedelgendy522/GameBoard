@@ -11,6 +11,7 @@
 #include "Infinity_Tic_Tac_Toe.h"
 #include "Shift XO.h"
 #include "Misere_Tic_Tac_Toe.h"
+#include "SUS.h"
 using namespace std;
 int main() {
     cout << "==================================\n"
