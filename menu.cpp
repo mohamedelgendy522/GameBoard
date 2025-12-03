@@ -25,6 +25,8 @@ int main() {
          << "6. 4 x 4 Tic-Tac-Toe\n"
          << "7. Misere Tic-Tac-Toe\n"
          << "8. SUS\n"
+         << "9. Diamond Tic-Tac-Toe\n"
+         << "10. Obstacles Tic-Tac-Toe\n"
          << "----------------------------------\n"
          << "Enter the number of the game u want to play: ";
     int choice;
@@ -215,6 +217,54 @@ int main() {
     SUS_game.run();
 
     delete sus_board;
+
+    for (int i = 0; i < 2; ++i) {
+        delete players[i];
+    }
+
+    delete[] players;
+
+    break;
+}
+        case 9:
+{
+    srand(static_cast<unsigned int>(time(0)));
+
+    UI<char>* game_ui = new Diamond_X_O_UI();
+
+    Board<char>* diamond_xo_board = new Diamond_X_O_Board();
+
+    Player<char>** players = game_ui->setup_players();
+
+    GameManager<char> diamondXO_game(diamond_xo_board, players, game_ui);
+
+    diamondXO_game.run();
+
+    delete diamond_xo_board;
+
+    for (int i = 0; i < 2; ++i) {
+        delete players[i];
+    }
+
+    delete[] players;
+
+    break;
+}
+case 10:
+{
+    srand(static_cast<unsigned int>(time(0)));
+
+    UI<char>* game_ui = new Obstacles_XO_UI();
+
+    Board<char>* obstacles_xo_board = new Obstacles_XO_Board();
+
+    Player<char>** players = game_ui->setup_players();
+
+    GameManager<char> obstacles_xo_game(obstacles_xo_board, players, game_ui);
+
+    obstacles_xo_game.run();
+
+    delete obstacles_xo_board;
 
     for (int i = 0; i < 2; ++i) {
         delete players[i];
