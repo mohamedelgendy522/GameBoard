@@ -12,6 +12,8 @@
 #include "Shift XO.h"
 #include "Misere_Tic_Tac_Toe.h"
 #include "SUS.h"
+#include "Diamond_Tic_Tac_Toe.h"
+#include "Obstacles_Tic_Tac_Toe.h"
 using namespace std;
 int main() {
     cout << "==================================\n"
