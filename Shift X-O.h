@@ -1,110 +1,124 @@
 /**
  * @file XO_Classes.h
- * @brief Defines the X-O (Tic-Tac-Toe) specific classes that extend the generic board game framework.
+ * @brief Defines the Shift X-O variant classes that extend the generic board game framework.
  *
  * This file provides:
- * - `X_O_Board`: A specialized board class for the Tic-Tac-Toe game.
- * - `XO_UI`: A user interface class tailored to X-O game setup and player interaction.
+ * - `X_O_Shift`: A specialized board class implementing the Shift X-O rules.
+ * - `X_O_Shift_UI`: A user interface class tailored to Shift X-O player setup and interaction.
  */
-
 
 #include "BoardGame_Classes.h"
 using namespace std;
 
 /**
- * @class X_O_Board
- * @brief Represents the Tic-Tac-Toe game board.
+ * @class X_O_Shift
+ * @brief Represents the Shift X-O game board.
  *
- * This class inherits from the generic `Board<char>` class and implements
- * the specific logic required for the Tic-Tac-Toe (X-O) game, including
- * move updates, win/draw detection, and display functions.
+ * This class inherits from the generic `Board<char>` template and implements
+ * the rules of the Shift X-O game, including move updates, shifting behavior,
+ * win/draw detection, and board-state management.
  *
  * @see Board
  */
 class X_O_Shift : public Board<char> {
 protected:
     char blank_symbol = '.'; ///< Character used to represent an empty cell on the board.
+
 public:
     /**
-     * @brief Default constructor that initializes a 3x3 X-O board.
+     * @brief Default constructor that initializes the 3×3 Shift X-O board.
      */
     X_O_Shift();
 
     /**
-     * @brief Updates the board with a player's move.
-     * @param move Pointer to a Move<char> object containing move coordinates and symbol.
-     * @return true if the move is valid and successfully applied, false otherwise.
+     * @brief Applies a player's move according to Shift X-O rules.
+     *
+     * In Shift X-O, moves may cause rows or columns to shift depending
+     * on the game's mechanics.
+     *
+     * @param move Pointer to a Move<char> object containing coordinates and symbol.
+     * @return true if the move is valid and successfully applied; false otherwise.
      */
     bool update_board(Move<char>* move);
 
     /**
-     * @brief Checks if the given player has won the game.
-     * @param player Pointer to the player being checked.
-     * @return true if the player has a winning line, false otherwise.
+     * @brief Checks whether the specified player has achieved a Shift X-O win.
+     *
+     * A win occurs when the player forms a 3-in-a-row horizontally,
+     * vertically, or diagonally after all shifts and updates.
+     *
+     * @param player Pointer to the player being evaluated.
+     * @return true if the player has won, false otherwise.
      */
     bool is_win(Player<char>* player);
 
     /**
-     * @brief Checks if the given player has lost the game.
-     * @param player Pointer to the player being checked.
-     * @return Always returns false (not used in X-O logic).
+     * @brief Always returns false — losing state is not needed in Shift X-O logic.
      */
     bool is_lose(Player<char>*) { return false; };
 
     /**
-     * @brief Checks if the game has ended in a draw.
+     * @brief Determines whether the Shift X-O game has ended in a draw.
+     *
+     * A draw occurs when all cells are filled and no winning line exists.
+     *
      * @param player Pointer to the player being checked.
-     * @return true if all cells are filled and no player has won, false otherwise.
+     * @return true if the board is full and no player has won.
      */
     bool is_draw(Player<char>* player);
 
     /**
-     * @brief Determines if the game is over (win or draw).
-     * @param player Pointer to the player to evaluate.
-     * @return true if the game has ended, false otherwise.
+     * @brief Checks if the game has ended (either win or draw).
+     *
+     * @param player Pointer to the player being evaluated.
+     * @return true if the game is over; otherwise false.
      */
     bool game_is_over(Player<char>* player);
-
 };
 
 
 /**
- * @class XO_UI
- * @brief User Interface class for the X-O (Tic-Tac-Toe) game.
+ * @class X_O_Shift_UI
+ * @brief User Interface class for the Shift X-O variant.
  *
- * Inherits from the generic `UI<char>` base class and provides
- * X-O�specific functionality for player setup and move input.
+ * This class inherits from `UI<char>` and provides Shift X-O–specific
+ * input handling, player creation, and move acquisition logic.
  *
  * @see UI
  */
 class X_O_Shift_UI : public UI<char> {
 public:
     /**
-     * @brief Constructs an XO_UI object.
+     * @brief Constructs the Shift X-O UI.
      *
-     * Initializes the base `UI<char>` class with the welcome message "FCAI X-O".
+     * Initializes the base UI with the message:
+     * `"Welcome to FCAI Shift X-O"`.
      */
     X_O_Shift_UI();
 
     /**
-     * @brief Destructor for XO_UI.
+     * @brief Destructor.
      */
     ~X_O_Shift_UI() {};
 
     /**
-     * @brief Creates a player of the specified type.
-     * @param name Name of the player.
-     * @param symbol Character symbol ('X' or 'O') assigned to the player.
-     * @param type The type of the player (Human or Computer).
-     * @return Pointer to the newly created Player<char> instance.
+     * @brief Creates a new player for Shift X-O.
+     *
+     * @param name    Player's name.
+     * @param symbol  Player's mark ('X' or 'O').
+     * @param type    Whether the player is Human or Computer.
+     * @return Pointer to the newly allocated Player<char>.
      */
-
     Player<char>* create_player(string& name, char symbol, PlayerType type);
 
     /**
      * @brief Retrieves the next move from a player.
+     *
+     * Human players enter coordinates manually,
+     * while computer players generate moves automatically.
+     *
      * @param player Pointer to the player whose move is being requested.
-     * @return A pointer to a new `Move<char>` object representing the player's action.
+     * @return Pointer to a newly created Move<char> representing the action.
      */
     virtual Move<char>* get_move(Player<char>* player);
 };
