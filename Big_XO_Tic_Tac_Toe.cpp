@@ -15,79 +15,83 @@ X_O_Board::X_O_Board() : Board(5, 5) {
 bool X_O_Board::update_board(Move<char>* move) {
     int x = move->get_x();
     int y = move->get_y();
-    char mark = toupper(move->get_symbol());
-
+    char mark_raw = move->get_symbol(); 
+    // bounds check
     if (x < 0 || x >= rows || y < 0 || y >= columns) {
         cout << "Invalid move! Position outside the board.\n";
         return false;
     }
-
-    if (mark == 0) {
+    if (mark_raw == '\0' || mark_raw == 0) {
         if (board[x][y] == blank_symbol) {
+            
             return false;
         }
         board[x][y] = blank_symbol;
         n_moves = max(0, n_moves - 1);
         return true;
     }
+    char mark = static_cast<char>(toupper(static_cast<unsigned char>(mark_raw)));
+    if (mark != 'X' && mark != 'O') {
+        cout << "Invalid symbol. Use 'X' or 'O'.\n";
+        return false;
+    }
 
     if (board[x][y] != blank_symbol) {
         cout << "Invalid move! Cell already filled.\n";
         return false;
     }
-
     if (n_moves >= 24) {
+        cout << "Maximum moves reached!\n";
         return false;
     }
-
     board[x][y] = mark;
     n_moves++;
-
     return true;
 }
 
-
-//count sequences of 3 same symbols in a row/column/diagonal
+// count sequences of 3 same symbols in rows/columns/diagonals
 int X_O_Board::count_sequences(char sym) {
+    sym = static_cast<char>(toupper(static_cast<unsigned char>(sym)));
     int count = 0;
 
     // Rows
-    for (int r = 0; r < 5; r++) {
-        for (int c = 0; c <= 2; c++) {
+    for (int r = 0; r < rows; ++r) {
+        for (int c = 0; c <= columns - 3; ++c) {
             if (board[r][c] == sym &&
                 board[r][c + 1] == sym &&
-                board[r][c + 2] == sym)
+                board[r][c + 2] == sym) {
                 count++;
+            }
         }
     }
-
     // Columns
-    for (int c = 0; c < 5; c++) {
-        for (int r = 0; r <= 2; r++) {
+    for (int c = 0; c < columns; ++c) {
+        for (int r = 0; r <= rows - 3; ++r) {
             if (board[r][c] == sym &&
                 board[r + 1][c] == sym &&
-                board[r + 2][c] == sym)
+                board[r + 2][c] == sym) {
                 count++;
+            }
         }
     }
-
-    // Main Diagonal 
-    for (int r = 0; r <= 2; r++) {
-        for (int c = 0; c <= 2; c++) {
+    // Main diagonals 
+    for (int r = 0; r <= rows - 3; ++r) {
+        for (int c = 0; c <= columns - 3; ++c) {
             if (board[r][c] == sym &&
                 board[r + 1][c + 1] == sym &&
-                board[r + 2][c + 2] == sym)
+                board[r + 2][c + 2] == sym) {
                 count++;
+            }
         }
     }
-
-    // Anti diagonal 
-    for (int r = 2; r < 5; r++) {
-        for (int c = 0; c <= 2; c++) {
+    // Anti-diagonals
+    for (int r = 2; r < rows; ++r) {
+        for (int c = 0; c <= columns - 3; ++c) {
             if (board[r][c] == sym &&
                 board[r - 1][c + 1] == sym &&
-                board[r - 2][c + 2] == sym)
+                board[r - 2][c + 2] == sym) {
                 count++;
+            }
         }
     }
 
@@ -95,23 +99,22 @@ int X_O_Board::count_sequences(char sym) {
 }
 
 bool X_O_Board::is_win(Player<char>* player) {
-
     if (n_moves < 24)
         return false;
 
     int xSeq = count_sequences('X');
     int oSeq = count_sequences('O');
 
-    char sym = player->get_symbol();
+    char sym = static_cast<char>(toupper(static_cast<unsigned char>(player->get_symbol())));
 
     if (sym == 'X' && xSeq > oSeq) return true;
     if (sym == 'O' && oSeq > xSeq) return true;
+
 
     return false;
 }
 
 bool X_O_Board::is_draw(Player<char>* player) {
-
     if (n_moves < 24)
         return false;
 
@@ -122,8 +125,11 @@ bool X_O_Board::is_draw(Player<char>* player) {
 }
 
 bool X_O_Board::game_is_over(Player<char>* player) {
-    return n_moves >= 24;   
+    return n_moves >= 24;
 }
+
+
+
 
 // ---------------- Big_XO_UI ----------------
 
