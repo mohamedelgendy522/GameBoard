@@ -45,10 +45,10 @@ bool X_O_Board::update_board(Move<char>* move)
         return true;
     }
 
-
     static int moveCounter = 0;
+    moveCounter++; 
 
-    if (moveCounter > 0 && (moveCounter % 3) == 0 && !history.empty()) {
+    if (moveCounter % 3 == 0 && !history.empty()) {
         auto oldest = history.front();
         history.pop();
         int ox = oldest.first;
@@ -63,8 +63,6 @@ bool X_O_Board::update_board(Move<char>* move)
     board[x][y] = mark;
     n_moves++;
     history.push({ x, y });
-
-    moveCounter++;
 
     return true;
 }
