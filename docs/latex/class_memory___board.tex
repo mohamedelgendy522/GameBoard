@@ -1,0 +1,375 @@
+\doxysection{Memory\+\_\+\+Board Class Reference}
+\hypertarget{class_memory___board}{}\label{class_memory___board}\index{Memory\_Board@{Memory\_Board}}
+
+
+Represents the board for Memory Tic-\/\+Tac-\/\+Toe game.  
+
+
+
+
+{\ttfamily \+\#include $<$Memory\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h$>$}
+
+Inheritance diagram for Memory\+\_\+\+Board:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_memory___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_memory___board_a235743f1bdf5051526c92cc59b276340}{Memory\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes a 3x3 board. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_memory___board_a2400ae0d0f2aa62a6ead70fc85ceeea1}{update\+\_\+board}} (\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move)
+\begin{DoxyCompactList}\small\item\em Updates the board with a player\textquotesingle{}s move. \end{DoxyCompactList}\item 
+virtual bool \doxymbox{\hyperlink{class_memory___board_a2da99e4db635e5010dd9d621127d5867}{is\+\_\+win}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if player has won (three in a row). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_memory___board_af1f12960fa061d9dde05c681e499fb21}{is\+\_\+lose}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Checks if the player has lost (always false in standard X-\/O). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_memory___board_a794baa26eeaad82c5bfc97faa4049736}{is\+\_\+draw}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if the game has ended in a draw. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_memory___board_a41987fe4c5d073c06546789ba2db656d}{game\+\_\+is\+\_\+over}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Determines if the game is over (win or draw). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \doxymbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the board for Memory Tic-\/\+Tac-\/\+Toe game. 
+
+This class inherits from the generic {\ttfamily \doxylink{class_board}{Board}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} class and implements the classic Tic-\/\+Tac-\/\+Toe logic but is designed for memory-\/based gameplay where symbols are hidden during display.
+
+\begin{DoxyNote}{Note}
+\doxylink{class_board}{Board} size is fixed at 3x3 (standard Tic-\/\+Tac-\/\+Toe) 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Symbols are stored normally but displayed as \textquotesingle{}H\textquotesingle{} (hidden) 
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_memory___tic___tac___toe_8h_source_l00031}{31}} of file \doxymbox{\hyperlink{_memory___tic___tac___toe_8h_source}{Memory\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_memory___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_memory___board_a235743f1bdf5051526c92cc59b276340}\index{Memory\_Board@{Memory\_Board}!Memory\_Board@{Memory\_Board}}
+\index{Memory\_Board@{Memory\_Board}!Memory\_Board@{Memory\_Board}}
+\doxysubsubsection{\texorpdfstring{Memory\_Board()}{Memory\_Board()}}
+{\footnotesize\ttfamily \label{class_memory___board_a235743f1bdf5051526c92cc59b276340} 
+Memory\+\_\+\+Board::\+\+Memory\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor that initializes a 3x3 board. 
+
+Constructs a \doxylink{class_memory___board}{Memory\+\_\+\+Board} with 3x3 dimensions.
+
+Initializes all cells with the blank symbol (\textquotesingle{}.\textquotesingle{}). \begin{DoxySeeAlso}{See also}
+\doxylink{class_memory___board_a235743f1bdf5051526c92cc59b276340}{Memory\+\_\+\+Board::\+\+Memory\+\_\+\+Board} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_memory___tic___tac___toe_8cpp_source_l00027}{27}} of file \doxymbox{\hyperlink{_memory___tic___tac___toe_8cpp_source}{Memory\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}(3,3)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Initialize\ all\ cells\ with\ blank\_symbol}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}\ :\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}})}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ cell\ :\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}})}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ cell\ =\ blank\_symbol;}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_memory___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_memory___board_a41987fe4c5d073c06546789ba2db656d}\index{Memory\_Board@{Memory\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Memory\_Board@{Memory\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_memory___board_a41987fe4c5d073c06546789ba2db656d} 
+bool Memory\+\_\+\+Board::\+game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determines if the game is over (win or draw). 
+
+Checks if game is over.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player to evaluate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the game has ended, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if game is won or drawn, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_memory___board_a41987fe4c5d073c06546789ba2db656d}{Memory\+\_\+\+Board::\+game\+\_\+is\+\_\+over} 
+\end{DoxySeeAlso}
+
+
+Implements \doxymbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_memory___tic___tac___toe_8cpp_source_l00106}{106}} of file \doxymbox{\hyperlink{_memory___tic___tac___toe_8cpp_source}{Memory\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_memory___board_a2da99e4db635e5010dd9d621127d5867}{is\_win}}(player)\ ||\ \doxymbox{\hyperlink{class_memory___board_a794baa26eeaad82c5bfc97faa4049736}{is\_draw}}(player);}
+\DoxyCodeLine{00108\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_memory___board_a794baa26eeaad82c5bfc97faa4049736}\index{Memory\_Board@{Memory\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Memory\_Board@{Memory\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_memory___board_a794baa26eeaad82c5bfc97faa4049736} 
+bool Memory\+\_\+\+Board::\+is\+\_\+draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the game has ended in a draw. 
+
+Checks if game is a draw.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all cells are filled and no player has won, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player (unused, for interface compatibility). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if board is full and no player has won, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_memory___board_a794baa26eeaad82c5bfc97faa4049736}{Memory\+\_\+\+Board::\+is\+\_\+draw} 
+\end{DoxySeeAlso}
+
+
+Implements \doxymbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_memory___tic___tac___toe_8cpp_source_l00096}{96}} of file \doxymbox{\hyperlink{_memory___tic___tac___toe_8cpp_source}{Memory\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 9\ \&\&\ !\doxymbox{\hyperlink{class_memory___board_a2da99e4db635e5010dd9d621127d5867}{is\_win}}(player));}
+\DoxyCodeLine{00098\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_memory___board_af1f12960fa061d9dde05c681e499fb21}\index{Memory\_Board@{Memory\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Memory\_Board@{Memory\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_memory___board_af1f12960fa061d9dde05c681e499fb21} 
+bool Memory\+\_\+\+Board::\+is\+\_\+lose (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the player has lost (always false in standard X-\/O). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns false (not used in standard X-\/O logic). 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_memory___tic___tac___toe_8h_source_l00060}{60}} of file \doxymbox{\hyperlink{_memory___tic___tac___toe_8h_source}{Memory\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+
+\end{DoxyCode}
+\Hypertarget{class_memory___board_a2da99e4db635e5010dd9d621127d5867}\index{Memory\_Board@{Memory\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Memory\_Board@{Memory\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_memory___board_a2da99e4db635e5010dd9d621127d5867} 
+bool Memory\+\_\+\+Board::\+is\+\_\+win (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if player has won (three in a row). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if player has three consecutive symbols, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if player has three consecutive symbols, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_memory___board_a2da99e4db635e5010dd9d621127d5867}{Memory\+\_\+\+Board::\+is\+\_\+win} 
+\end{DoxySeeAlso}
+
+
+Implements \doxymbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_memory___tic___tac___toe_8cpp_source_l00068}{68}} of file \doxymbox{\hyperlink{_memory___tic___tac___toe_8cpp_source}{Memory\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ sym\ =\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{auto}\ all\_equal\ =\ [\&](\textcolor{keywordtype}{char}\ a,\ \textcolor{keywordtype}{char}\ b,\ \textcolor{keywordtype}{char}\ c)\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a\ ==\ b\ \&\&\ b\ ==\ c\ \&\&\ a\ !=\ blank\_symbol;}
+\DoxyCodeLine{00073\ \ \ \ \ \};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//\ Check\ rows\ and\ columns}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}};\ ++i)\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][0]\ ==\ sym)\ ||}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][i])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][i]\ ==\ sym))}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//\ Check\ diagonals}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1]\ ==\ sym)\ ||}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][0])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1]\ ==\ sym))}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00088\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_memory___board_a2400ae0d0f2aa62a6ead70fc85ceeea1}\index{Memory\_Board@{Memory\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Memory\_Board@{Memory\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_memory___board_a2400ae0d0f2aa62a6ead70fc85ceeea1} 
+bool Memory\+\_\+\+Board::\+update\+\_\+board (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the board with a player\textquotesingle{}s move. 
+
+Updates the board with a move.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to \doxylink{class_move}{Move$<$char$>$} object containing move coordinates and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if move is valid and applied, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to \doxylink{class_move}{Move} object containing coordinates and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if move was valid and applied, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_memory___board_a2400ae0d0f2aa62a6ead70fc85ceeea1}{Memory\+\_\+\+Board::\+update\+\_\+board} 
+\end{DoxySeeAlso}
+
+
+Implements \doxymbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_memory___tic___tac___toe_8cpp_source_l00040}{40}} of file \doxymbox{\hyperlink{_memory___tic___tac___toe_8cpp_source}{Memory\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\doxymbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\doxymbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{char}\ mark\ =\ move-\/>\doxymbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Validate\ move\ and\ apply\ if\ valid}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(x\ <\ 0\ ||\ x\ >=\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ y\ <\ 0\ ||\ y\ >=\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})\ \&\&}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ ==\ blank\_symbol\ ||\ mark\ ==\ 0))\ \{}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mark\ ==\ 0)\ \{\ \textcolor{comment}{//\ Undo\ move}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}-\/-\/;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ blank\_symbol;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Apply\ move}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ toupper(mark);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_memory___tic___tac___toe_8h}{Memory\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}\item 
+\doxymbox{\hyperlink{_memory___tic___tac___toe_8cpp}{Memory\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}\end{DoxyCompactItemize}

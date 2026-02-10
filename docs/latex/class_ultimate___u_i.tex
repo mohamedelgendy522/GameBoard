@@ -1,0 +1,214 @@
+\doxysection{Ultimate\+\_\+\+UI Class Reference}
+\hypertarget{class_ultimate___u_i}{}\label{class_ultimate___u_i}\index{Ultimate\_UI@{Ultimate\_UI}}
+
+
+User Interface class for the \doxylink{class_ultimate}{Ultimate} X-\/O game.  
+
+
+
+
+{\ttfamily \+\#include $<$Ultimate.\+h$>$}
+
+Inheritance diagram for Ultimate\+\_\+\+UI:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ultimate___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_ultimate___u_i_a9e3b3b9207e382ffc43d8e34bcb34ce0}{Ultimate\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructs the \doxylink{class_ultimate___u_i}{Ultimate\+\_\+\+UI} object. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_ultimate___u_i_a8d2841e6b2a76a0137e5a00cf89fe29d}{\texorpdfstring{$\sim$}{\string~}\+Ultimate\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_ultimate___u_i}{Ultimate\+\_\+\+UI}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_ultimate___u_i_abe64db750af679a811bdc12d24046428}{create\+\_\+player}} (string \&name, char symbol, \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Creates a new player for the \doxylink{class_ultimate}{Ultimate} X-\/O game. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_ultimate___u_i_a3a36cbdd603279522874a439172977bd}{get\+\_\+move}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Retrieves the next move from the given player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, char symbol, \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \doxymbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \doxymbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User Interface class for the \doxylink{class_ultimate}{Ultimate} X-\/O game. 
+
+Inherits from the generic {\ttfamily \doxylink{class_u_i}{UI}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} and provides functions specific to setting up players and retrieving moves for the \doxylink{class_ultimate}{Ultimate} Tic-\/\+Tac-\/\+Toe experience.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_u_i}{UI} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_ultimate_8h_source_l00079}{79}} of file \doxymbox{\hyperlink{_ultimate_8h_source}{Ultimate.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_ultimate___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ultimate___u_i_a9e3b3b9207e382ffc43d8e34bcb34ce0}\index{Ultimate\_UI@{Ultimate\_UI}!Ultimate\_UI@{Ultimate\_UI}}
+\index{Ultimate\_UI@{Ultimate\_UI}!Ultimate\_UI@{Ultimate\_UI}}
+\doxysubsubsection{\texorpdfstring{Ultimate\_UI()}{Ultimate\_UI()}}
+{\footnotesize\ttfamily \label{class_ultimate___u_i_a9e3b3b9207e382ffc43d8e34bcb34ce0} 
+Ultimate\+\_\+\+UI::\+\+Ultimate\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs the \doxylink{class_ultimate___u_i}{Ultimate\+\_\+\+UI} object. 
+
+Constructor for \doxylink{class_ultimate___u_i}{Ultimate\+\_\+\+UI}.
+
+Initializes the base \doxylink{class_u_i}{UI} with the welcome message "{}\+Ultimate X-\/\+O"{}.
+
+Displays a welcome message and initializes \doxylink{class_u_i}{UI} with board size 3. 
+
+Definition at line \doxymbox{\hyperlink{_ultimate_8cpp_source_l00392}{392}} of file \doxymbox{\hyperlink{_ultimate_8cpp_source}{Ultimate.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00392\ :\ \doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI<char>}}(\textcolor{stringliteral}{"{}Weclome\ to\ FCAI\ Ultimate\ Game"{}},\ 3)\ \{\}}
+
+\end{DoxyCode}
+\Hypertarget{class_ultimate___u_i_a8d2841e6b2a76a0137e5a00cf89fe29d}\index{Ultimate\_UI@{Ultimate\_UI}!````~Ultimate\_UI@{\texorpdfstring{$\sim$}{\string~}Ultimate\_UI}}
+\index{````~Ultimate\_UI@{\texorpdfstring{$\sim$}{\string~}Ultimate\_UI}!Ultimate\_UI@{Ultimate\_UI}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Ultimate\_UI()}{\string~Ultimate\_UI()}}
+{\footnotesize\ttfamily \label{class_ultimate___u_i_a8d2841e6b2a76a0137e5a00cf89fe29d} 
+Ultimate\+\_\+\+UI::\+\texorpdfstring{$\sim$}{\string~}\+Ultimate\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{class_ultimate___u_i}{Ultimate\+\_\+\+UI}. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_ultimate_8cpp_source_l00405}{405}} of file \doxymbox{\hyperlink{_ultimate_8cpp_source}{Ultimate.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00405\ \{\}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ultimate___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ultimate___u_i_abe64db750af679a811bdc12d24046428}\index{Ultimate\_UI@{Ultimate\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Ultimate\_UI@{Ultimate\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_ultimate___u_i_abe64db750af679a811bdc12d24046428} 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Ultimate\+\_\+\+UI::\+create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{\doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new player for the \doxylink{class_ultimate}{Ultimate} X-\/O game. 
+
+Creates a human or computer player for \doxylink{class_ultimate}{Ultimate} X-\/O.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player} name. \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player}\textquotesingle{}s assigned symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}). \\
+\hline
+{\em type} & \doxylink{class_player}{Player} type (Human or Computer). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created \doxylink{class_player}{Player$<$char$>$} instance. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_ultimate_8cpp_source_l00398}{398}} of file \doxymbox{\hyperlink{_ultimate_8cpp_source}{Ultimate.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00399\ \ \ \ \ \textcolor{comment}{//\ Create\ player\ based\ on\ type}}
+\DoxyCodeLine{00400\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Creating\ "{}}\ <<\ (type\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}}\ ?\ \textcolor{stringliteral}{"{}human"{}}\ :\ \textcolor{stringliteral}{"{}computer"{}})}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ player:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ symbol\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00403\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Player<char>(name,\ symbol,\ type);}
+\DoxyCodeLine{00404\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ultimate___u_i_a3a36cbdd603279522874a439172977bd}\index{Ultimate\_UI@{Ultimate\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Ultimate\_UI@{Ultimate\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_ultimate___u_i_a3a36cbdd603279522874a439172977bd} 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Ultimate\+\_\+\+UI::\+get\+\_\+move (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the next move from the given player. 
+
+Reads or generates a move depending on player type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player whose move is requested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a new \doxylink{class_move}{Move$<$char$>$} representing the player\textquotesingle{}s intended action.
+\end{DoxyReturn}
+Human:\+ user enters x y Computer:\+ random valid coordinates 
+
+Implements \doxymbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_ultimate_8cpp_source_l00414}{414}} of file \doxymbox{\hyperlink{_ultimate_8cpp_source}{Ultimate.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00415\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00417\ \ \ \ \ \textcolor{keywordflow}{if}\ (player-\/>\doxymbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPlease\ enter\ your\ move\ x\ and\ y\ (0\ to\ 8):\ "{}};}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ cin\ >>\ x\ >>\ y;}
+\DoxyCodeLine{00420\ \ \ \ \ \}}
+\DoxyCodeLine{00421\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (player-\/>\doxymbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}})\ \{}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ x\ =\ rand()\ \%\ player-\/>\doxymbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}()-\/>\doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\_rows}}();}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ y\ =\ rand()\ \%\ player-\/>\doxymbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}()-\/>\doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\_columns}}();}
+\DoxyCodeLine{00424\ \ \ \ \ \}}
+\DoxyCodeLine{00425\ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}\ =\ x;}
+\DoxyCodeLine{00426\ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}\ =\ y;}
+\DoxyCodeLine{00427\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Move<char>(x,\ y,\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}());}
+\DoxyCodeLine{00428\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_ultimate_8h}{Ultimate.\+h}}\item 
+\doxymbox{\hyperlink{_ultimate_8cpp}{Ultimate.\+cpp}}\end{DoxyCompactItemize}

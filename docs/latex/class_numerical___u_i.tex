@@ -1,0 +1,298 @@
+\doxysection{Numerical\+\_\+\+UI Class Reference}
+\hypertarget{class_numerical___u_i}{}\label{class_numerical___u_i}\index{Numerical\_UI@{Numerical\_UI}}
+
+
+User Interface class for the Numerical X-\/O (Tic-\/\+Tac-\/\+Toe) game.  
+
+
+
+
+{\ttfamily \+\#include $<$Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h$>$}
+
+Inheritance diagram for Numerical\+\_\+\+UI:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_numerical___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_numerical___u_i_a2df77448a71627dbeb30f4c1694e5b2d}{Numerical\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_numerical___u_i}{Numerical\+\_\+\+UI} object. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_numerical___u_i_af5f69a5877592105d787a4549e490be8}{\texorpdfstring{$\sim$}{\string~}\+Numerical\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_numerical___u_i}{Numerical\+\_\+\+UI}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_numerical___u_i_a877118eca08b1864619094bdf9dd4ec2}{create\+\_\+player}} (string \&name, int symbol, \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Creates a player of the specified type. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_numerical___u_i_a29f2b736f05100b3204ba5289bc01625}{get\+\_\+move}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Retrieves the next move from a player. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_numerical___u_i_acb931397aecbdcd357a8e581dae11855}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the two players for the Numerical X-\/O game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, int symbol, \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ int $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \doxymbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \doxymbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User Interface class for the Numerical X-\/O (Tic-\/\+Tac-\/\+Toe) game. 
+
+Inherits from the generic {\ttfamily \doxylink{class_u_i}{UI}\texorpdfstring{$<$}{<}int\texorpdfstring{$>$}{>}} base class and provides Numerical-\/\+X-\/\+O–specific functionality for player setup and move input.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_u_i}{UI} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_numerical___tic___tac___toe_8h_source_l00081}{81}} of file \doxymbox{\hyperlink{_numerical___tic___tac___toe_8h_source}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_numerical___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_numerical___u_i_a2df77448a71627dbeb30f4c1694e5b2d}\index{Numerical\_UI@{Numerical\_UI}!Numerical\_UI@{Numerical\_UI}}
+\index{Numerical\_UI@{Numerical\_UI}!Numerical\_UI@{Numerical\_UI}}
+\doxysubsubsection{\texorpdfstring{Numerical\_UI()}{Numerical\_UI()}}
+{\footnotesize\ttfamily \label{class_numerical___u_i_a2df77448a71627dbeb30f4c1694e5b2d} 
+Numerical\+\_\+\+UI::\+\+Numerical\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_numerical___u_i}{Numerical\+\_\+\+UI} object. 
+
+Initializes the base {\ttfamily \doxylink{class_u_i}{UI}\texorpdfstring{$<$}{<}int\texorpdfstring{$>$}{>}} class with the welcome message "{}\+Numerical X-\/\+O"{}. 
+
+Definition at line \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source_l00065}{65}} of file \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ :\ \doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI<int>}}(\textcolor{stringliteral}{"{}====\ Numerical\ Tic-\/Tac-\/Toe\ Game\ ===="{}},\ 3)\ \{\}}
+
+\end{DoxyCode}
+\Hypertarget{class_numerical___u_i_af5f69a5877592105d787a4549e490be8}\index{Numerical\_UI@{Numerical\_UI}!````~Numerical\_UI@{\texorpdfstring{$\sim$}{\string~}Numerical\_UI}}
+\index{````~Numerical\_UI@{\texorpdfstring{$\sim$}{\string~}Numerical\_UI}!Numerical\_UI@{Numerical\_UI}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Numerical\_UI()}{\string~Numerical\_UI()}}
+{\footnotesize\ttfamily \label{class_numerical___u_i_af5f69a5877592105d787a4549e490be8} 
+Numerical\+\_\+\+UI::\+\texorpdfstring{$\sim$}{\string~}\+Numerical\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor for \doxylink{class_numerical___u_i}{Numerical\+\_\+\+UI}. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_numerical___tic___tac___toe_8h_source_l00094}{94}} of file \doxymbox{\hyperlink{_numerical___tic___tac___toe_8h_source}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \{\};}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_numerical___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_numerical___u_i_a877118eca08b1864619094bdf9dd4ec2}\index{Numerical\_UI@{Numerical\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Numerical\_UI@{Numerical\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_numerical___u_i_a877118eca08b1864619094bdf9dd4ec2} 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*} Numerical\+\_\+\+UI::\+create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{int}]{symbol}{, }\item[{\doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Creates a player of the specified type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the player. \\
+\hline
+{\em symbol} & Character symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) assigned to the player. \\
+\hline
+{\em type} & The type of the player (Human or Computer). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created \doxylink{class_player}{Player$<$int$>$} instance. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source_l00067}{67}} of file \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ Create\ player\ based\ on\ type}}
+\DoxyCodeLine{00069\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Creating\ "{}}\ <<\ (type\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}}\ ?\ \textcolor{stringliteral}{"{}human"{}}\ :\ \textcolor{stringliteral}{"{}computer"{}})\ <<\ \textcolor{stringliteral}{"{}\ player:\ "{}}\ <<\ name;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{if}\ (symbol\ ==\ 1)}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ (Odd\ numbers)\(\backslash\)n"{}};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ (Even\ numbers)\(\backslash\)n"{}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Player<int>(name,\ symbol,\ type);}
+\DoxyCodeLine{00076\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_numerical___u_i_a29f2b736f05100b3204ba5289bc01625}\index{Numerical\_UI@{Numerical\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Numerical\_UI@{Numerical\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_numerical___u_i_a29f2b736f05100b3204ba5289bc01625} 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*} Numerical\+\_\+\+UI::\+get\+\_\+move (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the next move from a player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player whose move is being requested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a new {\ttfamily \doxylink{class_move}{Move}\texorpdfstring{$<$}{<}int\texorpdfstring{$>$}{>}} object representing the player\textquotesingle{}s action. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ int $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source_l00078}{78}} of file \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y,\ num;}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ sym\ =\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n-\/"{}}\ <<\ player-\/>\doxymbox{\hyperlink{class_player_aed2af19790ba73190e3ebeea589518e1}{get\_name}}()\ <<\ \textcolor{stringliteral}{"{}:\ "{}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{if}\ (player-\/>\doxymbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ number\ from\ ("{}};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sym)\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}.size();\ ++i)\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}[i]\ <<\ \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}):\ "{}};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ num;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ find(\doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}.begin(),\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}.end(),\ num);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}.end())\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}.erase(remove(\doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}.begin(),\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}.end(),\ num),\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}.end());}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ another\ number\ from("{}};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}.size();\ ++i)\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}[i]\ <<\ \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}):\ "{}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ num;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}.erase(remove(\doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}.begin(),\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}.end(),\ num),\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}.end());}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}.size();\ ++i)\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}[i]\ <<\ \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}):\ "{}};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ num;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ find(\doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}.begin(),\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}.end(),\ num);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}.end())\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}.erase(remove(\doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}.begin(),\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}.end(),\ num),\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}.end());}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ another\ number\ from("{}};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}.size();\ ++i)\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}[i]\ <<\ \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}):\ "{}};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ num;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}.erase(remove(\doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}.begin(),\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}.end(),\ num),\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}.end());}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ your\ move\ position\ x,y\ (0-\/2):\(\backslash\)n"{}};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ cin\ >>\ x\ >>\ y;}
+\DoxyCodeLine{00128\ \ \ \ \ \}}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (player-\/>\doxymbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}})\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ rand()\ \%\ 3;}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ rand()\ \%\ 3;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ num\ =\ sym\ ?\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}[rand()\ \%\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}.size()]\ :\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}[rand()\ \%\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}}.size()];}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (player-\/>\doxymbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}()-\/>get\_board\_matrix()[x][y]\ !=\ 0);}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ current\ =\ sym\ ?\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a5b887de1928dc658016577a54f15c168}{odd}}\ :\ \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_a2688bd7aeff6a81fad6d85c224e03d9b}{even}};}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ current.erase(remove(current.begin(),\ current.end(),\ num),\ current.end());}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Move<int>(x,\ y,\ num);}
+\DoxyCodeLine{00142\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_numerical___u_i_acb931397aecbdcd357a8e581dae11855}\index{Numerical\_UI@{Numerical\_UI}!setup\_players@{setup\_players}}
+\index{setup\_players@{setup\_players}!Numerical\_UI@{Numerical\_UI}}
+\doxysubsubsection{\texorpdfstring{setup\_players()}{setup\_players()}}
+{\footnotesize\ttfamily \label{class_numerical___u_i_acb931397aecbdcd357a8e581dae11855} 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Numerical\+\_\+\+UI::\+setup\+\_\+players (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets up the two players for the Numerical X-\/O game. 
+
+\begin{DoxyReturn}{Returns}
+Array of pointers to the created \doxylink{class_player}{Player$<$int$>$} objects. 
+\end{DoxyReturn}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{UI$<$ int $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source_l00143}{143}} of file \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ Player<int>**\ players\ =\ \textcolor{keyword}{new}\ Player<int>*[2];}
+\DoxyCodeLine{00145\ \ \ \ \ vector<string>\ type\_options\ =\ \{\ \textcolor{stringliteral}{"{}Human"{}},\ \textcolor{stringliteral}{"{}Computer"{}}\ \};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{string}\ nameOdd\ =\ \doxymbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\_player\_name}}(\textcolor{stringliteral}{"{}Player\ 1"{}});}
+\DoxyCodeLine{00148\ \ \ \ \ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ typeOdd\ =\ \doxymbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\_player\_type\_choice}}(\textcolor{stringliteral}{"{}Player\ 1"{}},\ type\_options);}
+\DoxyCodeLine{00149\ \ \ \ \ players[0]\ =\ \doxymbox{\hyperlink{class_numerical___u_i_a877118eca08b1864619094bdf9dd4ec2}{create\_player}}(nameOdd,\ 1,\ typeOdd);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{string}\ nameEven\ =\ \doxymbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\_player\_name}}(\textcolor{stringliteral}{"{}Player\ 2"{}});}
+\DoxyCodeLine{00152\ \ \ \ \ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ typeEven\ =\ \doxymbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\_player\_type\_choice}}(\textcolor{stringliteral}{"{}Player\ 2"{}},\ type\_options);}
+\DoxyCodeLine{00153\ \ \ \ \ players[1]\ =\ \doxymbox{\hyperlink{class_numerical___u_i_a877118eca08b1864619094bdf9dd4ec2}{create\_player}}(nameEven,\ 0,\ typeEven);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordflow}{return}\ players;}
+\DoxyCodeLine{00156\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_numerical___tic___tac___toe_8h}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}\item 
+\doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,646 @@
+\doxysection{Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board Class Reference}
+\hypertarget{class_diamond___x___o___board}{}\label{class_diamond___x___o___board}\index{Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}}
+
+
+Represents the board for Diamond Tic-\/\+Tac-\/\+Toe game.  
+
+
+
+
+{\ttfamily \+\#include $<$Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h$>$}
+
+Inheritance diagram for Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_diamond___x___o___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_diamond___x___o___board_a12d3e7e2e02a28342b090f69d63350a8}{Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes a diamond-\/shaped 10x10 board. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_diamond___x___o___board_a08871b61586cbf6d53824cfe38bbf80a}{update\+\_\+board}} (\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move)
+\begin{DoxyCompactList}\small\item\em Updates the board with a player\textquotesingle{}s move. \end{DoxyCompactList}\item 
+virtual bool \doxymbox{\hyperlink{class_diamond___x___o___board_ab00ea8d7743e15d7d465bbe0812b004c}{is\+\_\+win}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if player has won according to diamond game rules. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_diamond___x___o___board_adc47f70144d5e689b4ebe2723d75d3a4}{is\+\_\+lose}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if the player has lost (opponent has won). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_diamond___x___o___board_a26d9f6a0250eb38fafa401721877cf85}{is\+\_\+draw}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if the game has ended in a draw. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_diamond___x___o___board_a9c0b09a1dae6087ccd7bcd0162a4d43b}{game\+\_\+is\+\_\+over}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Determines if the game is over (win or draw). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_diamond___x___o___board_a55b6379d42d3f3ce22db217dce69ea22}{set\+\_\+players}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}comp, \doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}human)
+\begin{DoxyCompactList}\small\item\em Sets the player pointers for the board. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_diamond___x___o___board_a7551f19805190a58b67515171fad1399}{is\+\_\+valid\+\_\+position}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Checks if a position is valid (part of the diamond shape). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_diamond___x___o___board_af660cde17f5ddeedc9cf5122f5ef572a}{is\+\_\+terminal}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the current board state is a terminal state. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_diamond___x___o___board_a22b81bb9349a8aa7d8d438154f11223a}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em Evaluates the current board state for AI decision making. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_diamond___x___o___board_ae8554679bb202d83b864fe63fb24c2d8}{find\+\_\+best\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Finds the best move for the computer using minimax algorithm. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_diamond___x___o___board_ababd4fa142e0f2192591ab5440a9f189}{minimax}} (bool is\+\_\+maximizing, int alpha, int beta, int depth=3)
+\begin{DoxyCompactList}\small\item\em Minimax algorithm with alpha-\/beta pruning and depth limitation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \doxymbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the board for Diamond Tic-\/\+Tac-\/\+Toe game. 
+
+This class inherits from the generic {\ttfamily \doxylink{class_board}{Board}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} class and implements a diamond-\/shaped board (10x10 matrix with valid positions forming a diamond). The winning condition requires both a line of 3 and a line of 4 in different directions.
+
+\begin{DoxyNote}{Note}
+\doxylink{class_board}{Board} size is 10x10 with only 25 valid positions forming a diamond shape 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Uses minimax algorithm with depth limitation and alpha-\/beta pruning 
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_diamond___tic___tac___toe_8h_source_l00033}{33}} of file \doxymbox{\hyperlink{_diamond___tic___tac___toe_8h_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_diamond___x___o___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_diamond___x___o___board_a12d3e7e2e02a28342b090f69d63350a8}\index{Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}!Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}}
+\index{Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}!Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{Diamond\_X\_O\_Board()}{Diamond\_X\_O\_Board()}}
+{\footnotesize\ttfamily \label{class_diamond___x___o___board_a12d3e7e2e02a28342b090f69d63350a8} 
+Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+\+Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor that initializes a diamond-\/shaped 10x10 board. 
+
+Constructs a \doxylink{class_diamond___x___o___board}{Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board} with 7x7 dimensions and diamond shape.
+
+Initializes only diamond-\/shaped positions as playable (25 positions). 
+
+Definition at line \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source_l00022}{22}} of file \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}(7,\ 7)\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Initialize\ pointers\ to\ prevent\ garbage\ access}}
+\DoxyCodeLine{00024\ \ \ \ \ computer\_player\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00025\ \ \ \ \ human\_player\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Center\ is\ at\ (3,\ 3).\ Valid\ positions\ are\ where\ Manhattan\ distance\ <=\ 3}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 7;\ i++)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 7;\ j++)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (abs(i\ -\/\ 3)\ +\ abs(j\ -\/\ 3)\ <=\ 3)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ blank\_symbol;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ \textcolor{charliteral}{'\#'};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_diamond___x___o___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_diamond___x___o___board_a22b81bb9349a8aa7d8d438154f11223a}\index{Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \label{class_diamond___x___o___board_a22b81bb9349a8aa7d8d438154f11223a} 
+int Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+evaluate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Evaluates the current board state for AI decision making. 
+
+Evaluates the board state.
+
+\begin{DoxyReturn}{Returns}
+Positive score for computer advantage, negative for human advantage.
+\end{DoxyReturn}
+Scores based on:\+ win/\+lose (+100/\+-\/100), lines of 2/\+3, center control. 
+
+Definition at line \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source_l00211}{211}} of file \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{class_diamond___x___o___board_ab00ea8d7743e15d7d465bbe0812b004c}{is\_win}}(computer\_player))\ \textcolor{keywordflow}{return}\ 100;}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{class_diamond___x___o___board_ab00ea8d7743e15d7d465bbe0812b004c}{is\_win}}(human\_player))\ \textcolor{keywordflow}{return}\ -\/100;}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{int}\ score\ =\ 0;}
+\DoxyCodeLine{00216\ \ \ \ \ score\ +=\ count\_lines(computer\_player,\ 2)\ *\ 5;}
+\DoxyCodeLine{00217\ \ \ \ \ score\ -\/=\ count\_lines(human\_player,\ 2)\ *\ 5;}
+\DoxyCodeLine{00218\ \ \ \ \ score\ +=\ count\_lines(computer\_player,\ 3)\ *\ 20;}
+\DoxyCodeLine{00219\ \ \ \ \ score\ -\/=\ count\_lines(human\_player,\ 3)\ *\ 20;}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{comment}{//\ Center\ control\ (3,3\ is\ the\ new\ center)}}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][3]\ ==\ computer\_player-\/>get\_symbol())\ score\ +=\ 10;}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordflow}{return}\ score;}
+\DoxyCodeLine{00225\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_diamond___x___o___board_ae8554679bb202d83b864fe63fb24c2d8}\index{Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}!find\_best\_move@{find\_best\_move}}
+\index{find\_best\_move@{find\_best\_move}!Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{find\_best\_move()}{find\_best\_move()}}
+{\footnotesize\ttfamily \label{class_diamond___x___o___board_ae8554679bb202d83b864fe63fb24c2d8} 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+find\+\_\+best\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Finds the best move for the computer using minimax algorithm. 
+
+Finds the best move using minimax.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the best \doxylink{class_move}{Move} object for the computer. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Uses depth-\/limited search (depth=5 by default) for performance. 
+\end{DoxyNote}
+
+
+Definition at line \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source_l00230}{230}} of file \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordtype}{int}\ best\_score\ =\ -\/1000;}
+\DoxyCodeLine{00232\ \ \ \ \ Move<char>*\ best\_move\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00233\ \ \ \ \ vector<pair<int,\ int>>\ valid\_positions\ =\ get\_valid\_positions();}
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordtype}{int}\ search\_depth\ =\ 5;}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ pos\ :\ valid\_positions)\ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ pos.first,\ j\ =\ pos.second;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ computer\_player-\/>get\_symbol();}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ score\ =\ \doxymbox{\hyperlink{class_diamond___x___o___board_ababd4fa142e0f2192591ab5440a9f189}{minimax}}(\textcolor{keyword}{false},\ -\/1000,\ 1000,\ search\_depth);}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ blank\_symbol;}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}-\/-\/;}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (score\ >\ best\_score)\ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ best\_score\ =\ score;}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ best\_move\ =\ \textcolor{keyword}{new}\ Move<char>(i,\ j,\ computer\_player-\/>get\_symbol());}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00250\ \ \ \ \ \}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordflow}{if}\ (best\_move\ ==\ \textcolor{keyword}{nullptr}\ \&\&\ !valid\_positions.empty())\ \{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ first\ =\ valid\_positions[0];}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ best\_move\ =\ \textcolor{keyword}{new}\ Move<char>(first.first,\ first.second,\ computer\_player-\/>get\_symbol());}
+\DoxyCodeLine{00255\ \ \ \ \ \}}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordflow}{return}\ best\_move;}
+\DoxyCodeLine{00257\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_diamond___x___o___board_a9c0b09a1dae6087ccd7bcd0162a4d43b}\index{Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_diamond___x___o___board_a9c0b09a1dae6087ccd7bcd0162a4d43b} 
+bool Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determines if the game is over (win or draw). 
+
+Checks if game is over.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player to evaluate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the game has ended, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source_l00145}{145}} of file \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_diamond___x___o___board_ab00ea8d7743e15d7d465bbe0812b004c}{is\_win}}(player)\ ||\ \doxymbox{\hyperlink{class_diamond___x___o___board_a26d9f6a0250eb38fafa401721877cf85}{is\_draw}}(player);}
+\DoxyCodeLine{00147\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_diamond___x___o___board_a26d9f6a0250eb38fafa401721877cf85}\index{Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_diamond___x___o___board_a26d9f6a0250eb38fafa401721877cf85} 
+bool Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+is\+\_\+draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the game has ended in a draw. 
+
+Checks if game is a draw.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all 25 diamond positions are filled and no player has won. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source_l00138}{138}} of file \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 25\ \&\&\ !\doxymbox{\hyperlink{class_diamond___x___o___board_ab00ea8d7743e15d7d465bbe0812b004c}{is\_win}}(player));}
+\DoxyCodeLine{00140\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_diamond___x___o___board_adc47f70144d5e689b4ebe2723d75d3a4}\index{Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_diamond___x___o___board_adc47f70144d5e689b4ebe2723d75d3a4} 
+bool Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+is\+\_\+lose (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the player has lost (opponent has won). 
+
+Checks if player has lost.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if opponent has won, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source_l00125}{125}} of file \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{if}\ (computer\_player\ ==\ \textcolor{keyword}{nullptr}\ ||\ human\_player\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00128\ \ \ \ \ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordflow}{if}\ (player\ ==\ computer\_player)\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_diamond___x___o___board_ab00ea8d7743e15d7d465bbe0812b004c}{is\_win}}(human\_player);}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_diamond___x___o___board_ab00ea8d7743e15d7d465bbe0812b004c}{is\_win}}(computer\_player);}
+\DoxyCodeLine{00133\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_diamond___x___o___board_af660cde17f5ddeedc9cf5122f5ef572a}\index{Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}!is\_terminal@{is\_terminal}}
+\index{is\_terminal@{is\_terminal}!Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_terminal()}{is\_terminal()}}
+{\footnotesize\ttfamily \label{class_diamond___x___o___board_af660cde17f5ddeedc9cf5122f5ef572a} 
+bool Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+is\+\_\+terminal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the current board state is a terminal state. 
+
+Checks if current state is terminal.
+
+\begin{DoxyReturn}{Returns}
+true if game is over (win or all positions filled), false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source_l00152}{152}} of file \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_diamond___x___o___board_ab00ea8d7743e15d7d465bbe0812b004c}{is\_win}}(computer\_player)\ ||\ \doxymbox{\hyperlink{class_diamond___x___o___board_ab00ea8d7743e15d7d465bbe0812b004c}{is\_win}}(human\_player)\ ||\ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 25;}
+\DoxyCodeLine{00154\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_diamond___x___o___board_a7551f19805190a58b67515171fad1399}\index{Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}!is\_valid\_position@{is\_valid\_position}}
+\index{is\_valid\_position@{is\_valid\_position}!Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_position()}{is\_valid\_position()}}
+{\footnotesize\ttfamily \label{class_diamond___x___o___board_a7551f19805190a58b67515171fad1399} 
+bool Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+is\+\_\+valid\+\_\+position (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a position is valid (part of the diamond shape). 
+
+Checks if position is valid.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Row index (0-\/9). \\
+\hline
+{\em y} & Column index (0-\/9). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if position is playable (not \textquotesingle{}\#\textquotesingle{} character). 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source_l00302}{302}} of file \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0\ ||\ x\ >=\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ y\ <\ 0\ ||\ y\ >=\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ !=\ \textcolor{charliteral}{'\#'});}
+\DoxyCodeLine{00305\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_diamond___x___o___board_ab00ea8d7743e15d7d465bbe0812b004c}\index{Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_diamond___x___o___board_ab00ea8d7743e15d7d465bbe0812b004c} 
+bool Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+is\+\_\+win (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if player has won according to diamond game rules. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if player has at least one line of 3 AND one line of 4 in different directions. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source_l00064}{64}} of file \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ sym\ =\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ vector<pair<int,\ int>>\ directions\ =\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \{0,\ 1\},\ \ \ \textcolor{comment}{//\ Horizontal}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \{1,\ 0\},\ \ \ \textcolor{comment}{//\ Vertical}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \{1,\ 1\},\ \ \ \textcolor{comment}{//\ Diagonal\ ↘}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{1,\ -\/1\}\ \ \ \textcolor{comment}{//\ Diagonal\ ↙}}
+\DoxyCodeLine{00072\ \ \ \ \ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ vector<bool>\ found\_three(4,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00075\ \ \ \ \ vector<bool>\ found\_four(4,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}};\ ++i)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}};\ ++j)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_diamond___x___o___board_a7551f19805190a58b67515171fad1399}{is\_valid\_position}}(i,\ j)\ ||\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ !=\ sym)}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ dir\_idx\ =\ 0;\ dir\_idx\ <\ 4;\ ++dir\_idx)\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ dir\ =\ directions[dir\_idx];}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dx\ =\ dir.first,\ dy\ =\ dir.second;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ 3\ in\ line}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ valid\_three\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ 3;\ ++k)\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ni\ =\ i\ +\ k*dx,\ nj\ =\ j\ +\ k*dy;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_diamond___x___o___board_a7551f19805190a58b67515171fad1399}{is\_valid\_position}}(ni,\ nj)\ ||\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[ni][nj]\ !=\ sym)\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ valid\_three\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (valid\_three)\ found\_three[dir\_idx]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ 4\ in\ line}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ valid\_four\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ 4;\ ++k)\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ni\ =\ i\ +\ k*dx,\ nj\ =\ j\ +\ k*dy;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_diamond___x___o___board_a7551f19805190a58b67515171fad1399}{is\_valid\_position}}(ni,\ nj)\ ||\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[ni][nj]\ !=\ sym)\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ valid\_four\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (valid\_four)\ found\_four[dir\_idx]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 4;\ ++i)\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 4;\ ++j)\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ !=\ j\ \&\&\ found\_three[i]\ \&\&\ found\_four[j])\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00120\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_diamond___x___o___board_ababd4fa142e0f2192591ab5440a9f189}\index{Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}!minimax@{minimax}}
+\index{minimax@{minimax}!Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{minimax()}{minimax()}}
+{\footnotesize\ttfamily \label{class_diamond___x___o___board_ababd4fa142e0f2192591ab5440a9f189} 
+int Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+minimax (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+maximizing}{, }\item[{int}]{alpha}{, }\item[{int}]{beta}{, }\item[{int}]{depth}{ = {\ttfamily 3}}\end{DoxyParamCaption})}
+
+
+
+Minimax algorithm with alpha-\/beta pruning and depth limitation. 
+
+Minimax algorithm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+\_\+maximizing} & true if current player is maximizing (computer), false if minimizing (human). \\
+\hline
+{\em alpha} & Alpha value for alpha-\/beta pruning. \\
+\hline
+{\em beta} & Beta value for alpha-\/beta pruning. \\
+\hline
+{\em depth} & Maximum search depth (default 3). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The evaluated score for the current board state. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source_l00262}{262}} of file \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_diamond___x___o___board_af660cde17f5ddeedc9cf5122f5ef572a}{is\_terminal}}()\ ||\ depth\ ==\ 0)\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_diamond___x___o___board_a22b81bb9349a8aa7d8d438154f11223a}{evaluate}}();}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ vector<pair<int,\ int>>\ valid\_positions\ =\ get\_valid\_positions();}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordflow}{if}\ (is\_maximizing)\ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ max\_eval\ =\ -\/1000;}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ pos\ :\ valid\_positions)\ \{}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ pos.first,\ j\ =\ pos.second;}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ computer\_player-\/>get\_symbol();}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ eval\ =\ \doxymbox{\hyperlink{class_diamond___x___o___board_ababd4fa142e0f2192591ab5440a9f189}{minimax}}(\textcolor{keyword}{false},\ alpha,\ beta,\ depth\ -\/\ 1);}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ blank\_symbol;}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}-\/-\/;}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ max\_eval\ =\ max(max\_eval,\ eval);}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ alpha\ =\ max(alpha,\ eval);}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (beta\ <=\ alpha)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ max\_eval;}
+\DoxyCodeLine{00281\ \ \ \ \ \}}
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ min\_eval\ =\ 1000;}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ pos\ :\ valid\_positions)\ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ pos.first,\ j\ =\ pos.second;}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ human\_player-\/>get\_symbol();}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ eval\ =\ \doxymbox{\hyperlink{class_diamond___x___o___board_ababd4fa142e0f2192591ab5440a9f189}{minimax}}(\textcolor{keyword}{true},\ alpha,\ beta,\ depth\ -\/\ 1);}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ blank\_symbol;}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}-\/-\/;}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ min\_eval\ =\ min(min\_eval,\ eval);}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ beta\ =\ min(beta,\ eval);}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (beta\ <=\ alpha)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ min\_eval;}
+\DoxyCodeLine{00296\ \ \ \ \ \}}
+\DoxyCodeLine{00297\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_diamond___x___o___board_a55b6379d42d3f3ce22db217dce69ea22}\index{Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}!set\_players@{set\_players}}
+\index{set\_players@{set\_players}!Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{set\_players()}{set\_players()}}
+{\footnotesize\ttfamily \label{class_diamond___x___o___board_a55b6379d42d3f3ce22db217dce69ea22} 
+void Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+set\+\_\+players (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{comp}{, }\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{human}{}\end{DoxyParamCaption})}
+
+
+
+Sets the player pointers for the board. 
+
+Sets player pointers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em comp} & Pointer to computer player. \\
+\hline
+{\em human} & Pointer to human player. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source_l00159}{159}} of file \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00160\ \ \ \ \ computer\_player\ =\ comp;}
+\DoxyCodeLine{00161\ \ \ \ \ human\_player\ =\ human;}
+\DoxyCodeLine{00162\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_diamond___x___o___board_a08871b61586cbf6d53824cfe38bbf80a}\index{Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Diamond\_X\_O\_Board@{Diamond\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_diamond___x___o___board_a08871b61586cbf6d53824cfe38bbf80a} 
+bool Diamond\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+update\+\_\+board (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the board with a player\textquotesingle{}s move. 
+
+Updates the board with a move.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to \doxylink{class_move}{Move$<$char$>$} object containing move coordinates and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if move is valid and applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source_l00042}{42}} of file \doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp_source}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\doxymbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\doxymbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{char}\ mark\ =\ move-\/>\doxymbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_diamond___x___o___board_a7551f19805190a58b67515171fad1399}{is\_valid\_position}}(x,\ y)\ \&\&\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ ==\ blank\_symbol\ ||\ mark\ ==\ 0))\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mark\ ==\ 0)\ \{\ \textcolor{comment}{//\ Undo\ move}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}-\/-\/;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ blank\_symbol;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Apply\ move}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ toupper(mark);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00059\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_diamond___tic___tac___toe_8h}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}\item 
+\doxymbox{\hyperlink{_diamond___tic___tac___toe_8cpp}{Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}\end{DoxyCompactItemize}

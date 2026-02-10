@@ -1,0 +1,301 @@
+\doxysection{Numerical\+\_\+\+Board Class Reference}
+\hypertarget{class_numerical___board}{}\label{class_numerical___board}\index{Numerical\_Board@{Numerical\_Board}}
+
+
+Represents the Numerical Tic-\/\+Tac-\/\+Toe game board.  
+
+
+
+
+{\ttfamily \+\#include $<$Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h$>$}
+
+Inheritance diagram for Numerical\+\_\+\+Board:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_numerical___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_numerical___board_a4fb0e1b6e368c8b6a591fb1d95b19077}{Numerical\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes a Numerical 3x3 X-\/O board. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_numerical___board_aec925385aaf0b4cafb115c3e7564e1f3}{update\+\_\+board}} (\doxymbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*}move)
+\begin{DoxyCompactList}\small\item\em Updates the board with a player\textquotesingle{}s move. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_numerical___board_a5b78e6577fdb38c26128dcacb4052e0a}{is\+\_\+win}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if the given player has won the game. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_numerical___board_abf72c9bf11b920ea91541b61724d38cc}{is\+\_\+lose}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Checks if the given player has lost the game. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_numerical___board_ab46ba8b9a6a19df5b26621b9073a4aa2}{is\+\_\+draw}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if the game has ended in a draw. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_numerical___board_ab2aadf7495af5b2b014bcd8d7ca67197}{game\+\_\+is\+\_\+over}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Determines if the game is over (win or draw). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_board}{Board$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \doxymbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_board}{Board$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the Numerical Tic-\/\+Tac-\/\+Toe game board. 
+
+This class inherits from the generic {\ttfamily \doxylink{class_board}{Board}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} class and implements the specific logic required for the Numerical Tic-\/\+Tac-\/\+Toe (X-\/O) game, including move updates, win/\+draw detection, and display functions.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_numerical___tic___tac___toe_8h_source_l00026}{26}} of file \doxymbox{\hyperlink{_numerical___tic___tac___toe_8h_source}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_numerical___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_numerical___board_a4fb0e1b6e368c8b6a591fb1d95b19077}\index{Numerical\_Board@{Numerical\_Board}!Numerical\_Board@{Numerical\_Board}}
+\index{Numerical\_Board@{Numerical\_Board}!Numerical\_Board@{Numerical\_Board}}
+\doxysubsubsection{\texorpdfstring{Numerical\_Board()}{Numerical\_Board()}}
+{\footnotesize\ttfamily \label{class_numerical___board_a4fb0e1b6e368c8b6a591fb1d95b19077} 
+Numerical\+\_\+\+Board::\+\+Numerical\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor that initializes a Numerical 3x3 X-\/O board. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source_l00013}{13}} of file \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}(3,\ 3)\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}.assign(3,\ vector<int>(3,\ 0));\ \textcolor{comment}{//\ initialize\ 3x3\ with\ zeros}}
+\DoxyCodeLine{00015\ \ \ \ \ used\_numbers.clear();}
+\DoxyCodeLine{00016\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_numerical___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_numerical___board_ab2aadf7495af5b2b014bcd8d7ca67197}\index{Numerical\_Board@{Numerical\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Numerical\_Board@{Numerical\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_numerical___board_ab2aadf7495af5b2b014bcd8d7ca67197} 
+bool Numerical\+\_\+\+Board::\+game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determines if the game is over (win or draw). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player to evaluate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the game has ended, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ int $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source_l00059}{59}} of file \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_numerical___board_a5b78e6577fdb38c26128dcacb4052e0a}{is\_win}}(player)\ ||\ \doxymbox{\hyperlink{class_numerical___board_ab46ba8b9a6a19df5b26621b9073a4aa2}{is\_draw}}(player);}
+\DoxyCodeLine{00061\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_numerical___board_ab46ba8b9a6a19df5b26621b9073a4aa2}\index{Numerical\_Board@{Numerical\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Numerical\_Board@{Numerical\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_numerical___board_ab46ba8b9a6a19df5b26621b9073a4aa2} 
+bool Numerical\+\_\+\+Board::\+is\+\_\+draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the game has ended in a draw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all cells are filled and no player has won, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ int $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source_l00055}{55}} of file \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 9\ \&\&\ !\doxymbox{\hyperlink{class_numerical___board_a5b78e6577fdb38c26128dcacb4052e0a}{is\_win}}(player));}
+\DoxyCodeLine{00057\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_numerical___board_abf72c9bf11b920ea91541b61724d38cc}\index{Numerical\_Board@{Numerical\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Numerical\_Board@{Numerical\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_numerical___board_abf72c9bf11b920ea91541b61724d38cc} 
+bool Numerical\+\_\+\+Board::\+is\+\_\+lose (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the given player has lost the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns false (not used in Numerical X-\/O logic). 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ int $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_numerical___tic___tac___toe_8h_source_l00055}{55}} of file \doxymbox{\hyperlink{_numerical___tic___tac___toe_8h_source}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+
+\end{DoxyCode}
+\Hypertarget{class_numerical___board_a5b78e6577fdb38c26128dcacb4052e0a}\index{Numerical\_Board@{Numerical\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Numerical\_Board@{Numerical\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_numerical___board_a5b78e6577fdb38c26128dcacb4052e0a} 
+bool Numerical\+\_\+\+Board::\+is\+\_\+win (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the given player has won the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the player has a winning line, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ int $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source_l00040}{40}} of file \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ Check\ rows\ and\ columns}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}};\ ++i)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][0]\ +\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][1]\ +\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][2])\ ==\ 15\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][0]\ !=\ 0\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][1]\ !=\ 0\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][2]\ !=\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][i]\ +\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][i]\ +\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][i])\ ==\ 15\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][i]\ !=\ 0\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][i]\ !=\ 0\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][i]\ !=\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ diagonals}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][0]\ +\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1]\ +\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][2])\ ==\ 15\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][0]\ !=\ 0\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1]\ !=\ 0\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][2]\ !=\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][2]\ +\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1]\ +\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][0])\ ==\ 15\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][2]\ !=\ 0\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1]\ !=\ 0\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][0]\ !=\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_numerical___board_aec925385aaf0b4cafb115c3e7564e1f3}\index{Numerical\_Board@{Numerical\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Numerical\_Board@{Numerical\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_numerical___board_aec925385aaf0b4cafb115c3e7564e1f3} 
+bool Numerical\+\_\+\+Board::\+update\+\_\+board (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the board with a player\textquotesingle{}s move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to a \doxylink{class_move}{Move$<$char$>$} object containing move coordinates and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid and successfully applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ int $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source_l00022}{22}} of file \doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp_source}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\doxymbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\doxymbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ num\ =\ move-\/>\doxymbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0\ ||\ x\ >=\ 3\ ||\ y\ <\ 0\ ||\ y\ >=\ 3)}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Cell\ must\ be\ empty\ and\ number\ must\ not\ be\ reused}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ !=\ 0\ ||\ used\_numbers.count(num))}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ num;}
+\DoxyCodeLine{00035\ \ \ \ \ used\_numbers.insert(num);}
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_numerical___tic___tac___toe_8h}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}\item 
+\doxymbox{\hyperlink{_numerical___tic___tac___toe_8cpp}{Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}\end{DoxyCompactItemize}

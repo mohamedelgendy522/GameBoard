@@ -1,0 +1,89 @@
+\doxysection{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp File Reference}
+\hypertarget{_word__tic__tac__toe_8cpp}{}\label{_word__tic__tac__toe_8cpp}\index{Word\_tic\_tac\_toe.cpp@{Word\_tic\_tac\_toe.cpp}}
+
+
+Implements the Word Tic-\/\+Tac-\/\+Toe board and \doxylink{class_u_i}{UI} logic.  
+
+
+{\ttfamily \+\#include "{}Word\+\_\+tic\+\_\+tac\+\_\+toe.\+h"{}}\newline
+{\ttfamily \+\#include $<$cstdlib$>$}\newline
+{\ttfamily \+\#include $<$ctime$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$iomanip$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_adb94773229c162b29c55e45a5e7a1b4e}{load\+\_\+dict}} ()
+\begin{DoxyCompactList}\small\item\em Loads dictionary words from a file into the global hash set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unordered\+\_\+set$<$ string $>$ \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}{dict}}
+\begin{DoxyCompactList}\small\item\em Global dictionary storing valid 3-\/letter words. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the Word Tic-\/\+Tac-\/\+Toe board and \doxylink{class_u_i}{UI} logic. 
+
+This file contains:\+
+\begin{DoxyItemize}
+\item Dictionary loading ~\newline
+
+\item \doxylink{class_word___board}{Word\+\_\+\+Board} implementation (move handling, win/\+draw detection) ~\newline
+
+\item \doxylink{class_word___u_i}{Word\+\_\+\+UI} implementation (player creation, move input, AI logic, board printing) 
+\end{DoxyItemize}
+
+Definition in file \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_word__tic__tac__toe_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_word__tic__tac__toe_8cpp_adb94773229c162b29c55e45a5e7a1b4e}\index{Word\_tic\_tac\_toe.cpp@{Word\_tic\_tac\_toe.cpp}!load\_dict@{load\_dict}}
+\index{load\_dict@{load\_dict}!Word\_tic\_tac\_toe.cpp@{Word\_tic\_tac\_toe.cpp}}
+\doxysubsubsection{\texorpdfstring{load\_dict()}{load\_dict()}}
+{\footnotesize\ttfamily \label{_word__tic__tac__toe_8cpp_adb94773229c162b29c55e45a5e7a1b4e} 
+void load\+\_\+dict (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loads dictionary words from a file into the global hash set. 
+
+Reads words from "{}dic.\+txt"{} and stores each into \doxylink{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}{dict}. This allows O(1) lookup for checking valid words. 
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source_l00032}{32}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ ifstream\ fin(\textcolor{stringliteral}{"{}dic.txt"{}});}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{string}\ w;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{while}\ (fin\ >>\ w)\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}{dict}}.insert(w);}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-var-members}
+\Hypertarget{_word__tic__tac__toe_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}\index{Word\_tic\_tac\_toe.cpp@{Word\_tic\_tac\_toe.cpp}!dict@{dict}}
+\index{dict@{dict}!Word\_tic\_tac\_toe.cpp@{Word\_tic\_tac\_toe.cpp}}
+\doxysubsubsection{\texorpdfstring{dict}{dict}}
+{\footnotesize\ttfamily \label{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f} 
+unordered\+\_\+set$<$string$>$ dict}
+
+
+
+Global dictionary storing valid 3-\/letter words. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source_l00024}{24}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}.
+

@@ -1,0 +1,281 @@
+\doxysection{Four\+\_\+\+In\+\_\+\+Row.\+cpp File Reference}
+\hypertarget{_four___in___row_8cpp}{}\label{_four___in___row_8cpp}\index{Four\_In\_Row.cpp@{Four\_In\_Row.cpp}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$iomanip$>$}\newline
+{\ttfamily \+\#include $<$cctype$>$}\newline
+{\ttfamily \+\#include "{}Four\+\_\+\+In\+\_\+\+Row.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{_four___in___row_8cpp_ae759f4d4b7f5257981d01fd0dad4e7a8}{is\+\_\+winning}} (const vector$<$ vector$<$ char $>$ $>$ \&b, char sym)
+\begin{DoxyCompactList}\small\item\em Checks whether a given player symbol achieves a winning 4-\/in-\/a-\/row pattern. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{_four___in___row_8cpp_a173061e7395962320eee84590bd0db4f}{create\+\_\+threat}} (const vector$<$ vector$<$ char $>$ $>$ \&b, char sym)
+\begin{DoxyCompactList}\small\item\em Detects whether a move creates an immediate 3-\/in-\/a-\/row threat. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{_four___in___row_8cpp_a8abbc3982c86aa6e0a4f16cc11c8fc6b}{two\+\_\+in\+\_\+row}} (const vector$<$ vector$<$ char $>$ $>$ \&b, int r, int c, char opp)
+\begin{DoxyCompactList}\small\item\em Checks whether placing a piece at (r,c) gives the opponent a dangerous 2-\/in-\/a-\/row extension that should be blocked. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{_four___in___row_8cpp_af9a8dd81a7ce289e55e01cc43ed8d2cb}{get\+\_\+bottom\+\_\+most\+\_\+cell}} (const vector$<$ vector$<$ char $>$ $>$ \&b, int \doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}})
+\begin{DoxyCompactList}\small\item\em Gets the lowest available row in a column according to gravity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_four___in___row_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_four___in___row_8cpp_a173061e7395962320eee84590bd0db4f}\index{Four\_In\_Row.cpp@{Four\_In\_Row.cpp}!create\_threat@{create\_threat}}
+\index{create\_threat@{create\_threat}!Four\_In\_Row.cpp@{Four\_In\_Row.cpp}}
+\doxysubsubsection{\texorpdfstring{create\_threat()}{create\_threat()}}
+{\footnotesize\ttfamily \label{_four___in___row_8cpp_a173061e7395962320eee84590bd0db4f} 
+bool create\+\_\+threat (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{b}{, }\item[{char}]{sym}{}\end{DoxyParamCaption})}
+
+
+
+Detects whether a move creates an immediate 3-\/in-\/a-\/row threat. 
+
+A "{}threat"{} means:\+ 3 symbols + 1 empty cell where gravity allows a winning move.
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & The board matrix. \\
+\hline
+{\em sym} & The player\textquotesingle{}s symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the symbol has a valid 3-\/in-\/a-\/row setup. 
+
+false Otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_four___in___row_8cpp_source_l00260}{260}} of file \doxymbox{\hyperlink{_four___in___row_8cpp_source}{Four\+\_\+\+In\+\_\+\+Row.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordtype}{char}\ blank\_symbol\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordtype}{int}\ R\ =\ 6;}
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{keywordtype}{int}\ C\ =\ 7;}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keyword}{auto}\ gravity\_ok\ =\ [\&](\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ c)\ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (r\ ==\ R\ -\/\ 1\ ||\ b[r\ +\ 1][c]\ !=\ blank\_symbol);}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{comment}{//\ Horizontal}}
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ r\ =\ 0;\ r\ <\ R;\ r++)\ \{}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ c\ =\ 0;\ c\ <=\ C\ -\/\ 4;\ c++)\ \{}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\_sym\ =\ 0;}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ empty\_r\ =\ -\/1,\ empty\_c\ =\ -\/1;}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ 4;\ k++)\ \{}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b[r][c\ +\ k]\ ==\ sym)\ count\_sym++;}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (b[r][c\ +\ k]\ ==\ blank\_symbol)\ empty\_r\ =\ r,\ empty\_c\ =\ c\ +\ k;}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (count\_sym\ ==\ 3\ \&\&\ empty\_r\ !=\ -\/1\ \&\&\ gravity\_ok(empty\_r,\ empty\_c))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00281\ \ \ \ \ \}}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{comment}{//\ Vertical}}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ r\ =\ 0;\ r\ <=\ R\ -\/\ 4;\ r++)\ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ c\ =\ 0;\ c\ <\ C;\ c++)\ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\_sym\ =\ 0;}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ empty\_r\ =\ -\/1,\ empty\_c\ =\ -\/1;}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ 4;\ k++)\ \{}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b[r\ +\ k][c]\ ==\ sym)\ count\_sym++;}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (b[r\ +\ k][c]\ ==\ blank\_symbol)\ empty\_r\ =\ r\ +\ k,\ empty\_c\ =\ c;}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (count\_sym\ ==\ 3\ \&\&\ empty\_r\ !=\ -\/1\ \&\&\ gravity\_ok(empty\_r,\ empty\_c))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00294\ \ \ \ \ \}}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{comment}{//\ Main\ diagonal}}
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ r\ =\ 0;\ r\ <=\ R\ -\/\ 4;\ r++)\ \{}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ c\ =\ 0;\ c\ <=\ C\ -\/\ 4;\ c++)\ \{}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\_sym\ =\ 0;}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ empty\_r\ =\ -\/1,\ empty\_c\ =\ -\/1;}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ 4;\ k++)\ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b[r\ +\ k][c\ +\ k]\ ==\ sym)\ count\_sym++;}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (b[r\ +\ k][c\ +\ k]\ ==\ blank\_symbol)\ empty\_r\ =\ r\ +\ k,\ empty\_c\ =\ c\ +\ k;}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (count\_sym\ ==\ 3\ \&\&\ empty\_r\ !=\ -\/1\ \&\&\ gravity\_ok(empty\_r,\ empty\_c))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00307\ \ \ \ \ \}}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \ \ \ \ \textcolor{comment}{//\ Anti\ diagonal}}
+\DoxyCodeLine{00310\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ r\ =\ 0;\ r\ <=\ R\ -\/\ 4;\ r++)\ \{}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ c\ =\ 3;\ c\ <\ C;\ c++)\ \{}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\_sym\ =\ 0;}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ empty\_r\ =\ -\/1,\ empty\_c\ =\ -\/1;}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ 4;\ k++)\ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b[r\ +\ k][c\ -\/\ k]\ ==\ sym)\ count\_sym++;}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (b[r\ +\ k][c\ -\/\ k]\ ==\ blank\_symbol)\ empty\_r\ =\ r\ +\ k,\ empty\_c\ =\ c\ -\/\ k;}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (count\_sym\ ==\ 3\ \&\&\ empty\_r\ !=\ -\/1\ \&\&\ gravity\_ok(empty\_r,\ empty\_c))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00320\ \ \ \ \ \}}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00323\ \}}
+
+\end{DoxyCode}
+\Hypertarget{_four___in___row_8cpp_af9a8dd81a7ce289e55e01cc43ed8d2cb}\index{Four\_In\_Row.cpp@{Four\_In\_Row.cpp}!get\_bottom\_most\_cell@{get\_bottom\_most\_cell}}
+\index{get\_bottom\_most\_cell@{get\_bottom\_most\_cell}!Four\_In\_Row.cpp@{Four\_In\_Row.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_bottom\_most\_cell()}{get\_bottom\_most\_cell()}}
+{\footnotesize\ttfamily \label{_four___in___row_8cpp_af9a8dd81a7ce289e55e01cc43ed8d2cb} 
+int get\+\_\+bottom\+\_\+most\+\_\+cell (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{b}{, }\item[{int}]{col}{}\end{DoxyParamCaption})}
+
+
+
+Gets the lowest available row in a column according to gravity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & The board matrix. \\
+\hline
+{\em \doxylink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}} & The column index (0–6). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Row index of the lowest empty cell, or -\/1 if the column is full. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_four___in___row_8cpp_source_l00355}{355}} of file \doxymbox{\hyperlink{_four___in___row_8cpp_source}{Four\+\_\+\+In\+\_\+\+Row.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ r\ =\ 5;\ r\ >=\ 0;\ r-\/-\/)}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b[r][\doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}]\ ==\ \textcolor{charliteral}{'.'})\ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{00358\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00359\ \}}
+
+\end{DoxyCode}
+\Hypertarget{_four___in___row_8cpp_ae759f4d4b7f5257981d01fd0dad4e7a8}\index{Four\_In\_Row.cpp@{Four\_In\_Row.cpp}!is\_winning@{is\_winning}}
+\index{is\_winning@{is\_winning}!Four\_In\_Row.cpp@{Four\_In\_Row.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_winning()}{is\_winning()}}
+{\footnotesize\ttfamily \label{_four___in___row_8cpp_ae759f4d4b7f5257981d01fd0dad4e7a8} 
+bool is\+\_\+winning (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{b}{, }\item[{char}]{sym}{}\end{DoxyParamCaption})}
+
+
+
+Checks whether a given player symbol achieves a winning 4-\/in-\/a-\/row pattern. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & The board matrix. \\
+\hline
+{\em sym} & The player\textquotesingle{}s symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the board contains a winning 4-\/in-\/a-\/row for this symbol. 
+
+false Otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_four___in___row_8cpp_source_l00225}{225}} of file \doxymbox{\hyperlink{_four___in___row_8cpp_source}{Four\+\_\+\+In\+\_\+\+Row.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{int}\ R\ =\ 6;}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordtype}{int}\ C\ =\ 7;}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{comment}{//\ Horizontal}}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ R;\ i++)}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ C\ -\/\ 3;\ j++)}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b[i][j]\ ==\ sym\ \&\&\ b[i][j\ +\ 1]\ ==\ sym\ \&\&}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b[i][j\ +\ 2]\ ==\ sym\ \&\&\ b[i][j\ +\ 3]\ ==\ sym)}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{comment}{//\ Vertical}}
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ R\ -\/\ 3;\ i++)}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ C;\ j++)}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b[i][j]\ ==\ sym\ \&\&\ b[i\ +\ 1][j]\ ==\ sym\ \&\&}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b[i\ +\ 2][j]\ ==\ sym\ \&\&\ b[i\ +\ 3][j]\ ==\ sym)}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{comment}{//\ Main\ diagonal}}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ R\ -\/\ 3;\ i++)}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ C\ -\/\ 3;\ j++)}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b[i][j]\ ==\ sym\ \&\&\ b[i\ +\ 1][j\ +\ 1]\ ==\ sym\ \&\&}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b[i\ +\ 2][j\ +\ 2]\ ==\ sym\ \&\&\ b[i\ +\ 3][j\ +\ 3]\ ==\ sym)}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{comment}{//\ Anti\ diagonal}}
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ R\ -\/\ 3;\ i++)}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 3;\ j\ <\ C;\ j++)}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b[i][j]\ ==\ sym\ \&\&\ b[i\ +\ 1][j\ -\/\ 1]\ ==\ sym\ \&\&}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b[i\ +\ 2][j\ -\/\ 2]\ ==\ sym\ \&\&\ b[i\ +\ 3][j\ -\/\ 3]\ ==\ sym)}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00258\ \}}
+
+\end{DoxyCode}
+\Hypertarget{_four___in___row_8cpp_a8abbc3982c86aa6e0a4f16cc11c8fc6b}\index{Four\_In\_Row.cpp@{Four\_In\_Row.cpp}!two\_in\_row@{two\_in\_row}}
+\index{two\_in\_row@{two\_in\_row}!Four\_In\_Row.cpp@{Four\_In\_Row.cpp}}
+\doxysubsubsection{\texorpdfstring{two\_in\_row()}{two\_in\_row()}}
+{\footnotesize\ttfamily \label{_four___in___row_8cpp_a8abbc3982c86aa6e0a4f16cc11c8fc6b} 
+bool two\+\_\+in\+\_\+row (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{b}{, }\item[{int}]{r}{, }\item[{int}]{c}{, }\item[{char}]{opp}{}\end{DoxyParamCaption})}
+
+
+
+Checks whether placing a piece at (r,c) gives the opponent a dangerous 2-\/in-\/a-\/row extension that should be blocked. 
+
+This is used by the AI to avoid giving the opponent setups.
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & The board matrix. \\
+\hline
+{\em r} & Row of the tested cell. \\
+\hline
+{\em c} & Column of the tested cell. \\
+\hline
+{\em opp} & Opponent\textquotesingle{}s symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If this move enables opponent 2-\/in-\/a-\/row. 
+
+false Otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_four___in___row_8cpp_source_l00324}{324}} of file \doxymbox{\hyperlink{_four___in___row_8cpp_source}{Four\+\_\+\+In\+\_\+\+Row.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00325\ \ \ \ \ \textcolor{comment}{//\ A\ defensive\ way\ to\ avoid\ giving\ opponent\ setup}}
+\DoxyCodeLine{00326\ \ \ \ \ }
+\DoxyCodeLine{00327\ \ \ \ \ \textcolor{keywordtype}{int}\ R\ =\ 6,\ C\ =\ 7;}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{comment}{//\ Horizontal}}
+\DoxyCodeLine{00330\ \ \ \ \ \textcolor{keywordtype}{int}\ left\ =\ 0,\ right\ =\ 0;}
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ c\ -\/\ 1;\ j\ >=\ 0\ \&\&\ b[r][j]\ ==\ opp;\ j-\/-\/)\ left++;}
+\DoxyCodeLine{00332\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ c\ +\ 1;\ j\ <\ C\ \&\&\ b[r][j]\ ==\ opp;\ j++)\ right++;}
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{keywordflow}{if}\ (left\ +\ right\ >=\ 2)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{comment}{//\ Vertical}}
+\DoxyCodeLine{00336\ \ \ \ \ \textcolor{keywordtype}{int}\ down\ =\ 0;}
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ r\ +\ 1;\ i\ <\ R\ \&\&\ b[i][c]\ ==\ opp;\ i++)\ down++;}
+\DoxyCodeLine{00338\ \ \ \ \ \textcolor{keywordflow}{if}\ (down\ >=\ 2)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00340\ \ \ \ \ \textcolor{comment}{//\ Main\ diagonal\ }}
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{keywordtype}{int}\ diagonal\_down\ =\ 0,\ diagonal\_up\ =\ 0;}
+\DoxyCodeLine{00342\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ r\ +\ 1,\ j\ =\ c\ +\ 1;\ i\ <\ R\ \&\&\ j\ <\ C\ \&\&\ b[i][j]\ ==\ opp;\ i++,\ j++)\ diagonal\_down++;}
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ r\ -\/\ 1,\ j\ =\ c\ -\/\ 1;\ i\ >=\ 0\ \&\&\ j\ >=\ 0\ \&\&\ b[i][j]\ ==\ opp;\ i-\/-\/,\ j-\/-\/)\ diagonal\_up++;}
+\DoxyCodeLine{00344\ \ \ \ \ \textcolor{keywordflow}{if}\ (diagonal\_down\ +\ diagonal\_up\ >=\ 2)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00346\ \ \ \ \ \textcolor{comment}{//\ Anti\ diagonal}}
+\DoxyCodeLine{00347\ \ \ \ \ \textcolor{keywordtype}{int}\ anti\_down\ =\ 0,\ anti\_up\ =\ 0;}
+\DoxyCodeLine{00348\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ r\ +\ 1,\ j\ =\ c\ -\/\ 1;\ i\ <\ R\ \&\&\ j\ >=\ 0\ \&\&\ b[i][j]\ ==\ opp;\ i++,\ j-\/-\/)\ anti\_down++;}
+\DoxyCodeLine{00349\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ r\ -\/\ 1,\ j\ =\ c\ +\ 1;\ i\ >=\ 0\ \&\&\ j\ <\ C\ \&\&\ b[i][j]\ ==\ opp;\ i-\/-\/,\ j++)\ anti\_up++;}
+\DoxyCodeLine{00350\ \ \ \ \ \textcolor{keywordflow}{if}\ (anti\_down\ +\ anti\_up\ >=\ 2)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00352\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00353\ \}}
+
+\end{DoxyCode}

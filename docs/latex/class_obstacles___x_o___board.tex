@@ -1,0 +1,374 @@
+\doxysection{Obstacles\+\_\+\+XO\+\_\+\+Board Class Reference}
+\hypertarget{class_obstacles___x_o___board}{}\label{class_obstacles___x_o___board}\index{Obstacles\_XO\_Board@{Obstacles\_XO\_Board}}
+
+
+Represents the Obstacles Tic-\/\+Tac-\/\+Toe game board.  
+
+
+
+
+{\ttfamily \+\#include $<$Obstacles\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h$>$}
+
+Inheritance diagram for Obstacles\+\_\+\+XO\+\_\+\+Board:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_obstacles___x_o___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_obstacles___x_o___board_a3e336da3597cad2168744be3d3bf8294}{Obstacles\+\_\+\+XO\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes a 6x6 Obstacle X-\/O board. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_obstacles___x_o___board_a3520ce8cd45d12edc02ebbdfc8827013}{update\+\_\+board}} (\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move)
+\begin{DoxyCompactList}\small\item\em Updates the board with a player\textquotesingle{}s move. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_obstacles___x_o___board_af87aa4c90181835037636e1d43c349ed}{is\+\_\+win}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if the given player has won the game. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_obstacles___x_o___board_aac0765d17e041b8d6ebc97ebf3e0ce36}{is\+\_\+lose}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Checks if the given player has lost the game. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_obstacles___x_o___board_acca6c3d042f40540ec89f4119a8d809f}{is\+\_\+draw}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if the game has ended in a draw. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_obstacles___x_o___board_a2679a478c779c15846b232de888342aa}{game\+\_\+is\+\_\+over}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Determines if the game is over (win or draw). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \doxymbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the Obstacles Tic-\/\+Tac-\/\+Toe game board. 
+
+This class inherits from the generic {\ttfamily \doxylink{class_board}{Board}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} class and implements the specific logic required for the Obstacles Tic-\/\+Tac-\/\+Toe (X-\/O) game, including move updates, win/\+draw detection, and display functions.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_obstacles___tic___tac___toe_8h_source_l00025}{25}} of file \doxymbox{\hyperlink{_obstacles___tic___tac___toe_8h_source}{Obstacles\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_obstacles___x_o___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_obstacles___x_o___board_a3e336da3597cad2168744be3d3bf8294}\index{Obstacles\_XO\_Board@{Obstacles\_XO\_Board}!Obstacles\_XO\_Board@{Obstacles\_XO\_Board}}
+\index{Obstacles\_XO\_Board@{Obstacles\_XO\_Board}!Obstacles\_XO\_Board@{Obstacles\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{Obstacles\_XO\_Board()}{Obstacles\_XO\_Board()}}
+{\footnotesize\ttfamily \label{class_obstacles___x_o___board_a3e336da3597cad2168744be3d3bf8294} 
+Obstacles\+\_\+\+XO\+\_\+\+Board::\+\+Obstacles\+\_\+\+XO\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor that initializes a 6x6 Obstacle X-\/O board. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_obstacles___tic___tac___toe_8cpp_source_l00011}{11}} of file \doxymbox{\hyperlink{_obstacles___tic___tac___toe_8cpp_source}{Obstacles\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}(6,\ 6)\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ Initialize\ all\ cells\ with\ blank\_symbol}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}\ :\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}})}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ cell\ :\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}})}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ cell\ =\ blank\_symbol;}
+\DoxyCodeLine{00016\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_obstacles___x_o___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_obstacles___x_o___board_a2679a478c779c15846b232de888342aa}\index{Obstacles\_XO\_Board@{Obstacles\_XO\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Obstacles\_XO\_Board@{Obstacles\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_obstacles___x_o___board_a2679a478c779c15846b232de888342aa} 
+bool Obstacles\+\_\+\+XO\+\_\+\+Board::\+game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determines if the game is over (win or draw). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player to evaluate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the game has ended, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_obstacles___tic___tac___toe_8cpp_source_l00124}{124}} of file \doxymbox{\hyperlink{_obstacles___tic___tac___toe_8cpp_source}{Obstacles\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_obstacles___x_o___board_af87aa4c90181835037636e1d43c349ed}{is\_win}}(player)\ ||\ \doxymbox{\hyperlink{class_obstacles___x_o___board_acca6c3d042f40540ec89f4119a8d809f}{is\_draw}}(player);}
+\DoxyCodeLine{00126\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_obstacles___x_o___board_acca6c3d042f40540ec89f4119a8d809f}\index{Obstacles\_XO\_Board@{Obstacles\_XO\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Obstacles\_XO\_Board@{Obstacles\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_obstacles___x_o___board_acca6c3d042f40540ec89f4119a8d809f} 
+bool Obstacles\+\_\+\+XO\+\_\+\+Board::\+is\+\_\+draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the game has ended in a draw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all cells are filled and no player has won, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_obstacles___tic___tac___toe_8cpp_source_l00111}{111}} of file \doxymbox{\hyperlink{_obstacles___tic___tac___toe_8cpp_source}{Obstacles\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//\ Board\ is\ full\ and\ no\ winner}}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_obstacles___x_o___board_af87aa4c90181835037636e1d43c349ed}{is\_win}}(p))\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}\ :\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}})}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ cell\ :\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}})}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cell\ ==\ blank\_symbol)}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00120\ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00122\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_obstacles___x_o___board_aac0765d17e041b8d6ebc97ebf3e0ce36}\index{Obstacles\_XO\_Board@{Obstacles\_XO\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Obstacles\_XO\_Board@{Obstacles\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_obstacles___x_o___board_aac0765d17e041b8d6ebc97ebf3e0ce36} 
+bool Obstacles\+\_\+\+XO\+\_\+\+Board::\+is\+\_\+lose (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the given player has lost the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns false (not used in Obstacles X-\/O logic). 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_obstacles___tic___tac___toe_8h_source_l00054}{54}} of file \doxymbox{\hyperlink{_obstacles___tic___tac___toe_8h_source}{Obstacles\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+
+\end{DoxyCode}
+\Hypertarget{class_obstacles___x_o___board_af87aa4c90181835037636e1d43c349ed}\index{Obstacles\_XO\_Board@{Obstacles\_XO\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Obstacles\_XO\_Board@{Obstacles\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_obstacles___x_o___board_af87aa4c90181835037636e1d43c349ed} 
+bool Obstacles\+\_\+\+XO\+\_\+\+Board::\+is\+\_\+win (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the given player has won the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the player has a winning line, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_obstacles___tic___tac___toe_8cpp_source_l00071}{71}} of file \doxymbox{\hyperlink{_obstacles___tic___tac___toe_8cpp_source}{Obstacles\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ sym\ =\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{auto}\ all\_equal\ =\ [\&](\textcolor{keywordtype}{char}\ a,\ \textcolor{keywordtype}{char}\ b,\ \textcolor{keywordtype}{char}\ c,\ \textcolor{keywordtype}{char}\ d)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a\ ==\ b\ \&\&\ b\ ==\ c\ \&\&\ c\ ==\ d\ \&\&\ a\ !=\ blank\_symbol\ \&\&\ a\ !=\ obstacles;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//\ Check\ rows}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 5;\ i\ >=\ 0;\ -\/-\/i)\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][3])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][0]\ ==\ sym)\ ||}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][3],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][4])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][1]\ ==\ sym)\ ||}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][3],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][4],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][5])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][2]\ ==\ sym))}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//\ Check\ columns}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 6;\ ++i)\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][i])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][i]\ ==\ sym)\ ||}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][i])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][i]\ ==\ sym)\ ||}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[5][i])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][i]\ ==\ sym))}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//\ Check\ Main\ diagonal\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 3;\ i\ <\ 6;\ ++i)\ \{\ \ \ \ \ \ \textcolor{comment}{//\ Row}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 3;\ ++j)\ \{\ \ \textcolor{comment}{//\ Column}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ -\/\ 1][j\ +\ 1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ -\/\ 2][j\ +\ 2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ -\/\ 3][j\ +\ 3])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ sym)}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//\ Check\ Anti\ diagonal\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 3;\ i\ <\ 6;\ ++i)\ \{\ \ \ \ \ \ \textcolor{comment}{//\ Row}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 3;\ j\ <\ 6;\ ++j)\ \{\ \ \textcolor{comment}{//\ Column}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ -\/\ 1][j\ -\/\ 1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ -\/\ 2][j\ -\/\ 2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ -\/\ 3][j\ -\/\ 3])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ sym)}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00110\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_obstacles___x_o___board_a3520ce8cd45d12edc02ebbdfc8827013}\index{Obstacles\_XO\_Board@{Obstacles\_XO\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Obstacles\_XO\_Board@{Obstacles\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_obstacles___x_o___board_a3520ce8cd45d12edc02ebbdfc8827013} 
+bool Obstacles\+\_\+\+XO\+\_\+\+Board::\+update\+\_\+board (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the board with a player\textquotesingle{}s move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to a \doxylink{class_move}{Move$<$char$>$} object containing move coordinates and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid and successfully applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_obstacles___tic___tac___toe_8cpp_source_l00017}{17}} of file \doxymbox{\hyperlink{_obstacles___tic___tac___toe_8cpp_source}{Obstacles\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\doxymbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\doxymbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{char}\ mark\ =\ move-\/>\doxymbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{char}\ obstacles\ =\ \textcolor{charliteral}{'\#'};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ obs1\_x\ =\ rand()\ \%\ \doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\_rows}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ obs1\_y\ =\ rand()\ \%\ \doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\_columns}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ obs2\_x\ =\ rand()\ \%\ \doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\_rows}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ obs2\_y\ =\ rand()\ \%\ \doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\_columns}}();}
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ obs1\_valid\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Check\ the\ validation\ of\ the\ first\ obstacle\ move}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ obs2\_valid\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Check\ the\ validation\ of\ the\ second\ obstacle\ move}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Validate\ move\ and\ apply\ if\ valid}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(x\ <\ 0\ ||\ x\ >=\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ y\ <\ 0\ ||\ y\ >=\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})\ \&\&}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ ==\ blank\_symbol\ ||\ mark\ ==\ 0))\ \{}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mark\ ==\ 0)\ \{\ \textcolor{comment}{//\ Undo\ move}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}-\/-\/;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ blank\_symbol;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Apply\ move}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ toupper(mark);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[obs1\_x][obs1\_y]\ !=\ blank\_symbol)\ obs1\_valid\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ Validate\ the\ first\ obstacle\ random\ move}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (obs1\_valid)\ \{\ \textcolor{comment}{//\ Loop\ until\ the\ move\ is\ valid}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ obs1\_x\ =\ rand()\ \%\ \doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\_rows}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ obs1\_y\ =\ rand()\ \%\ \doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\_columns}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[obs1\_x][obs1\_y]\ ==\ blank\_symbol)\ obs1\_valid\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[obs2\_x][obs2\_y]\ !=\ blank\_symbol)\ obs2\_valid\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ Validate\ the\ second\ obstacle\ random\ move}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (obs2\_valid)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ obs2\_x\ =\ rand()\ \%\ \doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\_rows}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ obs2\_y\ =\ rand()\ \%\ \doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\_columns}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[obs2\_x][obs2\_y]\ ==\ blank\_symbol)\ obs2\_valid\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mark\ ==\ \textcolor{charliteral}{'O'})\ \{\ \textcolor{comment}{//\ Apply\ the\ 2\ obstacles\ after\ every\ round\ (one\ turn\ for\ each\ player)}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[obs1\_x][obs1\_y]\ =\ obstacles;\ \textcolor{comment}{//\ Apply\ the\ first\ obstacle\ move}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[obs2\_x][obs2\_y]\ =\ obstacles;\ \textcolor{comment}{//\ Apply\ the\ second\ obstacle\ move}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00070\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_obstacles___tic___tac___toe_8h}{Obstacles\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}\item 
+\doxymbox{\hyperlink{_obstacles___tic___tac___toe_8cpp}{Obstacles\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}\end{DoxyCompactItemize}

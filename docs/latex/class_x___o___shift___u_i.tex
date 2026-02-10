@@ -1,0 +1,255 @@
+\doxysection{X\+\_\+\+O\+\_\+\+Shift\+\_\+\+UI Class Reference}
+\hypertarget{class_x___o___shift___u_i}{}\label{class_x___o___shift___u_i}\index{X\_O\_Shift\_UI@{X\_O\_Shift\_UI}}
+
+
+User Interface class for the Shift X-\/O variant.  
+
+
+
+
+{\ttfamily \+\#include $<$Shift\+\_\+\+X\+\_\+\+O.\+h$>$}
+
+Inheritance diagram for X\+\_\+\+O\+\_\+\+Shift\+\_\+\+UI:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_x___o___shift___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_x___o___shift___u_i_a4f0fd3c174666bd0f0eef5eeb8047051}{X\+\_\+\+O\+\_\+\+Shift\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructs the Shift X-\/O \doxylink{class_u_i}{UI}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_x___o___shift___u_i_a110a89d88ec41250cf2ae038ccdee110}{\texorpdfstring{$\sim$}{\string~}\+X\+\_\+\+O\+\_\+\+Shift\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_x___o___shift___u_i_a8fcdab7380b9ab0ac786075c6d4e467a}{create\+\_\+player}} (string \&name, char symbol, \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Creates a new player for Shift X-\/O. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_x___o___shift___u_i_aabdc75a9a773bc42539ba6a7a8f5f678}{get\+\_\+move}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Retrieves the next move from a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, char symbol, \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \doxymbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \doxymbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User Interface class for the Shift X-\/O variant. 
+
+This class inherits from {\ttfamily \doxylink{class_u_i}{UI}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} and provides Shift X-\/\+O–specific input handling, player creation, and move acquisition logic.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_u_i}{UI} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_shift___x___o_8h_source_l00092}{92}} of file \doxymbox{\hyperlink{_shift___x___o_8h_source}{Shift\+\_\+\+X\+\_\+\+O.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_x___o___shift___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_x___o___shift___u_i_a4f0fd3c174666bd0f0eef5eeb8047051}\index{X\_O\_Shift\_UI@{X\_O\_Shift\_UI}!X\_O\_Shift\_UI@{X\_O\_Shift\_UI}}
+\index{X\_O\_Shift\_UI@{X\_O\_Shift\_UI}!X\_O\_Shift\_UI@{X\_O\_Shift\_UI}}
+\doxysubsubsection{\texorpdfstring{X\_O\_Shift\_UI()}{X\_O\_Shift\_UI()}}
+{\footnotesize\ttfamily \label{class_x___o___shift___u_i_a4f0fd3c174666bd0f0eef5eeb8047051} 
+X\+\_\+\+O\+\_\+\+Shift\+\_\+\+UI::\+\+X\+\_\+\+O\+\_\+\+Shift\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs the Shift X-\/O \doxylink{class_u_i}{UI}. 
+
+Initializes the Shift X-\/O \doxylink{class_u_i}{UI} with a welcome message.
+
+Initializes the base \doxylink{class_u_i}{UI} with the message:\+ {\ttfamily "{}Welcome to FCAI Shift X-\/O"{}}. 
+
+Definition at line \doxymbox{\hyperlink{_shift___x___o_8cpp_source_l00219}{219}} of file \doxymbox{\hyperlink{_shift___x___o_8cpp_source}{Shift\+\_\+\+X\+\_\+\+O.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00220\ \ \ \ \ :\ \doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI<char>}}(\textcolor{stringliteral}{"{}Weclome\ to\ FCAI\ Shift\ X-\/O\ "{}},\ 3)\ \{\}}
+
+\end{DoxyCode}
+\Hypertarget{class_x___o___shift___u_i_a110a89d88ec41250cf2ae038ccdee110}\index{X\_O\_Shift\_UI@{X\_O\_Shift\_UI}!````~X\_O\_Shift\_UI@{\texorpdfstring{$\sim$}{\string~}X\_O\_Shift\_UI}}
+\index{````~X\_O\_Shift\_UI@{\texorpdfstring{$\sim$}{\string~}X\_O\_Shift\_UI}!X\_O\_Shift\_UI@{X\_O\_Shift\_UI}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}X\_O\_Shift\_UI()}{\string~X\_O\_Shift\_UI()}}
+{\footnotesize\ttfamily \label{class_x___o___shift___u_i_a110a89d88ec41250cf2ae038ccdee110} 
+X\+\_\+\+O\+\_\+\+Shift\+\_\+\+UI::\+\texorpdfstring{$\sim$}{\string~}\+X\+\_\+\+O\+\_\+\+Shift\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_shift___x___o_8h_source_l00105}{105}} of file \doxymbox{\hyperlink{_shift___x___o_8h_source}{Shift\+\_\+\+X\+\_\+\+O.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105\ \{\};}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_x___o___shift___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_x___o___shift___u_i_a8fcdab7380b9ab0ac786075c6d4e467a}\index{X\_O\_Shift\_UI@{X\_O\_Shift\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!X\_O\_Shift\_UI@{X\_O\_Shift\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_x___o___shift___u_i_a8fcdab7380b9ab0ac786075c6d4e467a} 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} X\+\_\+\+O\+\_\+\+Shift\+\_\+\+UI::\+create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{\doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new player for Shift X-\/O. 
+
+Creates a player (Human or Computer) for Shift X-\/O.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player}\textquotesingle{}s name. \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player}\textquotesingle{}s mark (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}). \\
+\hline
+{\em type} & Whether the player is Human or Computer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly allocated \doxylink{class_player}{Player$<$char$>$}. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_shift___x___o_8cpp_source_l00225}{225}} of file \doxymbox{\hyperlink{_shift___x___o_8cpp_source}{Shift\+\_\+\+X\+\_\+\+O.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00226\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Creating\ "{}}\ <<\ (type\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}}\ ?\ \textcolor{stringliteral}{"{}human"{}}\ :\ \textcolor{stringliteral}{"{}computer"{}})}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ player:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ symbol\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Player<char>(name,\ symbol,\ type);}
+\DoxyCodeLine{00230\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_x___o___shift___u_i_aabdc75a9a773bc42539ba6a7a8f5f678}\index{X\_O\_Shift\_UI@{X\_O\_Shift\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!X\_O\_Shift\_UI@{X\_O\_Shift\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_x___o___shift___u_i_aabdc75a9a773bc42539ba6a7a8f5f678} 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} X\+\_\+\+O\+\_\+\+Shift\+\_\+\+UI::\+get\+\_\+move (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the next move from a player. 
+
+Retrieves the next move from the player.
+
+Human players enter coordinates manually, while computer players generate moves automatically.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player whose move is being requested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a newly created \doxylink{class_move}{Move$<$char$>$} representing the action.
+\end{DoxyReturn}
+Human player:\+
+\begin{DoxyItemize}
+\item Selects a piece by typing (x, y)
+\item Selects direction:\+ Right /\+ Left /\+ Up /\+ Down
+\end{DoxyItemize}
+
+Computer player:\+
+\begin{DoxyItemize}
+\item Scans Matrix1 for its pieces
+\item Tries all 4 directions
+\item Picks the first valid shift 
+\end{DoxyItemize}
+
+Implements \doxymbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_shift___x___o_8cpp_source_l00244}{244}} of file \doxymbox{\hyperlink{_shift___x___o_8cpp_source}{Shift\+\_\+\+X\+\_\+\+O.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordtype}{int}\ x,y;}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{comment}{//\ Human\ input\ mode}}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordflow}{if}\ (player-\/>\doxymbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Choose\ the\ position\ of\ the\ piece\ you\ want\ to\ move\ :\ "{}};}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ cin>>x>>y;}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Select\ Your\ Move\ (Right\ ,\ Left\ ,\ Up\ ,\ Down)\ "{}};}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ s;}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ cin>>s;}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ shift\ =\ s;}
+\DoxyCodeLine{00255\ \ \ \ \ \}}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{comment}{//\ Computer\ AI\ mode}}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordflow}{if}\ (player-\/>\doxymbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}})\ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ sym\ =\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ vector<string>\ dirs\ =\ \{\textcolor{stringliteral}{"{}Right"{}},\ \textcolor{stringliteral}{"{}Left"{}},\ \textcolor{stringliteral}{"{}Down"{}},\ \textcolor{stringliteral}{"{}Up"{}}\};}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 4;\ i++)\ \{}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 4;\ j++)\ \{}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_shift___x___o_8cpp_a966c2bc898edca80d4d5236e6e6c839d}{Matrix1}}[i][j]\ !=\ sym)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ d\ :\ dirs)\ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nx\ =\ i,\ ny\ =\ j;}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (d\ ==\ \textcolor{stringliteral}{"{}Right"{}})\ \ ny++;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (d\ ==\ \textcolor{stringliteral}{"{}Left"{}})\ \ \ ny-\/-\/;}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (d\ ==\ \textcolor{stringliteral}{"{}Down"{}})\ \ \ nx++;}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (d\ ==\ \textcolor{stringliteral}{"{}Up"{}})\ \ \ \ \ nx-\/-\/;}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nx\ >=\ 0\ \&\&\ nx\ <\ 4\ \&\&}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ny\ >=\ 0\ \&\&\ ny\ <\ 4\ \&\&}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_shift___x___o_8cpp_a966c2bc898edca80d4d5236e6e6c839d}{Matrix1}}[nx][ny]\ ==\ \textcolor{charliteral}{'.'})}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ shift\ =\ d;}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Move<char>(i,\ j,\ sym);}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00286\ \ \ \ \ \}}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Move<char>(x,\ y,\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}());}
+\DoxyCodeLine{00289\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_shift___x___o_8h}{Shift\+\_\+\+X\+\_\+\+O.\+h}}\item 
+\doxymbox{\hyperlink{_shift___x___o_8cpp}{Shift\+\_\+\+X\+\_\+\+O.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,620 @@
+\doxysection{Ultimate Class Reference}
+\hypertarget{class_ultimate}{}\label{class_ultimate}\index{Ultimate@{Ultimate}}
+
+
+Represents the \doxylink{class_ultimate}{Ultimate} Tic-\/\+Tac-\/\+Toe game board.  
+
+
+
+
+{\ttfamily \+\#include $<$Ultimate.\+h$>$}
+
+Inheritance diagram for Ultimate:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ultimate}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_ultimate_a58610f110bbf9aa7e04b2a4c20fbfef4}{Ultimate}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes a 9x9 \doxylink{class_ultimate}{Ultimate} X-\/O board. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_ultimate_adf0b5e13be880dd01b42e0838f7b08ea}{update\+\_\+board}} (\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move)
+\begin{DoxyCompactList}\small\item\em Applies a player\textquotesingle{}s move to the \doxylink{class_ultimate}{Ultimate} X-\/O board. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_ultimate_aa7c9d73fd868da1d7a641d05f00cdb69}{is\+\_\+win}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if the specified player has won the \doxylink{class_ultimate}{Ultimate} X-\/O game. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_ultimate_a0d61d5073177685e619169cd81b1f4d2}{is\+\_\+lose}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Checks if the given player has lost. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_ultimate_af7ecff2f8d90ca6806b2751667ad3e15}{is\+\_\+draw}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Determines if the game has ended in a draw. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_ultimate_a76d198d3a5c504d9a3bd1f418e426f64}{game\+\_\+is\+\_\+over}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if the game is over (win or draw). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \doxymbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \doxymbox{\hyperlink{class_ultimate_a43838a116656f0ac72fba03b64cb95de}{blank\+\_\+symbol}} = \textquotesingle{}.\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Symbol used to represent an empty cell in the \doxylink{class_ultimate}{Ultimate} board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the \doxylink{class_ultimate}{Ultimate} Tic-\/\+Tac-\/\+Toe game board. 
+
+This class inherits from the generic {\ttfamily \doxylink{class_board}{Board}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} and implements the rules of the \doxylink{class_ultimate}{Ultimate} X-\/O game, including move validation, win/\+draw detection, and board display logic.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_ultimate_8h_source_l00023}{23}} of file \doxymbox{\hyperlink{_ultimate_8h_source}{Ultimate.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_ultimate_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ultimate_a58610f110bbf9aa7e04b2a4c20fbfef4}\index{Ultimate@{Ultimate}!Ultimate@{Ultimate}}
+\index{Ultimate@{Ultimate}!Ultimate@{Ultimate}}
+\doxysubsubsection{\texorpdfstring{Ultimate()}{Ultimate()}}
+{\footnotesize\ttfamily \label{class_ultimate_a58610f110bbf9aa7e04b2a4c20fbfef4} 
+Ultimate::\+\+Ultimate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor that initializes a 9x9 \doxylink{class_ultimate}{Ultimate} X-\/O board. 
+
+Constructor for \doxylink{class_ultimate}{Ultimate} board.
+
+Initializes a 9×9 board and fills all cells with the blank symbol. 
+
+Definition at line \doxymbox{\hyperlink{_ultimate_8cpp_source_l00031}{31}} of file \doxymbox{\hyperlink{_ultimate_8cpp_source}{Ultimate.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}(9,\ 9)\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Initialize\ all\ cells\ with\ blank\_symbol}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}\ :\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}})}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ cell\ :\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}})}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ cell\ =\ \doxymbox{\hyperlink{class_ultimate_a43838a116656f0ac72fba03b64cb95de}{blank\_symbol}};}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ultimate_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ultimate_a76d198d3a5c504d9a3bd1f418e426f64}\index{Ultimate@{Ultimate}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Ultimate@{Ultimate}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_ultimate_a76d198d3a5c504d9a3bd1f418e426f64} 
+bool Ultimate::\+game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the game is over (win or draw). 
+
+Determines whether the game has finished (win or draw).
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being evaluated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the game has ended; false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_ultimate_8cpp_source_l00379}{379}} of file \doxymbox{\hyperlink{_ultimate_8cpp_source}{Ultimate.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00380\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_ultimate_aa7c9d73fd868da1d7a641d05f00cdb69}{is\_win}}(player)\ ||\ \doxymbox{\hyperlink{class_ultimate_af7ecff2f8d90ca6806b2751667ad3e15}{is\_draw}}(player);}
+\DoxyCodeLine{00381\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ultimate_af7ecff2f8d90ca6806b2751667ad3e15}\index{Ultimate@{Ultimate}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Ultimate@{Ultimate}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_ultimate_af7ecff2f8d90ca6806b2751667ad3e15} 
+bool Ultimate::\+is\+\_\+draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determines if the game has ended in a draw. 
+
+Checks if the \doxylink{class_ultimate}{Ultimate} game ended in a draw.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the board is full and no player has won.
+\end{DoxyReturn}
+A draw occurs when all 9 sub-\/boards are decided (all steps used) and no player has won. 
+
+Implements \doxymbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_ultimate_8cpp_source_l00372}{372}} of file \doxymbox{\hyperlink{_ultimate_8cpp_source}{Ultimate.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00373\ \ \ \ \ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}\ ==\ 9\ \&\&\ !\doxymbox{\hyperlink{class_ultimate_aa7c9d73fd868da1d7a641d05f00cdb69}{is\_win}}(player));}
+\DoxyCodeLine{00374\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ultimate_a0d61d5073177685e619169cd81b1f4d2}\index{Ultimate@{Ultimate}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Ultimate@{Ultimate}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_ultimate_a0d61d5073177685e619169cd81b1f4d2} 
+bool Ultimate::\+is\+\_\+lose (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the given player has lost. 
+
+Not used in \doxylink{class_ultimate}{Ultimate} X-\/O, always returns false. 
+
+Implements \doxymbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_ultimate_8h_source_l00051}{51}} of file \doxymbox{\hyperlink{_ultimate_8h_source}{Ultimate.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+
+\end{DoxyCode}
+\Hypertarget{class_ultimate_aa7c9d73fd868da1d7a641d05f00cdb69}\index{Ultimate@{Ultimate}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Ultimate@{Ultimate}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_ultimate_aa7c9d73fd868da1d7a641d05f00cdb69} 
+bool Ultimate::\+is\+\_\+win (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the specified player has won the \doxylink{class_ultimate}{Ultimate} X-\/O game. 
+
+Checks if the player won either the small sub-\/board or the whole \doxylink{class_ultimate}{Ultimate} game.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the player has a winning condition; false otherwise.
+\end{DoxyReturn}
+Steps:\+
+\begin{DoxyEnumerate}
+\item Identify which 3×3 sub-\/board the last move belongs to.
+\item Check if the player won that sub-\/board.
+\item Update Matrix\+[]\+\+[]\+ if sub-\/board is won or drawn.
+\item Check if Matrix\+[]\+\+[]\+ has a 3-\/in-\/a-\/row → \doxylink{class_ultimate}{Ultimate} victory.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player whose win is being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the player has won the entire \doxylink{class_ultimate}{Ultimate} game. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_ultimate_8cpp_source_l00098}{98}} of file \doxymbox{\hyperlink{_ultimate_8cpp_source}{Ultimate.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ sym\ =\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{auto}\ all\_equal\ =\ [\&](\textcolor{keywordtype}{char}\ a,\ \textcolor{keywordtype}{char}\ b,\ \textcolor{keywordtype}{char}\ c)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a\ ==\ b\ \&\&\ b\ ==\ c\ \&\&\ a\ !=\ \doxymbox{\hyperlink{class_ultimate_a43838a116656f0ac72fba03b64cb95de}{blank\_symbol}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/\ All\ sub-\/board\ checks\ remain\ unchanged\ -\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//\ (The\ logic\ is\ correct\ —\ only\ comments\ needed;\ not\ editing\ logic)}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/\ SUB-\/BOARD\ CHECKS\ ↓\ -\/-\/-\/-\/}}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//\ Every\ block\ sets\ Matrix[i][j]\ if\ the\ player\ wins\ that\ sub-\/board.}}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//\ If\ the\ board\ fills\ completely\ →\ mark\ sub-\/board\ as\ finished\ (step\ counter++)}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}>=0\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}<=2)\ \&\&\ (\doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}>=0\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}<=2))\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ ;\ ++i)\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][0]\ ==\ sym)\ ||}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][i])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][i]\ ==\ sym)\ ||}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][0]\ ==\ sym)\ ||}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][0])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][2]\ ==\ sym))}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][0]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][0]\ =\ sym;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cnt\ =\ 0;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ ;\ ++i)\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 3\ ;\ ++j)\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ !=\ \doxymbox{\hyperlink{class_ultimate_a43838a116656f0ac72fba03b64cb95de}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cnt++;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cnt\ ==\ 9\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][0]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ \ \ \ \ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{comment}{//\ (0,1)}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}>=0\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}<=2)\ \&\&\ (\doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}>=3\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}<=5))\ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ ;\ ++i)\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][3],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][4],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][5])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][3]\ ==\ sym)\ ||}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][3+i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][3+i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][3+i])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][3+i]\ ==\ sym)\ ||}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][3],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][4],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][5])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][3]\ ==\ sym)\ ||}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][5],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][4],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][3])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][5]\ ==\ sym))}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][1]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][1]\ =\ sym;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cnt\ =\ 0;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ ;\ ++i)\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 3;\ j\ <\ 6\ ;\ ++j)\ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ !=\ \doxymbox{\hyperlink{class_ultimate_a43838a116656f0ac72fba03b64cb95de}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cnt++;}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cnt\ ==\ 9\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][1]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{comment}{//\ (0,2)}}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}>=0\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}<=2)\ \&\&\ (\doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}>=6\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}<=8))\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ ;\ ++i)\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][6],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][7],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][8])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][6]\ ==\ sym)\ ||}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][6+i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][6+i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][6+i])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][6\ +\ i]\ ==\ sym)\ ||}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][6],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][7],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][8])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][6]\ ==\ sym)\ ||}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][8],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][7],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][6])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][8]\ ==\ sym))}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][2]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][2]\ =\ sym;}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cnt\ =\ 0;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ ;\ ++i)\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 6;\ j\ <\ 9\ ;\ ++j)\ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ !=\ \doxymbox{\hyperlink{class_ultimate_a43838a116656f0ac72fba03b64cb95de}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cnt++;}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cnt\ ==\ 9\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][2]==\textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ \}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{comment}{//\ (1,0)}}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}>=3\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}<=5)\ \&\&\ (\doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}>=0\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}<=2))\ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ ;\ ++i)\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3+i][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3+i][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3+i][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3+i][0]\ ==\ sym)\ ||}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[5][i])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][i]\ ==\ sym)\ ||}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[5][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][0]\ ==\ sym)\ ||}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[5][0])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][2]\ ==\ sym))}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][0]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][0]\ =\ sym;}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cnt\ =\ 0;}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 3\ ;\ i\ <\ 6\ ;\ ++i)\ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 3\ ;\ ++j)\ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ !=\ \doxymbox{\hyperlink{class_ultimate_a43838a116656f0ac72fba03b64cb95de}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cnt++;}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cnt\ ==\ 9\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][0]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00218\ \ \ \ \ \}}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \textcolor{comment}{//\ (1,1)}}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}>=3\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}<=5)\ \&\&\ (\doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}>=3\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}<=5))\ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ ;\ ++i)\ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3+i][3],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3+i][4],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3+i][5])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3+i][3]\ ==\ sym)\ ||}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][3+i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][3+i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[5][3+i])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][3+i]\ ==\ sym)\ ||}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][3],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][4],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[5][5])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][3]\ ==\ sym)\ ||}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][5],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][4],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[5][3])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][5]\ ==\ sym))}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][1]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][1]\ =\ sym;}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cnt\ =\ 0;}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 3\ ;\ i\ <\ 6\ ;\ ++i)\ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 3\ ;\ j\ <\ 6\ ;\ ++j)\ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ !=\ \doxymbox{\hyperlink{class_ultimate_a43838a116656f0ac72fba03b64cb95de}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cnt++;}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cnt\ ==\ 9\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][1]==\textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00245\ \ \ \ \ \}}
+\DoxyCodeLine{00246\ \textcolor{comment}{//\ (1,2)}}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}>=3\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}<=5)\ \&\&\ (\doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}>=6\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}<=8))\ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ ;\ ++i)\ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3+i][6],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3+i][7],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3+i][8])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3+i][6]\ ==\ sym)\ ||}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][6+i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][6+i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[5][6+i])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][6+i]\ ==\ sym)\ ||}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][6],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][7],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[5][8])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][6]\ ==\ sym)\ ||}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][8],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][7],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[5][6])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][8]\ ==\ sym))}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][2]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][2]\ =\ sym;}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cnt\ =\ 0;}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 3;\ i\ <\ 6\ ;\ ++i)\ \{}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 6;\ j\ <\ 9\ ;\ ++j)\ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ !=\ \doxymbox{\hyperlink{class_ultimate_a43838a116656f0ac72fba03b64cb95de}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cnt++;}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cnt\ ==\ 9\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][2]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00271\ \ \ \ \ \}}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \textcolor{comment}{//\ (2,0)}}
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}>=6\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}<=8)\ \&\&\ (\doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}>=0\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}<=2))\ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ ;\ ++i)\ \{}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6+i][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6+i][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6+i][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6+i][0]\ ==\ sym)\ ||}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[7][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[8][i])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][i]\ ==\ sym)\ ||}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[7][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[8][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][0]\ ==\ sym)\ ||}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[7][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[8][0])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][2]\ ==\ sym))}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][0]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][0]\ =\ sym;}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cnt\ =\ 0;}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 6\ ;\ i\ <\ 9\ ;\ ++i)\ \{}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 3\ ;\ ++j)\ \{}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ !=\ \doxymbox{\hyperlink{class_ultimate_a43838a116656f0ac72fba03b64cb95de}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cnt++;}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cnt\ ==\ 9\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][0]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00298\ \ \ \ \ \}}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00300\ \textcolor{comment}{//\ (2,1)}}
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}>=6\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}<=8)\ \&\&\ (\doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}>=3\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}<=5))\ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ ;\ ++i)\ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6+i][3],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6+i][4],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6+i][5])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6+i][3]\ ==\ sym)\ ||}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][3+i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[7][3+i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[8][3+i])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][3+i]\ ==\ sym)\ ||}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][3],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[7][4],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[8][5])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][3]\ ==\ sym)\ ||}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][5],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[7][4],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[8][3])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][5]\ ==\ sym))}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][1]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][1]\ =\ sym;}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cnt\ =\ 0;}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 6;\ i\ <\ 9\ ;\ ++i)\ \{}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 3\ ;\ j\ <\ 6\ ;\ ++j)\ \{}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ !=\ \doxymbox{\hyperlink{class_ultimate_a43838a116656f0ac72fba03b64cb95de}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cnt++;}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cnt\ ==\ 9\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][1]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00325\ \ \ \ \ \}}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00327\ \textcolor{comment}{//\ (2,2)}}
+\DoxyCodeLine{00328\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}>=6\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}<=8)\ \&\&\ (\doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}>=6\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}}<=8))\ \{}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ ;\ ++i)\ \{}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6+i][6],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6+i][7],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6+i][8])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6+i][6]\ ==\ sym)\ ||}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][6+i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[7][6+i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[8][6+i])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][6+i]\ ==\ sym)\ ||}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][6],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[7][7],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[8][8])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][6]\ ==\ sym)\ ||}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][8],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[7][7],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[8][6])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[6][8]\ ==\ sym))}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][2]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][2]\ =\ sym;}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cnt\ =\ 0;}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 6;\ i\ <\ 9\ ;\ ++i)\ \{}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 6\ ;\ j\ <\ 9\ ;\ ++j)\ \{}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ !=\ \doxymbox{\hyperlink{class_ultimate_a43838a116656f0ac72fba03b64cb95de}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cnt++;}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cnt\ ==\ 9\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][2]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_ultimate_8cpp_ab4ae7205573977222eadd0795db193e2}{steps}}++;}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00352\ \ \ \ \ \}}
+\DoxyCodeLine{00353\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/\ CHECK\ IF\ PLAYER\ WON\ THE\ BIG\ 3×3\ (Ultimate)\ BOARD\ -\/-\/-\/-\/}}
+\DoxyCodeLine{00354\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ ;\ ++i)\ \{}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[i][0],\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[i][1],\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[i][2])\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[i][0]\ ==\ sym)\ ||}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][i],\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][i],\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][i])\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][i]\ ==\ sym)\ ||}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][0],\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][1],\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][2])\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][0]\ ==\ sym)\ ||}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][2],\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][1],\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][0])\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][2]\ ==\ sym))}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ Player\ won\ the\ Ultimate\ game}}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00362\ \ \ \ \ \}}
+\DoxyCodeLine{00363\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00364\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ultimate_adf0b5e13be880dd01b42e0838f7b08ea}\index{Ultimate@{Ultimate}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Ultimate@{Ultimate}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_ultimate_adf0b5e13be880dd01b42e0838f7b08ea} 
+bool Ultimate::\+update\+\_\+board (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Applies a player\textquotesingle{}s move to the \doxylink{class_ultimate}{Ultimate} X-\/O board. 
+
+Updates the \doxylink{class_ultimate}{Ultimate} X-\/O board with a given move.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to a \doxylink{class_move}{Move$<$char$>$} containing coordinates and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid and successfully applied; false otherwise.
+\end{DoxyReturn}
+Validates if the targeted sub-\/board is still open. If the move is allowed, it applies or removes the symbol (undo).
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to \doxylink{class_move}{Move$<$char$>$} containing position + symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move was successfully applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_ultimate_8cpp_source_l00053}{53}} of file \doxymbox{\hyperlink{_ultimate_8cpp_source}{Ultimate.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\doxymbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\doxymbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{char}\ mark\ =\ move-\/>\doxymbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{if}\ ((x>=0\ \&\&\ x<=2)\ \&\&\ (y>=0\ \&\&\ y<=2)\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][0]\ !=\ \textcolor{charliteral}{'.'})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{if}\ ((x>=0\ \&\&\ x<=2)\ \&\&\ (y>=3\ \&\&\ y<=5)\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][1]\ !=\ \textcolor{charliteral}{'.'})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{if}\ ((x>=0\ \&\&\ x<=2)\ \&\&\ (y>=6\ \&\&\ y<=8)\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[0][2]\ !=\ \textcolor{charliteral}{'.'})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{if}\ ((x>=3\ \&\&\ x<=5)\ \&\&\ (y>=0\ \&\&\ y<=2)\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][0]\ !=\ \textcolor{charliteral}{'.'})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{if}\ ((x>=3\ \&\&\ x<=5)\ \&\&\ (y>=3\ \&\&\ y<=5)\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][1]\ !=\ \textcolor{charliteral}{'.'})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{if}\ ((x>=3\ \&\&\ x<=5)\ \&\&\ (y>=6\ \&\&\ y<=8)\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[1][2]\ !=\ \textcolor{charliteral}{'.'})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{if}\ ((x>=6\ \&\&\ x<=8)\ \&\&\ (y>=0\ \&\&\ y<=2)\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][0]\ !=\ \textcolor{charliteral}{'.'})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{if}\ ((x>=6\ \&\&\ x<=8)\ \&\&\ (y>=3\ \&\&\ y<=5)\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][1]\ !=\ \textcolor{charliteral}{'.'})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{if}\ ((x>=6\ \&\&\ x<=8)\ \&\&\ (y>=6\ \&\&\ y<=8)\ \&\&\ \doxymbox{\hyperlink{_ultimate_8cpp_a51b61d69a537234cf56f58f110a81b7d}{Matrix}}[2][2]\ !=\ \textcolor{charliteral}{'.'})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ Validate\ move\ and\ apply\ if\ valid}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(x\ <\ 0\ ||\ x\ >=\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ y\ <\ 0\ ||\ y\ >=\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})\ \&\&}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ ==\ \doxymbox{\hyperlink{class_ultimate_a43838a116656f0ac72fba03b64cb95de}{blank\_symbol}}\ ||\ mark\ ==\ 0))\ \{}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mark\ ==\ 0)\ \{\ \textcolor{comment}{//\ Undo\ move}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ \doxymbox{\hyperlink{class_ultimate_a43838a116656f0ac72fba03b64cb95de}{blank\_symbol}};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Apply\ move}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ toupper(mark);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00082\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_ultimate_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_ultimate_a43838a116656f0ac72fba03b64cb95de}\index{Ultimate@{Ultimate}!blank\_symbol@{blank\_symbol}}
+\index{blank\_symbol@{blank\_symbol}!Ultimate@{Ultimate}}
+\doxysubsubsection{\texorpdfstring{blank\_symbol}{blank\_symbol}}
+{\footnotesize\ttfamily \label{class_ultimate_a43838a116656f0ac72fba03b64cb95de} 
+char Ultimate::\+blank\+\_\+symbol = \textquotesingle{}.\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Symbol used to represent an empty cell in the \doxylink{class_ultimate}{Ultimate} board. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_ultimate_8h_source_l00025}{25}} of file \doxymbox{\hyperlink{_ultimate_8h_source}{Ultimate.\+h}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_ultimate_8h}{Ultimate.\+h}}\item 
+\doxymbox{\hyperlink{_ultimate_8cpp}{Ultimate.\+cpp}}\end{DoxyCompactItemize}

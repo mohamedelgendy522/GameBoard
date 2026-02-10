@@ -1,0 +1,51 @@
+\doxysection{XO\+\_\+\+Demo.\+cpp}
+\hypertarget{_x_o___demo_8cpp_source}{}\label{_x_o___demo_8cpp_source}\doxymbox{\hyperlink{_x_o___demo_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <iostream>}\ \textcolor{comment}{//\ Required\ for\ input/output\ operations\ (cout,\ cin)}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <string>}\ \ \ \textcolor{comment}{//\ Required\ for\ string}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <vector>}\ \ \ \textcolor{comment}{//\ Required\ for\ vector}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <memory>}\ \ \ \textcolor{comment}{//\ Required\ for\ unique\_ptr}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_board_game___classes_8h}{BoardGame\_Classes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_x_o___classes_8h}{XO\_Classes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00017}00017\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00031}\doxymbox{\hyperlink{_x_o___demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00031}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_x_o___demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00033}00033\ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));\ \ \textcolor{comment}{//\ Seed\ the\ random\ number\ generator}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ Create\ an\ instance\ of\ the\ specific\ UI\ for\ X-\/O\ using\ a\ pointer\ }}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00036}00036\ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_x_o___u_i}{XO\_UI}}();}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ board.\ For\ X-\/O,\ this\ is\ an\ X\_O\_Board.}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00039}00039\ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ xo\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_x___o___board}{X\_O\_Board}}();}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//\ Use\ the\ UI\ to\ set\ up\ the\ players\ for\ the\ game.}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ The\ UI\ returns\ a\ dynamically\ allocated\ array\ of\ Player\ pointers.}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00043}00043\ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//\ Create\ the\ game\ manager\ with\ the\ board\ and\ the\ array\ of\ players.}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00046}00046\ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<char>}}\ x\_o\_game(xo\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ Run\ the\ game\ loop.}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00049}00049\ \ \ \ \ x\_o\_game.\doxymbox{\hyperlink{class_game_manager_a71f46d5189dac5c773f608cea1b5a203}{run}}();}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Cleanup\ -\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ board\ object.}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{delete}\ xo\_board;}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ individual\ player\ objects.}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ dynamically\ allocated\ array\ of\ player\ pointers\ itself.}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \textcolor{comment}{//\ Exit\ successfully}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_x_o___demo_8cpp_source_l00065}00065\ \textcolor{comment}{//\ =====================================================================}}
+
+\end{DoxyCode}

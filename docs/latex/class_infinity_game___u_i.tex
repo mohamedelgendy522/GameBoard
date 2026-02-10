@@ -1,0 +1,226 @@
+\doxysection{Infinity\+Game\+\_\+\+UI Class Reference}
+\hypertarget{class_infinity_game___u_i}{}\label{class_infinity_game___u_i}\index{InfinityGame\_UI@{InfinityGame\_UI}}
+
+
+User Interface class for the Tic-\/\+Tac-\/\+Toe game.  
+
+
+
+
+{\ttfamily \+\#include $<$Infinity.\+h$>$}
+
+Inheritance diagram for Infinity\+Game\+\_\+\+UI:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_infinity_game___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_infinity_game___u_i_a8fef009e52413b93d2c13299d2c684b8}{Infinity\+Game\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructs the user interface for Tic-\/\+Tac-\/\+Toe. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_infinity_game___u_i_a06fac4760768ba6ae5e004c7f30d756a}{create\+\_\+player}} (string \&name, char symbol, \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Creates a new player (Human or Computer). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_infinity_game___u_i_aa4712043caf2e2566b19d3be887d9035}{get\+\_\+move}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Retrieves the next move from the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, char symbol, \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \doxymbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \doxymbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User Interface class for the Tic-\/\+Tac-\/\+Toe game. 
+
+Responsible for:\+
+\begin{DoxyItemize}
+\item \doxylink{class_player}{Player} creation
+\item Collecting player moves
+\item Displaying the game board
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_u_i}{UI} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_infinity_8h_source_l00115}{115}} of file \doxymbox{\hyperlink{_infinity_8h_source}{Infinity.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_infinity_game___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_infinity_game___u_i_a8fef009e52413b93d2c13299d2c684b8}\index{InfinityGame\_UI@{InfinityGame\_UI}!InfinityGame\_UI@{InfinityGame\_UI}}
+\index{InfinityGame\_UI@{InfinityGame\_UI}!InfinityGame\_UI@{InfinityGame\_UI}}
+\doxysubsubsection{\texorpdfstring{InfinityGame\_UI()}{InfinityGame\_UI()}}
+{\footnotesize\ttfamily \label{class_infinity_game___u_i_a8fef009e52413b93d2c13299d2c684b8} 
+Infinity\+Game\+\_\+\+UI::\+\+Infinity\+Game\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs the user interface for Tic-\/\+Tac-\/\+Toe. 
+
+Constructs the Infinity Tic-\/\+Tac-\/\+Toe \doxylink{class_u_i}{UI} with welcome message.
+
+Displays a welcome message or initializes \doxylink{class_u_i}{UI} components. 
+
+Definition at line \doxymbox{\hyperlink{_infinity_8cpp_source_l00145}{145}} of file \doxymbox{\hyperlink{_infinity_8cpp_source}{Infinity.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00145\ :\ \doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI<char>}}(\textcolor{stringliteral}{"{}Welcome\ to\ Infinity\ Tic-\/Tac-\/Toe\ (3x3)"{}},\ 2)\ \{\}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_infinity_game___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_infinity_game___u_i_a06fac4760768ba6ae5e004c7f30d756a}\index{InfinityGame\_UI@{InfinityGame\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!InfinityGame\_UI@{InfinityGame\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_infinity_game___u_i_a06fac4760768ba6ae5e004c7f30d756a} 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Infinity\+Game\+\_\+\+UI::\+create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{\doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Creates a new player (Human or Computer). 
+
+Creates a player (Human or Computer) for the game.
+
+Assigns:\+
+\begin{DoxyItemize}
+\item \doxylink{class_player}{Player} name
+\item Symbol (X or O)
+\item Type (Human /\+ Computer)
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player} name. \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player} symbol. \\
+\hline
+{\em type} & \doxylink{class_player}{Player} type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a new \doxylink{class_player}{Player$<$char$>$} instance.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player} name. \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player}\textquotesingle{}s symbol. \\
+\hline
+{\em type} & \doxylink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type} (HUMAN or COMPUTER) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created \doxylink{class_player}{Player} object. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_infinity_8cpp_source_l00155}{155}} of file \doxymbox{\hyperlink{_infinity_8cpp_source}{Infinity.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00156\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Creating\ "{}}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ <<\ (type\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}}\ ?\ \textcolor{stringliteral}{"{}human"{}}\ :\ \textcolor{stringliteral}{"{}computer"{}})}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ player:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ symbol\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Player<char>(name,\ symbol,\ type);}
+\DoxyCodeLine{00161\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_infinity_game___u_i_aa4712043caf2e2566b19d3be887d9035}\index{InfinityGame\_UI@{InfinityGame\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!InfinityGame\_UI@{InfinityGame\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_infinity_game___u_i_aa4712043caf2e2566b19d3be887d9035} 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Infinity\+Game\+\_\+\+UI::\+get\+\_\+move (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the next move from the player. 
+
+Prompts the player to enter the coordinates of the move.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player whose move is requested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a new \doxylink{class_move}{Move$<$char$>$} object.
+\end{DoxyReturn}
+Human:\+ prompts input (x, y) Computer:\+ generates random coordinates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the current player. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a \doxylink{class_move}{Move} object. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_infinity_8cpp_source_l00172}{172}} of file \doxymbox{\hyperlink{_infinity_8cpp_source}{Infinity.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{if}\ (player-\/>\doxymbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ <<\ player-\/>\doxymbox{\hyperlink{class_player_aed2af19790ba73190e3ebeea589518e1}{get\_name}}()}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}()}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{})\ enter\ your\ move\ x\ y\ (0\ to\ 2):\ "{}};}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ cin\ >>\ x\ >>\ y;}
+\DoxyCodeLine{00180\ \ \ \ \ \}}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ x\ =\ rand()\ \%\ player-\/>\doxymbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}()-\/>\doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\_rows}}();}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ y\ =\ rand()\ \%\ player-\/>\doxymbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}()-\/>\doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\_columns}}();}
+\DoxyCodeLine{00184\ \ \ \ \ \}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Move<char>(x,\ y,\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}());}
+\DoxyCodeLine{00187\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_infinity_8h}{Infinity.\+h}}\item 
+\doxymbox{\hyperlink{_infinity_8cpp}{Infinity.\+cpp}}\end{DoxyCompactItemize}

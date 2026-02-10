@@ -1,0 +1,447 @@
+\doxysection{Word\+\_\+\+Board Class Reference}
+\hypertarget{class_word___board}{}\label{class_word___board}\index{Word\_Board@{Word\_Board}}
+
+
+Represents a 3×3 board for the Word Tic-\/\+Tac-\/\+Toe game.  
+
+
+
+
+{\ttfamily \+\#include $<$Word\+\_\+tic\+\_\+tac\+\_\+toe.\+h$>$}
+
+Inheritance diagram for Word\+\_\+\+Board:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_word___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_word___board_a333451cc4551290f7cbc5fcc85c3d4dc}{Word\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new Word \doxylink{class_board}{Board} (3×3) initialized with \textquotesingle{}.\textquotesingle{}. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_word___board_a38df9f9c8ee882efe6be49caa8f49e17}{update\+\_\+board}} (\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Applies a player move to the board if valid. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_word___board_ae979d62a555279816687e1f7cfa0ccee}{is\+\_\+win}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks whether the board contains a valid word in any row, column, or diagonal. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_word___board_a2711a5163435141ff7e87bee962306b2}{is\+\_\+draw}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the game has ended in a draw. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_word___board_a21bcd59e08df0a5bdc8c82070e3b1cc0}{game\+\_\+is\+\_\+over}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Determines if the game has ended. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_word___board_a0f959cb00d8bfa37c69930e6bf46d3ba}{is\+\_\+lose}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Loss conditions are not used in Word Tic-\/\+Tac-\/\+Toe. \end{DoxyCompactList}\item 
+char \doxymbox{\hyperlink{class_word___board_a12b49f8bc530920c5052d90bd2566039}{get\+\_\+cell}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em Retrieves a character from the board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \doxymbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a 3×3 board for the Word Tic-\/\+Tac-\/\+Toe game. 
+
+The board:\+
+\begin{DoxyItemize}
+\item Stores characters placed by players ~\newline
+
+\item Validates moves ~\newline
+
+\item Checks for word completion (win) ~\newline
+
+\item Determines draw and game end conditions ~\newline
+
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8h_source_l00034}{34}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8h_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_word___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_word___board_a333451cc4551290f7cbc5fcc85c3d4dc}\index{Word\_Board@{Word\_Board}!Word\_Board@{Word\_Board}}
+\index{Word\_Board@{Word\_Board}!Word\_Board@{Word\_Board}}
+\doxysubsubsection{\texorpdfstring{Word\_Board()}{Word\_Board()}}
+{\footnotesize\ttfamily \label{class_word___board_a333451cc4551290f7cbc5fcc85c3d4dc} 
+Word\+\_\+\+Board::\+\+Word\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a new Word \doxylink{class_board}{Board} (3×3) initialized with \textquotesingle{}.\textquotesingle{}. 
+
+Constructs a 3×3 Word Tic-\/\+Tac-\/\+Toe board.
+
+Also resets the move counter inherited from \doxylink{class_board}{Board}.
+
+Initializes:\+
+\begin{DoxyItemize}
+\item Dictionary ~\newline
+
+\item All cells to \textquotesingle{}.\textquotesingle{} ~\newline
+
+\item \doxylink{class_move}{Move} counter to 0 
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source_l00052}{52}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board<char>}}(3,\ 3)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_adb94773229c162b29c55e45a5e7a1b4e}{load\_dict}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}\ :\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}})}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ cell\ :\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}})}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ cell\ =\ \textcolor{charliteral}{'.'};\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ =\ 0;}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_word___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_word___board_a21bcd59e08df0a5bdc8c82070e3b1cc0}\index{Word\_Board@{Word\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Word\_Board@{Word\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_word___board_a21bcd59e08df0a5bdc8c82070e3b1cc0} 
+bool Word\+\_\+\+Board::\+game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Determines if the game has ended. 
+
+Determines whether the game has ended.
+
+The game ends when:\+
+\begin{DoxyItemize}
+\item A winning word is found, or ~\newline
+
+\item The board is full (draw) ~\newline
+
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+true if the game is over.
+\end{DoxyReturn}
+The game ends when:\+
+\begin{DoxyItemize}
+\item A valid word is formed (win) ~\newline
+
+\item The board is full (draw) 
+\end{DoxyItemize}
+
+Implements \doxymbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source_l00152}{152}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_word___board_ae979d62a555279816687e1f7cfa0ccee}{is\_win}}(player)\ ||\ \doxymbox{\hyperlink{class_word___board_a2711a5163435141ff7e87bee962306b2}{is\_draw}}(player);}
+\DoxyCodeLine{00154\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_word___board_a12b49f8bc530920c5052d90bd2566039}\index{Word\_Board@{Word\_Board}!get\_cell@{get\_cell}}
+\index{get\_cell@{get\_cell}!Word\_Board@{Word\_Board}}
+\doxysubsubsection{\texorpdfstring{get\_cell()}{get\_cell()}}
+{\footnotesize\ttfamily \label{class_word___board_a12b49f8bc530920c5052d90bd2566039} 
+char Word\+\_\+\+Board::\+get\+\_\+cell (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a character from the board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Row index. \\
+\hline
+{\em y} & Column index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Character stored at the given position. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8h_source_l00104}{104}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8h_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y];\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_word___board_a2711a5163435141ff7e87bee962306b2}\index{Word\_Board@{Word\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Word\_Board@{Word\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_word___board_a2711a5163435141ff7e87bee962306b2} 
+bool Word\+\_\+\+Board::\+is\+\_\+draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the game has ended in a draw. 
+
+Checks for a draw.
+
+A draw occurs when:\+
+\begin{DoxyItemize}
+\item All 9 cells are filled, and ~\newline
+
+\item No win condition is met ~\newline
+
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+true if the game is a draw.
+\end{DoxyReturn}
+A draw occurs when:\+
+\begin{DoxyItemize}
+\item All 9 cells are filled ~\newline
+
+\item No valid word has been formed 
+\end{DoxyItemize}
+
+Implements \doxymbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source_l00141}{141}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 9\ \&\&\ !\doxymbox{\hyperlink{class_word___board_ae979d62a555279816687e1f7cfa0ccee}{is\_win}}(\textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00143\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_word___board_a0f959cb00d8bfa37c69930e6bf46d3ba}\index{Word\_Board@{Word\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Word\_Board@{Word\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_word___board_a0f959cb00d8bfa37c69930e6bf46d3ba} 
+bool Word\+\_\+\+Board::\+is\+\_\+lose (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Loss conditions are not used in Word Tic-\/\+Tac-\/\+Toe. 
+
+Word Tic-\/\+Tac-\/\+Toe does not implement losing conditions.
+
+Always returns false unless custom loss rules are added.
+
+\begin{DoxyReturn}{Returns}
+false.
+
+Always false. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source_l00161}{161}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00163\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_word___board_ae979d62a555279816687e1f7cfa0ccee}\index{Word\_Board@{Word\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Word\_Board@{Word\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_word___board_ae979d62a555279816687e1f7cfa0ccee} 
+bool Word\+\_\+\+Board::\+is\+\_\+win (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether the board contains a valid word in any row, column, or diagonal. 
+
+Determines if placing any 3-\/letter sequence forms a valid dictionary word.
+
+A win occurs when any 3-\/letter line forms a valid dictionary word.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Unused — win does not depend on player symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a winning word is detected.
+\end{DoxyReturn}
+Checks:\+
+\begin{DoxyItemize}
+\item All rows ~\newline
+
+\item All columns ~\newline
+
+\item Both diagonals ~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Unused (word completion doesn\textquotesingle{}t depend on player symbol). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if any line forms a valid word. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source_l00106}{106}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{auto}\ ValidWord\ =\ [\&](\textcolor{keywordtype}{char}\ a,\ \textcolor{keywordtype}{char}\ b,\ \textcolor{keywordtype}{char}\ c)\ -\/>\ \textcolor{keywordtype}{string}\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ s;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ s.push\_back(a);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ s.push\_back(b);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ s.push\_back(c);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ s;}
+\DoxyCodeLine{00113\ \ \ \ \ \};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//\ Check\ rows\ and\ columns}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}};\ ++i)\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ rowWord\ =\ ValidWord(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][2]);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}{dict}}.count(rowWord))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ colWord\ =\ ValidWord(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][i]);}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}{dict}}.count(colWord))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//\ Check\ diagonals}}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{string}\ d1\ =\ ValidWord(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][2]);}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}{dict}}.count(d1))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{string}\ d2\ =\ ValidWord(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][0]);}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}{dict}}.count(d2))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00132\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_word___board_a38df9f9c8ee882efe6be49caa8f49e17}\index{Word\_Board@{Word\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Word\_Board@{Word\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_word___board_a38df9f9c8ee882efe6be49caa8f49e17} 
+bool Word\+\_\+\+Board::\+update\+\_\+board (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies a player move to the board if valid. 
+
+Applies a user\textquotesingle{}s move if the position is valid.
+
+Moves are rejected if:\+
+\begin{DoxyItemize}
+\item The position is outside the board ~\newline
+
+\item The target cell is already filled ~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to a \doxylink{class_move}{Move$<$char$>$} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid and applied; false otherwise.
+\end{DoxyReturn}
+Checks:\+
+\begin{DoxyItemize}
+\item If coordinates are inside the board ~\newline
+
+\item If the target cell is empty ~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & \doxylink{class_move}{Move} containing x, y, and the character. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is accepted, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source_l00072}{72}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\doxymbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\doxymbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{char}\ val\ =\ move-\/>\doxymbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//\ Bounds\ check}}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0\ ||\ x\ >=\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ y\ <\ 0\ ||\ y\ >=\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\ Invalid\ move!\ Position\ ("{}}\ <<\ x\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ y\ <<\ \textcolor{stringliteral}{"{})\ is\ outside\ the\ board.\(\backslash\)n"{}};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//\ Occupied\ cell\ check}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ !=\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\ Invalid\ move!\ Cell\ ("{}}\ <<\ x\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ y\ <<\ \textcolor{stringliteral}{"{})\ is\ already\ filled.\(\backslash\)n"{}};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ val;}
+\DoxyCodeLine{00090\ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00093\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_word__tic__tac__toe_8h}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+h}}\item 
+\doxymbox{\hyperlink{_word__tic__tac__toe_8cpp}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}\end{DoxyCompactItemize}

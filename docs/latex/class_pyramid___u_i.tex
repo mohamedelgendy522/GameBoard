@@ -1,0 +1,243 @@
+\doxysection{Pyramid\+\_\+\+UI Class Reference}
+\hypertarget{class_pyramid___u_i}{}\label{class_pyramid___u_i}\index{Pyramid\_UI@{Pyramid\_UI}}
+
+
+User Interface class for the \doxylink{class_pyramid}{Pyramid} X-\/O game.  
+
+
+
+
+{\ttfamily \+\#include $<$Pyramid.\+h$>$}
+
+Inheritance diagram for Pyramid\+\_\+\+UI:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pyramid___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_pyramid___u_i_aba1636a5f5c0d1300a74b0620c1f58f6}{Pyramid\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_pyramid___u_i}{Pyramid\+\_\+\+UI} object. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_pyramid___u_i_a527dd9ad6b62050abe0dff0a9efe0938}{\texorpdfstring{$\sim$}{\string~}\+Pyramid\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_pyramid___u_i}{Pyramid\+\_\+\+UI}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_pyramid___u_i_a700efb45cce65c4ea1e0ea781ec67bf2}{create\+\_\+player}} (string \&name, char symbol, \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Creates a player for the \doxylink{class_pyramid}{Pyramid} X-\/O game. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_pyramid___u_i_a16e4d4429b36ec1a3cf8229bd87c7fc6}{get\+\_\+move}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Retrieves the next move for the \doxylink{class_pyramid}{Pyramid} X-\/O game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, char symbol, \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \doxymbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \doxymbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User Interface class for the \doxylink{class_pyramid}{Pyramid} X-\/O game. 
+
+This class inherits from {\ttfamily \doxylink{class_u_i}{UI}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} and provides Pyramid-\/specific player registration, move collection, and display handling.
+
+It ensures players follow the spatial constraints of the pyramid layout when selecting moves.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_u_i}{UI} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_pyramid_8h_source_l00102}{102}} of file \doxymbox{\hyperlink{_pyramid_8h_source}{Pyramid.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_pyramid___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_pyramid___u_i_aba1636a5f5c0d1300a74b0620c1f58f6}\index{Pyramid\_UI@{Pyramid\_UI}!Pyramid\_UI@{Pyramid\_UI}}
+\index{Pyramid\_UI@{Pyramid\_UI}!Pyramid\_UI@{Pyramid\_UI}}
+\doxysubsubsection{\texorpdfstring{Pyramid\_UI()}{Pyramid\_UI()}}
+{\footnotesize\ttfamily \label{class_pyramid___u_i_aba1636a5f5c0d1300a74b0620c1f58f6} 
+Pyramid\+\_\+\+UI::\+\+Pyramid\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_pyramid___u_i}{Pyramid\+\_\+\+UI} object. 
+
+Initializes the \doxylink{class_u_i}{UI} with a welcome message for \doxylink{class_pyramid}{Pyramid} X-\/O.
+
+Initializes the base {\ttfamily \doxylink{class_u_i}{UI}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} class with the welcome message:\+ "{}\+FCAI Pyramid X-\/\+O"{}. 
+
+Definition at line \doxymbox{\hyperlink{_pyramid_8cpp_source_l00164}{164}} of file \doxymbox{\hyperlink{_pyramid_8cpp_source}{Pyramid.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00165\ \ \ \ \ :\ \doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI<char>}}(\textcolor{stringliteral}{"{}Weclome\ to\ Pyramid\ X-\/O\ Game\ "{}},\ 3)\ \{\}}
+
+\end{DoxyCode}
+\Hypertarget{class_pyramid___u_i_a527dd9ad6b62050abe0dff0a9efe0938}\index{Pyramid\_UI@{Pyramid\_UI}!````~Pyramid\_UI@{\texorpdfstring{$\sim$}{\string~}Pyramid\_UI}}
+\index{````~Pyramid\_UI@{\texorpdfstring{$\sim$}{\string~}Pyramid\_UI}!Pyramid\_UI@{Pyramid\_UI}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Pyramid\_UI()}{\string~Pyramid\_UI()}}
+{\footnotesize\ttfamily \label{class_pyramid___u_i_a527dd9ad6b62050abe0dff0a9efe0938} 
+Pyramid\+\_\+\+UI::\+\texorpdfstring{$\sim$}{\string~}\+Pyramid\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor for \doxylink{class_pyramid___u_i}{Pyramid\+\_\+\+UI}. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_pyramid_8h_source_l00115}{115}} of file \doxymbox{\hyperlink{_pyramid_8h_source}{Pyramid.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00115\ \{\};}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_pyramid___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pyramid___u_i_a700efb45cce65c4ea1e0ea781ec67bf2}\index{Pyramid\_UI@{Pyramid\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Pyramid\_UI@{Pyramid\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_pyramid___u_i_a700efb45cce65c4ea1e0ea781ec67bf2} 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Pyramid\+\_\+\+UI::\+create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{\doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Creates a player for the \doxylink{class_pyramid}{Pyramid} X-\/O game. 
+
+Creates a player (Human or Computer) for \doxylink{class_pyramid}{Pyramid} X-\/O.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player} name. \\
+\hline
+{\em symbol} & Either \textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}. \\
+\hline
+{\em type} & Human or Computer player type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a newly allocated \doxylink{class_player}{Player$<$char$>$} instance. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_pyramid_8cpp_source_l00170}{170}} of file \doxymbox{\hyperlink{_pyramid_8cpp_source}{Pyramid.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Creating\ "{}}}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ <<\ (type\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}}\ ?\ \textcolor{stringliteral}{"{}human"{}}\ :\ \textcolor{stringliteral}{"{}computer"{}})}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ player:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ symbol\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Player<char>(name,\ symbol,\ type);}
+\DoxyCodeLine{00176\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_pyramid___u_i_a16e4d4429b36ec1a3cf8229bd87c7fc6}\index{Pyramid\_UI@{Pyramid\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Pyramid\_UI@{Pyramid\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_pyramid___u_i_a16e4d4429b36ec1a3cf8229bd87c7fc6} 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Pyramid\+\_\+\+UI::\+get\+\_\+move (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the next move for the \doxylink{class_pyramid}{Pyramid} X-\/O game. 
+
+Retrieves the next move from the player.
+
+Human players manually input coordinates; computer players compute valid positions based on the pyramid shape.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player providing the move. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a new {\ttfamily \doxylink{class_move}{Move}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} instance.
+\end{DoxyReturn}
+Human:\+
+\begin{DoxyItemize}
+\item Inputs x \& y manually.
+\end{DoxyItemize}
+
+Computer:\+
+\begin{DoxyItemize}
+\item Scans the board for the first available playable \textquotesingle{}.\textquotesingle{} cell according to the pyramid shape.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player making a move. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{class_move}{Move$<$char$>$} representing the player\textquotesingle{}s action. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_pyramid_8cpp_source_l00191}{191}} of file \doxymbox{\hyperlink{_pyramid_8cpp_source}{Pyramid.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{comment}{//\ Human\ selects\ coordinates}}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordflow}{if}\ (player-\/>\doxymbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPlease\ enter\ your\ move\ x\ and\ y"{}};}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ cin\ >>\ x\ >>\ y;}
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//\ Computer\ selects\ first\ available\ valid\ cell}}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (player-\/>\doxymbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}})\ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ Board<char>*\ b\ =\ player-\/>\doxymbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}();}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ b-\/>\doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\_rows}}();\ i++)\ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ b-\/>\doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\_columns}}();\ j++)\ \{}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_pyramid_8cpp_a5bd5d81fe59e52d07f5a4a2f4bac5b15}{check}}[\{i,\ j\}]\ \&\&\ b-\/>\doxymbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\_cell}}(i,\ j)\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Move<char>(i,\ j,\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}());}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00211\ \ \ \ \ \}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Move<char>(x,\ y,\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}());}
+\DoxyCodeLine{00214\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_pyramid_8h}{Pyramid.\+h}}\item 
+\doxymbox{\hyperlink{_pyramid_8cpp}{Pyramid.\+cpp}}\end{DoxyCompactItemize}

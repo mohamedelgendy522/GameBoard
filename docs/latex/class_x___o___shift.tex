@@ -1,0 +1,458 @@
+\doxysection{X\+\_\+\+O\+\_\+\+Shift Class Reference}
+\hypertarget{class_x___o___shift}{}\label{class_x___o___shift}\index{X\_O\_Shift@{X\_O\_Shift}}
+
+
+Represents the Shift X-\/O game board.  
+
+
+
+
+{\ttfamily \+\#include $<$Shift\+\_\+\+X\+\_\+\+O.\+h$>$}
+
+Inheritance diagram for X\+\_\+\+O\+\_\+\+Shift:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_x___o___shift}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_x___o___shift_a830ebac1d179690cb73c5c5cf7459ab8}{X\+\_\+\+O\+\_\+\+Shift}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes the 3×3 Shift X-\/O board. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_x___o___shift_a68d61fb4aa3cc8fdfd870e32598fc12a}{update\+\_\+board}} (\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move)
+\begin{DoxyCompactList}\small\item\em Applies a player\textquotesingle{}s move according to Shift X-\/O rules. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_x___o___shift_a7a62fcba8747953b887781c62db276b8}{is\+\_\+win}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks whether the specified player has achieved a Shift X-\/O win. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_x___o___shift_aaf05f4618a341ade66907315d17e48b5}{is\+\_\+lose}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Always returns false — losing state is not needed in Shift X-\/O logic. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_x___o___shift_a418bead28c639d3b2ddf1ede0d05dfb4}{is\+\_\+draw}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Determines whether the Shift X-\/O game has ended in a draw. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_x___o___shift_a2dbd2d2130e8c3f6dd903221eccf54d7}{game\+\_\+is\+\_\+over}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if the game has ended (either win or draw). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \doxymbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \doxymbox{\hyperlink{class_x___o___shift_ae212965a4b7dad60ceda44bfb6d29ceb}{blank\+\_\+symbol}} = \textquotesingle{}.\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Character used to represent an empty cell on the board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the Shift X-\/O game board. 
+
+This class inherits from the generic {\ttfamily \doxylink{class_board}{Board}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} template and implements the rules of the Shift X-\/O game, including move updates, shifting behavior, win/\+draw detection, and board-\/state management.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_shift___x___o_8h_source_l00026}{26}} of file \doxymbox{\hyperlink{_shift___x___o_8h_source}{Shift\+\_\+\+X\+\_\+\+O.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_x___o___shift_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_x___o___shift_a830ebac1d179690cb73c5c5cf7459ab8}\index{X\_O\_Shift@{X\_O\_Shift}!X\_O\_Shift@{X\_O\_Shift}}
+\index{X\_O\_Shift@{X\_O\_Shift}!X\_O\_Shift@{X\_O\_Shift}}
+\doxysubsubsection{\texorpdfstring{X\_O\_Shift()}{X\_O\_Shift()}}
+{\footnotesize\ttfamily \label{class_x___o___shift_a830ebac1d179690cb73c5c5cf7459ab8} 
+X\+\_\+\+O\+\_\+\+Shift::\+\+X\+\_\+\+O\+\_\+\+Shift (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor that initializes the 3×3 Shift X-\/O board. 
+
+Constructs a Shift X-\/O board (4×4) with predefined positions.
+
+Initial layout:\+
+\begin{DoxyItemize}
+\item Four \textquotesingle{}O\textquotesingle{} pieces in fixed positions
+\item Four \textquotesingle{}X\textquotesingle{} pieces in fixed positions
+\item The rest are empty \textquotesingle{}.\textquotesingle{}
+\end{DoxyItemize}
+
+After initialization, Matrix1 is synchronized with board\+[]\+\+[]\+ 
+
+Definition at line \doxymbox{\hyperlink{_shift___x___o_8cpp_source_l00048}{48}} of file \doxymbox{\hyperlink{_shift___x___o_8cpp_source}{Shift\+\_\+\+X\+\_\+\+O.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}(4,\ 4)\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ vector<pair<int,int>>\ O=\{\{0,0\},\{0,2\},\{3,1\},\{3,3\}\};}
+\DoxyCodeLine{00050\ \ \ \ \ vector<pair<int,int>>\ X=\{\{0,1\},\{0,3\},\{3,0\},\{3,2\}\};}
+\DoxyCodeLine{00051\ \ \ \ \ map<pair<int,int>,\textcolor{keywordtype}{bool}>\ Oo,Xx;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ :\ O)\ Oo[i]=\textcolor{keyword}{true};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ :\ X)\ Xx[i]=\textcolor{keyword}{true};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Fill\ board\ with\ O/X\ pieces\ based\ on\ fixed\ starting\ positions}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;i<4;i++)\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j=0;j<4;j++)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Oo[\{i,j\}])\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ \textcolor{charliteral}{'O'};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (Xx[\{i,j\}])\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ \textcolor{charliteral}{'X'};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ \doxymbox{\hyperlink{class_x___o___shift_ae212965a4b7dad60ceda44bfb6d29ceb}{blank\_symbol}};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \doxymbox{\hyperlink{_shift___x___o_8cpp_a966c2bc898edca80d4d5236e6e6c839d}{Matrix1}}\ =\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}};}
+\DoxyCodeLine{00071\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_x___o___shift_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_x___o___shift_a2dbd2d2130e8c3f6dd903221eccf54d7}\index{X\_O\_Shift@{X\_O\_Shift}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!X\_O\_Shift@{X\_O\_Shift}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_x___o___shift_a2dbd2d2130e8c3f6dd903221eccf54d7} 
+bool X\+\_\+\+O\+\_\+\+Shift::\+game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the game has ended (either win or draw). 
+
+Checks if the game is finished (win or draw).
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being evaluated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the game is over; otherwise false. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_shift___x___o_8cpp_source_l00207}{207}} of file \doxymbox{\hyperlink{_shift___x___o_8cpp_source}{Shift\+\_\+\+X\+\_\+\+O.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_x___o___shift_a7a62fcba8747953b887781c62db276b8}{is\_win}}(player)\ ||\ \doxymbox{\hyperlink{class_x___o___shift_a418bead28c639d3b2ddf1ede0d05dfb4}{is\_draw}}(player);}
+\DoxyCodeLine{00209\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_x___o___shift_a418bead28c639d3b2ddf1ede0d05dfb4}\index{X\_O\_Shift@{X\_O\_Shift}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!X\_O\_Shift@{X\_O\_Shift}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_x___o___shift_a418bead28c639d3b2ddf1ede0d05dfb4} 
+bool X\+\_\+\+O\+\_\+\+Shift::\+is\+\_\+draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determines whether the Shift X-\/O game has ended in a draw. 
+
+Determines if the game is a draw.
+
+A draw occurs when all cells are filled and no winning line exists.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the board is full and no player has won.
+\end{DoxyReturn}
+A draw happens in Shift X-\/O when:\+
+\begin{DoxyItemize}
+\item Each player has used all 6 moves (n\+\_\+moves == 12)
+\item AND no winning condition exists 
+\end{DoxyItemize}
+
+Implements \doxymbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_shift___x___o_8cpp_source_l00200}{200}} of file \doxymbox{\hyperlink{_shift___x___o_8cpp_source}{Shift\+\_\+\+X\+\_\+\+O.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 12\ \&\&\ !\doxymbox{\hyperlink{class_x___o___shift_a7a62fcba8747953b887781c62db276b8}{is\_win}}(player));}
+\DoxyCodeLine{00202\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_x___o___shift_aaf05f4618a341ade66907315d17e48b5}\index{X\_O\_Shift@{X\_O\_Shift}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!X\_O\_Shift@{X\_O\_Shift}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_x___o___shift_aaf05f4618a341ade66907315d17e48b5} 
+bool X\+\_\+\+O\+\_\+\+Shift::\+is\+\_\+lose (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Always returns false — losing state is not needed in Shift X-\/O logic. 
+
+
+
+Implements \doxymbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_shift___x___o_8h_source_l00061}{61}} of file \doxymbox{\hyperlink{_shift___x___o_8h_source}{Shift\+\_\+\+X\+\_\+\+O.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+
+\end{DoxyCode}
+\Hypertarget{class_x___o___shift_a7a62fcba8747953b887781c62db276b8}\index{X\_O\_Shift@{X\_O\_Shift}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!X\_O\_Shift@{X\_O\_Shift}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_x___o___shift_a7a62fcba8747953b887781c62db276b8} 
+bool X\+\_\+\+O\+\_\+\+Shift::\+is\+\_\+win (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks whether the specified player has achieved a Shift X-\/O win. 
+
+Checks if the player has achieved a winning condition in Shift X-\/O.
+
+A win occurs when the player forms a 3-\/in-\/a-\/row horizontally, vertically, or diagonally after all shifts and updates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being evaluated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the player has won, false otherwise.
+\end{DoxyReturn}
+Win Conditions:\+
+\begin{DoxyItemize}
+\item Any full row of 4 matching pieces
+\item Any full column of 4 matching pieces
+\item 3-\/length diagonal sequences
+\item 4-\/length major diagonals
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player whose win status is checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if win detected, otherwise false. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_shift___x___o_8cpp_source_l00153}{153}} of file \doxymbox{\hyperlink{_shift___x___o_8cpp_source}{Shift\+\_\+\+X\+\_\+\+O.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ sym\ =\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//\ Check\ sliding\ 4-\/length\ matches}}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{auto}\ all\_equal\_4\ =\ [\&](\textcolor{keywordtype}{char}\ a,\ \textcolor{keywordtype}{char}\ b,\ \textcolor{keywordtype}{char}\ c,\ \textcolor{keywordtype}{char}\ d)\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (a==b\ \&\&\ b==c\ \&\&\ a!=\doxymbox{\hyperlink{class_x___o___shift_ae212965a4b7dad60ceda44bfb6d29ceb}{blank\_symbol}}\ \&\&\ a\ ==\ sym)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b==c\ \&\&\ c==d\ \&\&\ d!=\doxymbox{\hyperlink{class_x___o___shift_ae212965a4b7dad60ceda44bfb6d29ceb}{blank\_symbol}}\ \&\&\ b\ ==\ sym)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00161\ \ \ \ \ \};}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{comment}{//\ Check\ simple\ 3-\/length\ diagonal\ matches}}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keyword}{auto}\ all\_equal\_3\ =\ [\&](\textcolor{keywordtype}{char}\ a,\ \textcolor{keywordtype}{char}\ b,\ \textcolor{keywordtype}{char}\ c)\ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a\ ==\ b\ \&\&\ b\ ==\ c\ \&\&\ a\ !=\ \doxymbox{\hyperlink{class_x___o___shift_ae212965a4b7dad60ceda44bfb6d29ceb}{blank\_symbol}}\ \&\&\ a\ ==\ sym;}
+\DoxyCodeLine{00166\ \ \ \ \ \};}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//\ Check\ rows\ and\ columns}}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}};\ ++i)\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (all\_equal\_4(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][3])\ ||}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ all\_equal\_4(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][i]))}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00173\ \ \ \ \ \}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{comment}{//\ 3-\/length\ Diagonals\ (upper)}}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal\_3(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][2]\ ==\ sym)\ ||}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ (all\_equal\_3(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][3])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][1]\ ==\ sym))}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{comment}{//\ 3-\/length\ Diagonals\ (lower)}}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal\_3(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][0]\ ==\ sym)\ ||}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ (all\_equal\_3(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][3])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][1]\ ==\ sym))}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{comment}{//\ Full\ 4-\/length\ diagonals}}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordflow}{if}\ (all\_equal\_4(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][0],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][2],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][3])\ ||}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ all\_equal\_4(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][3],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][2],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][1],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][0]))}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00191\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_x___o___shift_a68d61fb4aa3cc8fdfd870e32598fc12a}\index{X\_O\_Shift@{X\_O\_Shift}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!X\_O\_Shift@{X\_O\_Shift}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_x___o___shift_a68d61fb4aa3cc8fdfd870e32598fc12a} 
+bool X\+\_\+\+O\+\_\+\+Shift::\+update\+\_\+board (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Applies a player\textquotesingle{}s move according to Shift X-\/O rules. 
+
+Applies a shift move to the board.
+
+In Shift X-\/O, moves may cause rows or columns to shift depending on the game\textquotesingle{}s mechanics.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to a \doxylink{class_move}{Move$<$char$>$} object containing coordinates and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid and successfully applied; false otherwise.
+\end{DoxyReturn}
+Rules:\+
+\begin{DoxyItemize}
+\item \doxylink{class_player}{Player} selects one of their own pieces.
+\item \doxylink{class_player}{Player} chooses a direction:\+ Right /\+ Left /\+ Up /\+ Down.
+\item Piece shifts by exactly 1 cell if the destination is inside bounds \& empty.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & \doxylink{class_move}{Move$<$char$>$} containing (x, y) coordinates + player\textquotesingle{}s symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the shift is valid and applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_shift___x___o_8cpp_source_l00084}{84}} of file \doxymbox{\hyperlink{_shift___x___o_8cpp_source}{Shift\+\_\+\+X\+\_\+\+O.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\doxymbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\doxymbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{char}\ mark\ =\ move-\/>\doxymbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{string}\ s\ =\ \ shift;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//\ Validate\ inside\ board\ bounds}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0\ ||\ x\ >=\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ y\ <\ 0\ ||\ y\ >=\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}\ )\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Out\ of\ bounds!"{}}<<endl;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//\ Player\ must\ move\ their\ own\ piece}}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ !=\ mark)\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}This\ is\ not\ your\ piece!"{}}<<endl;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00100\ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//\ Movement\ logic\ based\ on\ direction}}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordflow}{if}\ (shift==\textcolor{stringliteral}{"{}Right"{}})\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (y\ +\ 1\ >=\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}\ ||\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y\ +\ 1]\ !=\ \textcolor{charliteral}{'.'}\ )\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Choose\ another\ Direction."{}}<<endl;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y+1]\ =\ mark;}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (shift==\textcolor{stringliteral}{"{}Left"{}})\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (y\ -\/\ 1\ <\ 0\ ||\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y\ -\/\ 1]\ !=\ \textcolor{charliteral}{'.'}\ )\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Choose\ another\ Direction."{}}<<endl;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y-\/1]\ =\ mark;}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (shift==\textcolor{stringliteral}{"{}Down"{}})\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ +\ 1\ >=\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x\ +\ 1][y]\ !=\ \textcolor{charliteral}{'.'}\ )\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Choose\ another\ Direction."{}}<<endl;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x\ +\ 1][y]\ =\ mark;}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (shift==\textcolor{stringliteral}{"{}Up"{}})\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ -\/\ 1\ <\ 0\ ||\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x\ -\/\ 1][y]\ !=\ \textcolor{charliteral}{'.'}\ )\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Choose\ another\ Direction."{}}<<endl;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x\ -\/\ 1][y]\ =\ mark;}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//\ Sync\ AI\ matrix\ with\ board}}
+\DoxyCodeLine{00137\ \ \ \ \ \doxymbox{\hyperlink{_shift___x___o_8cpp_a966c2bc898edca80d4d5236e6e6c839d}{Matrix1}}\ =\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}};}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00139\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_x___o___shift_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_x___o___shift_ae212965a4b7dad60ceda44bfb6d29ceb}\index{X\_O\_Shift@{X\_O\_Shift}!blank\_symbol@{blank\_symbol}}
+\index{blank\_symbol@{blank\_symbol}!X\_O\_Shift@{X\_O\_Shift}}
+\doxysubsubsection{\texorpdfstring{blank\_symbol}{blank\_symbol}}
+{\footnotesize\ttfamily \label{class_x___o___shift_ae212965a4b7dad60ceda44bfb6d29ceb} 
+char X\+\_\+\+O\+\_\+\+Shift::\+blank\+\_\+symbol = \textquotesingle{}.\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Character used to represent an empty cell on the board. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_shift___x___o_8h_source_l00028}{28}} of file \doxymbox{\hyperlink{_shift___x___o_8h_source}{Shift\+\_\+\+X\+\_\+\+O.\+h}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_shift___x___o_8h}{Shift\+\_\+\+X\+\_\+\+O.\+h}}\item 
+\doxymbox{\hyperlink{_shift___x___o_8cpp}{Shift\+\_\+\+X\+\_\+\+O.\+cpp}}\end{DoxyCompactItemize}

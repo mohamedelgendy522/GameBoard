@@ -1,0 +1,479 @@
+\doxysection{Big\+\_\+\+XO\+\_\+\+Board Class Reference}
+\hypertarget{class_big___x_o___board}{}\label{class_big___x_o___board}\index{Big\_XO\_Board@{Big\_XO\_Board}}
+
+
+{\ttfamily \+\#include $<$Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h$>$}
+
+Inheritance diagram for Big\+\_\+\+XO\+\_\+\+Board:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_big___x_o___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_big___x_o___board_a9f312400b307ce3bd5d585fc80e664c1}{Big\+\_\+\+XO\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new 5×5 Big Tic-\/\+Tac-\/\+Toe board. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_big___x_o___board_abb07318c3a5b69b842138677d822cd3b}{update\+\_\+board}} (\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Applies a move to the board if it is valid. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_big___x_o___board_a233a44edca4c430a6639352bc44a8c28}{count\+\_\+sequences}} (char sym)
+\begin{DoxyCompactList}\small\item\em Counts consecutive symbol sequences on the board. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_big___x_o___board_ae88e3f7bed364583802adc76c1d8535e}{is\+\_\+win}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Determines if a player has won. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_big___x_o___board_a4d586f97dbf77c79c72d26f5ccbb79c5}{is\+\_\+lose}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}) override
+\begin{DoxyCompactList}\small\item\em Always returns false — no loss condition is defined. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_big___x_o___board_a665e3ae91225cefbfde88dd57cda56b1}{is\+\_\+draw}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Detects if the game ended in a draw. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_big___x_o___board_a19d20d97bfcf5925aa2373e8adef6bae}{game\+\_\+is\+\_\+over}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the game is over. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_big___x_o___board_a22df1f2dab42e5777c70588b8362c1d6}{display\+\_\+scores}} ()
+\begin{DoxyCompactList}\small\item\em Displays advanced score information (e.\+g., sequence counts). \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_big___x_o___board_a03d98c34ac708ff3d3215f075fd03c08}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Returns number of completed moves. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \doxymbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8h_source_l00030}{30}} of file \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8h_source}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_big___x_o___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_big___x_o___board_a9f312400b307ce3bd5d585fc80e664c1}\index{Big\_XO\_Board@{Big\_XO\_Board}!Big\_XO\_Board@{Big\_XO\_Board}}
+\index{Big\_XO\_Board@{Big\_XO\_Board}!Big\_XO\_Board@{Big\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{Big\_XO\_Board()}{Big\_XO\_Board()}}
+{\footnotesize\ttfamily \label{class_big___x_o___board_a9f312400b307ce3bd5d585fc80e664c1} 
+Big\+\_\+\+XO\+\_\+\+Board::\+\+Big\+\_\+\+XO\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a new 5×5 Big Tic-\/\+Tac-\/\+Toe board. 
+
+Initializes all cells to \textquotesingle{}.\textquotesingle{} and resets the move counter.
+
+Initializes all cells with the blank symbol (\textquotesingle{}.\textquotesingle{}) and resets move counter. 
+
+Definition at line \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source_l00025}{25}} of file \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}(5,\ 5)\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}\ :\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}})}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ cell\ :\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}})}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ cell\ =\ blank\_symbol;}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_big___x_o___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_big___x_o___board_a233a44edca4c430a6639352bc44a8c28}\index{Big\_XO\_Board@{Big\_XO\_Board}!count\_sequences@{count\_sequences}}
+\index{count\_sequences@{count\_sequences}!Big\_XO\_Board@{Big\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{count\_sequences()}{count\_sequences()}}
+{\footnotesize\ttfamily \label{class_big___x_o___board_a233a44edca4c430a6639352bc44a8c28} 
+int Big\+\_\+\+XO\+\_\+\+Board::\+count\+\_\+sequences (\begin{DoxyParamCaption}\item[{char}]{sym}{}\end{DoxyParamCaption})}
+
+
+
+Counts consecutive symbol sequences on the board. 
+
+Counts sequences of 3 identical symbols in rows, columns, and diagonals.
+
+Used for enhanced scoring or advanced win logic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sym} & Symbol to count sequences for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of found sequences.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em sym} & Symbol to count sequences for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of sequences of 3 found. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source_l00084}{84}} of file \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ sym\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(toupper(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\textcolor{keyword}{>}(sym)));}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//\ Rows}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ r\ =\ 0;\ r\ <\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}};\ ++r)}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ c\ =\ 0;\ c\ <=\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}\ -\/\ 3;\ ++c)}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[r][c]\ ==\ sym\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[r][c\ +\ 1]\ ==\ sym\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[r][c\ +\ 2]\ ==\ sym)}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//\ Columns}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ c\ =\ 0;\ c\ <\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}};\ ++c)}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ r\ =\ 0;\ r\ <=\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ -\/\ 3;\ ++r)}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[r][c]\ ==\ sym\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[r\ +\ 1][c]\ ==\ sym\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[r\ +\ 2][c]\ ==\ sym)}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//\ Main\ diagonals}}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ r\ =\ 0;\ r\ <=\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ -\/\ 3;\ ++r)}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ c\ =\ 0;\ c\ <=\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}\ -\/\ 3;\ ++c)}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[r][c]\ ==\ sym\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[r\ +\ 1][c\ +\ 1]\ ==\ sym\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[r\ +\ 2][c\ +\ 2]\ ==\ sym)}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//\ Anti-\/diagonals}}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ r\ =\ 2;\ r\ <\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}};\ ++r)}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ c\ =\ 0;\ c\ <=\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}\ -\/\ 3;\ ++c)}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[r][c]\ ==\ sym\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[r\ -\/\ 1][c\ +\ 1]\ ==\ sym\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[r\ -\/\ 2][c\ +\ 2]\ ==\ sym)}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordflow}{return}\ count;}
+\DoxyCodeLine{00113\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_big___x_o___board_a22df1f2dab42e5777c70588b8362c1d6}\index{Big\_XO\_Board@{Big\_XO\_Board}!display\_scores@{display\_scores}}
+\index{display\_scores@{display\_scores}!Big\_XO\_Board@{Big\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{display\_scores()}{display\_scores()}}
+{\footnotesize\ttfamily \label{class_big___x_o___board_a22df1f2dab42e5777c70588b8362c1d6} 
+void Big\+\_\+\+XO\+\_\+\+Board::\+display\+\_\+scores (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Displays advanced score information (e.\+g., sequence counts). 
+
+Displays scores (optional:\+ sequence counts for X and O). 
+
+Definition at line \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source_l00161}{161}} of file \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}X\ sequences:\ "{}}\ <<\ \doxymbox{\hyperlink{class_big___x_o___board_a233a44edca4c430a6639352bc44a8c28}{count\_sequences}}(\textcolor{charliteral}{'X'})\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00163\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}O\ sequences:\ "{}}\ <<\ \doxymbox{\hyperlink{class_big___x_o___board_a233a44edca4c430a6639352bc44a8c28}{count\_sequences}}(\textcolor{charliteral}{'O'})\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00164\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_big___x_o___board_a19d20d97bfcf5925aa2373e8adef6bae}\index{Big\_XO\_Board@{Big\_XO\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Big\_XO\_Board@{Big\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_big___x_o___board_a19d20d97bfcf5925aa2373e8adef6bae} 
+bool Big\+\_\+\+XO\+\_\+\+Board::\+game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the game is over. 
+
+The game ends when:\+
+\begin{DoxyItemize}
+\item A win occurs ~\newline
+
+\item A draw occurs ~\newline
+
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+true if game is finished.
+\end{DoxyReturn}
+Game is over after 24 moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \doxylink{class_player}{Player} reference (unused). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if game ended. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source_l00154}{154}} of file \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ >=\ 24;}
+\DoxyCodeLine{00156\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_big___x_o___board_a03d98c34ac708ff3d3215f075fd03c08}\index{Big\_XO\_Board@{Big\_XO\_Board}!get\_n\_moves@{get\_n\_moves}}
+\index{get\_n\_moves@{get\_n\_moves}!Big\_XO\_Board@{Big\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{get\_n\_moves()}{get\_n\_moves()}}
+{\footnotesize\ttfamily \label{class_big___x_o___board_a03d98c34ac708ff3d3215f075fd03c08} 
+int Big\+\_\+\+XO\+\_\+\+Board::\+get\+\_\+n\+\_\+moves (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns number of completed moves. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8h_source_l00112}{112}} of file \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8h_source}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_big___x_o___board_a665e3ae91225cefbfde88dd57cda56b1}\index{Big\_XO\_Board@{Big\_XO\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Big\_XO\_Board@{Big\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_big___x_o___board_a665e3ae91225cefbfde88dd57cda56b1} 
+bool Big\+\_\+\+XO\+\_\+\+Board::\+is\+\_\+draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Detects if the game ended in a draw. 
+
+Determines if the game ended in a draw.
+
+A draw occurs when the board is full and no one wins.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Unused. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if draw.
+\end{DoxyReturn}
+Draw occurs if both X and O have equal sequences after all moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \doxylink{class_player}{Player} reference (unused). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if draw. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source_l00141}{141}} of file \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ <\ 24)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_big___x_o___board_a233a44edca4c430a6639352bc44a8c28}{count\_sequences}}(\textcolor{charliteral}{'X'})\ ==\ \doxymbox{\hyperlink{class_big___x_o___board_a233a44edca4c430a6639352bc44a8c28}{count\_sequences}}(\textcolor{charliteral}{'O'});}
+\DoxyCodeLine{00144\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_big___x_o___board_a4d586f97dbf77c79c72d26f5ccbb79c5}\index{Big\_XO\_Board@{Big\_XO\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Big\_XO\_Board@{Big\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_big___x_o___board_a4d586f97dbf77c79c72d26f5ccbb79c5} 
+bool Big\+\_\+\+XO\+\_\+\+Board::\+is\+\_\+lose (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Always returns false — no loss condition is defined. 
+
+\begin{DoxyReturn}{Returns}
+false. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8h_source_l00081}{81}} of file \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8h_source}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_big___x_o___board_ae88e3f7bed364583802adc76c1d8535e}\index{Big\_XO\_Board@{Big\_XO\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Big\_XO\_Board@{Big\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_big___x_o___board_ae88e3f7bed364583802adc76c1d8535e} 
+bool Big\+\_\+\+XO\+\_\+\+Board::\+is\+\_\+win (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Determines if a player has won. 
+
+Determines if the given player has won the game.
+
+A win occurs when the player has a sequence satisfying the Big X-\/O win condition (e.\+g., 4 in a row).
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \doxylink{class_player}{Player} whose victory is checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the player wins.
+\end{DoxyReturn}
+Win occurs if the player has more sequences of 3 than the opponent after all moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \doxylink{class_player}{Player} to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the player wins. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source_l00123}{123}} of file \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ <\ 24)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ xSeq\ =\ \doxymbox{\hyperlink{class_big___x_o___board_a233a44edca4c430a6639352bc44a8c28}{count\_sequences}}(\textcolor{charliteral}{'X'});}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{int}\ oSeq\ =\ \doxymbox{\hyperlink{class_big___x_o___board_a233a44edca4c430a6639352bc44a8c28}{count\_sequences}}(\textcolor{charliteral}{'O'});}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{char}\ sym\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(toupper(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\textcolor{keyword}{>}(player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}())));}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{return}\ (sym\ ==\ \textcolor{charliteral}{'X'}\ \&\&\ xSeq\ >\ oSeq)\ ||\ (sym\ ==\ \textcolor{charliteral}{'O'}\ \&\&\ oSeq\ >\ xSeq);}
+\DoxyCodeLine{00131\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_big___x_o___board_abb07318c3a5b69b842138677d822cd3b}\index{Big\_XO\_Board@{Big\_XO\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Big\_XO\_Board@{Big\_XO\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_big___x_o___board_abb07318c3a5b69b842138677d822cd3b} 
+bool Big\+\_\+\+XO\+\_\+\+Board::\+update\+\_\+board (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies a move to the board if it is valid. 
+
+Applies a move to the board if valid.
+
+A move is rejected if:\+
+\begin{DoxyItemize}
+\item It is out of bounds ~\newline
+
+\item The target cell is already occupied ~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to a \doxylink{class_move}{Move$<$char$>$} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if applied, false otherwise.
+\end{DoxyReturn}
+Checks boundaries, symbol validity, cell availability, and max moves. Supports deletion with symbol \textquotesingle{}\textbackslash{}0\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to a \doxylink{class_move}{Move$<$char$>$} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move was applied successfully, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source_l00040}{40}} of file \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\doxymbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\doxymbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{char}\ mark\_raw\ =\ move-\/>\doxymbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0\ ||\ x\ >=\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ y\ <\ 0\ ||\ y\ >=\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ move!\ Position\ outside\ the\ board.\(\backslash\)n"{}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{if}\ (mark\_raw\ ==\ \textcolor{charliteral}{'\(\backslash\)0'}\ ||\ mark\_raw\ ==\ 0)\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ ==\ blank\_symbol)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ blank\_symbol;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ =\ max(0,\ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ -\/\ 1);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{char}\ mark\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(toupper(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\textcolor{keyword}{>}(mark\_raw)));}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{if}\ (mark\ !=\ \textcolor{charliteral}{'X'}\ \&\&\ mark\ !=\ \textcolor{charliteral}{'O'})\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ symbol.\ Use\ 'X'\ or\ 'O'.\(\backslash\)n"{}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ !=\ blank\_symbol)\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ move!\ Cell\ already\ filled.\(\backslash\)n"{}};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ >=\ 24)\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Game\ over!\ Maximum\ moves\ reached!\(\backslash\)n"{}};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ mark;}
+\DoxyCodeLine{00074\ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00076\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8h}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}\item 
+\doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}\end{DoxyCompactItemize}

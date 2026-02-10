@@ -1,0 +1,43 @@
+\doxysection{Pyramid.\+cpp File Reference}
+\hypertarget{_pyramid_8cpp}{}\label{_pyramid_8cpp}\index{Pyramid.cpp@{Pyramid.cpp}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$iomanip$>$}\newline
+{\ttfamily \+\#include $<$cctype$>$}\newline
+{\ttfamily \+\#include "{}Pyramid.\+h"{}}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$algorithm$>$}\newline
+{\ttfamily \+\#include $<$map$>$}\newline
+{\ttfamily \+\#include $<$cstdlib$>$}\newline
+{\ttfamily \+\#include $<$ctime$>$}\newline
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ pair$<$ int, int $>$, bool $>$ \doxymbox{\hyperlink{_pyramid_8cpp_a5bd5d81fe59e52d07f5a4a2f4bac5b15}{check}}
+\begin{DoxyCompactList}\small\item\em A map used to mark which board positions are valid playable cells in the \doxylink{class_pyramid}{Pyramid} X-\/O structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-var-members}
+\Hypertarget{_pyramid_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{_pyramid_8cpp_a5bd5d81fe59e52d07f5a4a2f4bac5b15}\index{Pyramid.cpp@{Pyramid.cpp}!check@{check}}
+\index{check@{check}!Pyramid.cpp@{Pyramid.cpp}}
+\doxysubsubsection{\texorpdfstring{check}{check}}
+{\footnotesize\ttfamily \label{_pyramid_8cpp_a5bd5d81fe59e52d07f5a4a2f4bac5b15} 
+map$<$pair$<$int,int$>$,bool$>$ check}
+
+
+
+A map used to mark which board positions are valid playable cells in the \doxylink{class_pyramid}{Pyramid} X-\/O structure. 
+
+Valid cells = true Blocked/\+invalid cells = false
+
+Example:\+
+\begin{DoxyItemize}
+\item Levels 0–2 are blocked:\+ \textquotesingle{}\#\textquotesingle{}
+\item Level 3:\+ middle 3 cells playable
+\item Level 4:\+ all 5 cells playable 
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{_pyramid_8cpp_source_l00026}{26}} of file \doxymbox{\hyperlink{_pyramid_8cpp_source}{Pyramid.\+cpp}}.
+

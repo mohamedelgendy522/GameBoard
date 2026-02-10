@@ -1,0 +1,136 @@
+\doxysection{Pyramid.\+cpp}
+\hypertarget{_pyramid_8cpp_source}{}\label{_pyramid_8cpp_source}\doxymbox{\hyperlink{_pyramid_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <cctype>}\ \ \textcolor{comment}{//\ for\ toupper()}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_pyramid_8h}{Pyramid.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00012}00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00026}\doxymbox{\hyperlink{_pyramid_8cpp_a5bd5d81fe59e52d07f5a4a2f4bac5b15}{00026}}\ map<pair<int,int>,\textcolor{keywordtype}{bool}>\ \doxymbox{\hyperlink{_pyramid_8cpp_a5bd5d81fe59e52d07f5a4a2f4bac5b15}{check}};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00043}\doxymbox{\hyperlink{class_pyramid_aa78baa6faa1c3fbcca510e8ddf37de49}{00043}}\ \doxymbox{\hyperlink{class_pyramid_aa78baa6faa1c3fbcca510e8ddf37de49}{Pyramid::Pyramid}}()\ :\ \doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}(5,\ 5)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ Block\ all\ upper\ 3\ rows\ initially}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 4;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 5;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ \textcolor{charliteral}{'\#'};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ Middle\ apex\ of\ pyramid}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00052}00052\ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][2]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00053}00053\ \ \ \ \ \doxymbox{\hyperlink{_pyramid_8cpp_a5bd5d81fe59e52d07f5a4a2f4bac5b15}{check}}[\{2,2\}]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ Second\ row\ from\ bottom}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ 4;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][i]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_pyramid_8cpp_a5bd5d81fe59e52d07f5a4a2f4bac5b15}{check}}[\{3,i\}]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//\ Bottom\ base\ of\ the\ pyramid}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 5;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_pyramid_8cpp_a5bd5d81fe59e52d07f5a4a2f4bac5b15}{check}}[\{4,i\}]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][i]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00079}\doxymbox{\hyperlink{class_pyramid_a907aad74899ec813fbc8340484e49f9e}{00079}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_pyramid_a907aad74899ec813fbc8340484e49f9e}{Pyramid::update\_board}}(\doxymbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00080}00080\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\doxymbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\doxymbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00082}00082\ \ \ \ \ \textcolor{keywordtype}{char}\ mark\ =\ move-\/>\doxymbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{comment}{//\ Cell\ must\ be\ a\ valid\ pyramid\ coordinate\ AND\ empty}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00085}00085\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{_pyramid_8cpp_a5bd5d81fe59e52d07f5a4a2f4bac5b15}{check}}[\{x,y\}]\ ||\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ !=\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00089}00089\ \ \ \ \ \textcolor{comment}{//\ Place\ the\ player's\ symbol}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00090}00090\ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ mark;}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00092}00092\ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00107}\doxymbox{\hyperlink{class_pyramid_a01802dc3d4bf82fece68736dd3d5a423}{00107}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_pyramid_a01802dc3d4bf82fece68736dd3d5a423}{Pyramid::is\_win}}(\doxymbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00108}00108\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ sym\ =\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00110}00110\ \ \ \ \ \textcolor{keyword}{auto}\ all\_equal\ =\ [\&](\textcolor{keywordtype}{char}\ a,\ \textcolor{keywordtype}{char}\ b,\ \textcolor{keywordtype}{char}\ c)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a\ ==\ b\ \&\&\ b\ ==\ c\ \&\&\ a\ !=\ \doxymbox{\hyperlink{class_pyramid_a7efc549e111643743ae1cc82ab47db3b}{blank\_symbol}};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00112}00112\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00114}00114\ \ \ \ \ \textcolor{comment}{//\ Diagonal\ checks}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00115}00115\ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][0],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][1],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][0]\ ==\ sym)}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ ||\ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][4],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][3],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][4]\ ==\ sym))}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00119}00119\ \ \ \ \ \textcolor{comment}{//\ Vertical}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00120}00120\ \ \ \ \ \textcolor{keywordflow}{if}\ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][2],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][2],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][2]\ ==\ sym)}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00123}00123\ \ \ \ \ \textcolor{comment}{//\ Middle\ horizontal\ in\ row\ 3}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00124}00124\ \ \ \ \ \textcolor{keywordflow}{if}\ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][1],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][2],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][3])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[3][3]\ ==\ sym)}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00127}00127\ \ \ \ \ \textcolor{comment}{//\ Any\ 3-\/in-\/a-\/row\ on\ bottom\ row}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00128}00128\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0\ ;\ i\ <\ 3;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][i],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][i\ +\ 1],\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][i\ +\ 2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[4][i]\ ==\ sym)}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00133}00133\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00134}00134\ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00146}\doxymbox{\hyperlink{class_pyramid_a66067c480d7f0f05756be926b857acd6}{00146}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_pyramid_a66067c480d7f0f05756be926b857acd6}{Pyramid::is\_draw}}(\doxymbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00147}00147\ \ \ \ \ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 9\ \&\&\ !\doxymbox{\hyperlink{class_pyramid_a01802dc3d4bf82fece68736dd3d5a423}{is\_win}}(player));}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00148}00148\ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00153}\doxymbox{\hyperlink{class_pyramid_aa927a2442a9586ee4dae6a3c3146bcaa}{00153}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_pyramid_aa927a2442a9586ee4dae6a3c3146bcaa}{Pyramid::game\_is\_over}}(\doxymbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00154}00154\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_pyramid_a01802dc3d4bf82fece68736dd3d5a423}{is\_win}}(player)\ ||\ \doxymbox{\hyperlink{class_pyramid_a66067c480d7f0f05756be926b857acd6}{is\_draw}}(player);}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00155}00155\ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00157}00157\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00158}00158\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Pyramid\_UI\ Implementation}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00159}00159\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00164}\doxymbox{\hyperlink{class_pyramid___u_i_aba1636a5f5c0d1300a74b0620c1f58f6}{00164}}\ \doxymbox{\hyperlink{class_pyramid___u_i_aba1636a5f5c0d1300a74b0620c1f58f6}{Pyramid\_UI::Pyramid\_UI}}()}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00165}00165\ \ \ \ \ :\ \doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>(\textcolor{stringliteral}{"{}Weclome\ to\ Pyramid\ X-\/O\ Game\ "{}},\ 3)\ \{\}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00170}\doxymbox{\hyperlink{class_pyramid___u_i_a700efb45cce65c4ea1e0ea781ec67bf2}{00170}}\ \doxymbox{\hyperlink{class_player}{Player<char>}}*\ \doxymbox{\hyperlink{class_pyramid___u_i_a700efb45cce65c4ea1e0ea781ec67bf2}{Pyramid\_UI::create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00171}00171\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Creating\ "{}}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ \ <<\ (type\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}}\ ?\ \textcolor{stringliteral}{"{}human"{}}\ :\ \textcolor{stringliteral}{"{}computer"{}})}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00173}00173\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ player:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ symbol\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00175}00175\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_player}{Player<char>}}(name,\ symbol,\ type);}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00176}00176\ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00191}\doxymbox{\hyperlink{class_pyramid___u_i_a16e4d4429b36ec1a3cf8229bd87c7fc6}{00191}}\ \doxymbox{\hyperlink{class_move}{Move<char>}}*\ \doxymbox{\hyperlink{class_pyramid___u_i_a16e4d4429b36ec1a3cf8229bd87c7fc6}{Pyramid\_UI::get\_move}}(\doxymbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00192}00192\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00194}00194\ \ \ \ \ \textcolor{comment}{//\ Human\ selects\ coordinates}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00195}00195\ \ \ \ \ \textcolor{keywordflow}{if}\ (player-\/>\doxymbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00196}00196\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPlease\ enter\ your\ move\ x\ and\ y"{}};}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ cin\ >>\ x\ >>\ y;}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00198}00198\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00199}00199\ \ \ \ \ \textcolor{comment}{//\ Computer\ selects\ first\ available\ valid\ cell}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00200}00200\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (player-\/>\doxymbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{PlayerType::COMPUTER}})\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00201}00201\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ b\ =\ player-\/>\doxymbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}();}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ b-\/>\doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\_rows}}();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ b-\/>\doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\_columns}}();\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_pyramid_8cpp_a5bd5d81fe59e52d07f5a4a2f4bac5b15}{check}}[\{i,\ j\}]\ \&\&\ b-\/>\doxymbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\_cell}}(i,\ j)\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_move}{Move<char>}}(i,\ j,\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}());}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00211}00211\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00213}00213\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_move}{Move<char>}}(x,\ y,\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}());}
+\DoxyCodeLine{\Hypertarget{_pyramid_8cpp_source_l00214}00214\ \}}
+
+\end{DoxyCode}

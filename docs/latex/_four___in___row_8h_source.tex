@@ -1,0 +1,55 @@
+\doxysection{Four\+\_\+\+In\+\_\+\+Row.\+h}
+\hypertarget{_four___in___row_8h_source}{}\label{_four___in___row_8h_source}\doxymbox{\hyperlink{_four___in___row_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00010}00010\ \textcolor{preprocessor}{\#ifndef\ FOUR\_IN\_ROW\_H}}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00011}00011\ \textcolor{preprocessor}{\#define\ FOUR\_IN\_ROW\_H}}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_board_game___classes_8h}{BoardGame\_Classes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00014}00014\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00024}00024\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{_four___in___row_8h_ae759f4d4b7f5257981d01fd0dad4e7a8}{is\_winning}}(\textcolor{keyword}{const}\ vector<vector<char>>\&\ b,\ \textcolor{keywordtype}{char}\ sym);}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00036}00036\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{_four___in___row_8h_a173061e7395962320eee84590bd0db4f}{create\_threat}}(\textcolor{keyword}{const}\ vector<vector<char>>\&\ b,\ \textcolor{keywordtype}{char}\ sym);}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00045}00045\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_four___in___row_8h_af9a8dd81a7ce289e55e01cc43ed8d2cb}{get\_bottom\_most\_cell}}(\textcolor{keyword}{const}\ vector<vector<char>>\&\ b,\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_ultimate_8cpp_afb52e720f5f0c483db5861f9e42e924e}{col}});}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00060}00060\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{_four___in___row_8h_a8abbc3982c86aa6e0a4f16cc11c8fc6b}{two\_in\_row}}(\textcolor{keyword}{const}\ vector<vector<char>>\&\ b,\ \textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ c,\ \textcolor{keywordtype}{char}\ opp);}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00069}\doxymbox{\hyperlink{class_four_in_row___board}{00069}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_four_in_row___board_af18d4fbb54e1affa153cbb362c23dbea}{FourInRow\_Board}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00070}00070\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00071}00071\ \ \ \ \ \textcolor{keywordtype}{char}\ blank\_symbol\ =\ \textcolor{charliteral}{'.'};\ \ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00073}00073\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00078}00078\ \ \ \ \ \doxymbox{\hyperlink{class_four_in_row___board_af18d4fbb54e1affa153cbb362c23dbea}{FourInRow\_Board}}();}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00085}00085\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_four_in_row___board_ad23681755bcbd3234c2bea7453ad238d}{update\_board}}(\doxymbox{\hyperlink{class_move}{Move<char>}}*\ move);}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00092}00092\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_four_in_row___board_a297d9b4e4c098843c5fb9cfbe9abbefb}{is\_win}}(\doxymbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00099}\doxymbox{\hyperlink{class_four_in_row___board_a8ba279ed7d1d6d99d6fcf6a6f1b09790}{00099}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_four_in_row___board_a8ba279ed7d1d6d99d6fcf6a6f1b09790}{is\_lose}}(\doxymbox{\hyperlink{class_player}{Player<char>}}*)\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00106}00106\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_four_in_row___board_a768661d56c917bc9e301de238ab7c4e5}{is\_draw}}(\doxymbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00113}00113\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_four_in_row___board_a173649415fc71f1ada603e7b8521c5cb}{game\_is\_over}}(\doxymbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00114}00114\ \};}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00126}\doxymbox{\hyperlink{class_four_in_row___u_i}{00126}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_four_in_row___u_i_aa9f45d6a4dc7340a3148685078046af6}{FourInRow\_UI}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>\ \{}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00127}00127\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00134}00134\ \ \ \ \ \doxymbox{\hyperlink{class_four_in_row___u_i_aa9f45d6a4dc7340a3148685078046af6}{FourInRow\_UI}}();}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00139}\doxymbox{\hyperlink{class_four_in_row___u_i_afefaf3fa3b969c42ffec5a5edeec8428}{00139}}\ \ \ \ \ \doxymbox{\hyperlink{class_four_in_row___u_i_afefaf3fa3b969c42ffec5a5edeec8428}{\string~FourInRow\_UI}}()\ \{\};}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00148}00148\ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}*\ \doxymbox{\hyperlink{class_four_in_row___u_i_acfe5cb3a137689aaed3f441984d4e7a5}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type);}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00155}00155\ \ \ \ \ \doxymbox{\hyperlink{class_move}{Move<char>}}*\ \doxymbox{\hyperlink{class_four_in_row___u_i_a24db025a55e0f2d0cad94735193adf11}{get\_move}}(\doxymbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00156}00156\ \};}
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{_four___in___row_8h_source_l00158}00158\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FOUR\_IN\_ROW\_H}}
+
+\end{DoxyCode}

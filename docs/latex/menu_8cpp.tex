@@ -1,0 +1,425 @@
+\doxysection{menu.\+cpp File Reference}
+\hypertarget{menu_8cpp}{}\label{menu_8cpp}\index{menu.cpp@{menu.cpp}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$memory$>$}\newline
+{\ttfamily \+\#include "{}Board\+Game\+\_\+\+Classes.\+h"{}}\newline
+{\ttfamily \+\#include "{}XO\+\_\+\+Classes.\+h"{}}\newline
+{\ttfamily \+\#include "{}Numerical\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h"{}}\newline
+{\ttfamily \+\#include "{}SUS.\+h"{}}\newline
+{\ttfamily \+\#include "{}Four\+\_\+\+In\+\_\+\+Row.\+h"{}}\newline
+{\ttfamily \+\#include "{}Word\+\_\+tic\+\_\+tac\+\_\+toe.\+h"{}}\newline
+{\ttfamily \+\#include "{}Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h"{}}\newline
+{\ttfamily \+\#include "{}Infinity.\+h"{}}\newline
+{\ttfamily \+\#include "{}Shift\+\_\+\+X\+\_\+\+O.\+h"{}}\newline
+{\ttfamily \+\#include "{}Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h"{}}\newline
+{\ttfamily \+\#include "{}Diamond\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h"{}}\newline
+{\ttfamily \+\#include "{}Obstacles\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h"{}}\newline
+{\ttfamily \+\#include "{}Pyramid.\+h"{}}\newline
+{\ttfamily \+\#include "{}Memory\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h"{}}\newline
+{\ttfamily \+\#include "{}Ultimate.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{menu_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{menu_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{menu_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{menu.cpp@{menu.cpp}!main@{main}}
+\index{main@{main}!menu.cpp@{menu.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{menu_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{menu_8cpp_source_l00022}{22}} of file \doxymbox{\hyperlink{menu_8cpp_source}{menu.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}==================================\(\backslash\)n"{}}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ Games\ Menu\(\backslash\)n"{}}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}==================================\(\backslash\)n"{}}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ 1.\ Tic-\/Tac-\/Toe\(\backslash\)n"{}}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ 2.\ Numerical\ Tic-\/Tac-\/Toe\(\backslash\)n"{}}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ 3.\ Word\ Tic-\/Tac-\/Toe\(\backslash\)n"{}}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ 4.\ Four-\/In-\/A-\/Row\(\backslash\)n"{}}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ 5.\ 5\ x\ 5\ Tic-\/Tac-\/Toe\(\backslash\)n"{}}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ 6.\ Infinity\ Tic-\/Tac-\/Toe\(\backslash\)n"{}}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ 7.\ 4\ x\ 4\ Tic-\/Tac-\/Toe\(\backslash\)n"{}}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ 8.\ Misere\ Tic-\/Tac-\/Toe\(\backslash\)n"{}}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ 9.\ SUS\(\backslash\)n"{}}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}10.\ Diamond\ Tic-\/Tac-\/Toe\(\backslash\)n"{}}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}11.\ Obstacles\ Tic-\/Tac-\/Toe\(\backslash\)n"{}}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}12.\ Pyramid\ Tic-\/Tac-\/Toe\(\backslash\)n"{}}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}13.\ Memory\ Tic-\/Tac-\/Toe\(\backslash\)n"{}}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}14.\ Ultimate\ Tic-\/Tac-\/Toe\(\backslash\)n"{}}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Enter\ the\ number\ of\ the\ game\ u\ want\ to\ play:\ "{}};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ choice;}
+\DoxyCodeLine{00043\ \ \ \ \ cin\ >>\ choice;}
+\DoxyCodeLine{00044\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}///////////////////////////////////////////////////////////////////////////////////////////////////////////\(\backslash\)n"{}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00048\ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_x_o___u_i}{XO\_UI}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ xo\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_x___o___board}{X\_O\_Board}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<char>}}\ x\_o\_game(xo\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ x\_o\_game.run();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ xo\_board;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<int>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_numerical___u_i}{Numerical\_UI}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<int>}}*\ nxo\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_numerical___board}{Numerical\_Board}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<int>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<int>}}\ Numerical\_game(nxo\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ Numerical\_game.run();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ nxo\_board;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00096\ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_word___u_i}{Word\_UI}}();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ word\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_word___board}{Word\_Board}}();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<char>}}\ Word\_game(word\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ Word\_game.run();}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ word\_board;}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{00120\ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_four_in_row___u_i}{FourInRow\_UI}}();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ four\_in\_row\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_four_in_row___board}{FourInRow\_Board}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<char>}}\ four\_in\_row\_game(four\_in\_row\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ four\_in\_row\_game.run();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ four\_in\_row\_board;}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00142\ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{00144\ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_big___x_o___u_i}{Big\_XO\_UI}}();}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ big\_xo\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_big___x_o___board}{Big\_XO\_Board}}();}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<char>}}\ big\_xo\_game(big\_xo\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ big\_xo\_game.run();}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ big\_xo\_board;}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00166\ \ \ \ \ \}}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordflow}{case}\ 6:}
+\DoxyCodeLine{00168\ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_infinity_game___u_i}{InfinityGame\_UI}}();}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ infinity\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_infinity_game___board}{InfinityGame\_Board}}();}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<char>}}\ infinity\_game(infinity\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ infinity\_game.run();}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ infinity\_board;}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00190\ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordflow}{case}\ 7:}
+\DoxyCodeLine{00192\ \ \ \ \ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_x___o___shift___u_i}{X\_O\_Shift\_UI}}();}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ xo\_shift\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_x___o___shift}{X\_O\_Shift}}();}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<char>}}\ xo\_shift\_game(xo\_shift\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ xo\_shift\_game.run();}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ xo\_shift\_board;}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00214\ \ \ \ \ \}}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordflow}{case}\ 8:}
+\DoxyCodeLine{00216\ \ \ \ \ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_inverse___x___o___u_i}{Inverse\_X\_O\_UI}}();}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ inverse\_xo\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_inverse___x___o___board}{Inverse\_X\_O\_Board}}();}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<char>}}\ inverse\_xo\_game(inverse\_xo\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ inverse\_xo\_game.run();}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ inverse\_xo\_board;}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00238\ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordflow}{case}\ 9:}
+\DoxyCodeLine{00240\ \ \ \ \ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_s_u_s___u_i}{SUS\_UI}}();}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ sus\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_s_u_s___board}{SUS\_Board}}();}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<char>}}\ SUS\_game(sus\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ SUS\_game.run();}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ sus\_board;}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00262\ \ \ \ \ \}}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 10:}
+\DoxyCodeLine{00264\ \ \ \ \ \{}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_diamond___x___o___u_i}{Diamond\_X\_O\_UI}}();}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ diamond\_xo\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_diamond___x___o___board}{Diamond\_X\_O\_Board}}();}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ players[0]-\/>\doxymbox{\hyperlink{class_player_a3617a3ad0db435176a06948065f9a3a6}{set\_board\_ptr}}(diamond\_xo\_board);}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ players[1]-\/>\doxymbox{\hyperlink{class_player_a3617a3ad0db435176a06948065f9a3a6}{set\_board\_ptr}}(diamond\_xo\_board);}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_diamond___x___o___board}{Diamond\_X\_O\_Board}}*\ specific\_board\ =\ \textcolor{keyword}{dynamic\_cast<}\doxymbox{\hyperlink{class_diamond___x___o___board}{Diamond\_X\_O\_Board}}*\textcolor{keyword}{>}(diamond\_xo\_board);}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (specific\_board\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ specific\_board-\/>\doxymbox{\hyperlink{class_diamond___x___o___board_a55b6379d42d3f3ce22db217dce69ea22}{set\_players}}(players[1],\ players[0]);}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<char>}}\ diamondXO\_game(diamond\_xo\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ diamondXO\_game.run();}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ diamond\_xo\_board;}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ game\_ui;}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00299\ \ \ \ \ \}}
+\DoxyCodeLine{00300\ \ \ \ \ \textcolor{keywordflow}{case}\ 11:}
+\DoxyCodeLine{00301\ \ \ \ \ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_obstacles___x_o___u_i}{Obstacles\_XO\_UI}}();}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ obstacles\_xo\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_obstacles___x_o___board}{Obstacles\_XO\_Board}}();}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<char>}}\ obstacles\_xo\_game(obstacles\_xo\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ obstacles\_xo\_game.run();}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ obstacles\_xo\_board;}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00323\ \ \ \ \ \}}
+\DoxyCodeLine{00324\ \ \ \ \ \textcolor{keywordflow}{case}\ 12:}
+\DoxyCodeLine{00325\ \ \ \ \ \{}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_pyramid___u_i}{Pyramid\_UI}}();}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ pyramid\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_pyramid}{Pyramid}}();}
+\DoxyCodeLine{00331\ }
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<char>}}\ pyramid\_game(pyramid\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00335\ }
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ pyramid\_game.run();}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ pyramid\_board;}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00347\ \ \ \ \ \}}
+\DoxyCodeLine{00348\ \ \ \ \ \textcolor{keywordflow}{case}\ 13:}
+\DoxyCodeLine{00349\ \ \ \ \ \{}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_memory___x___o___u_i}{Memory\_X\_O\_UI}}();}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ memory\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_memory___board}{Memory\_Board}}();}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<char>}}\ memory\_game(memory\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ memory\_game.run();}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ memory\_board;}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00367\ }
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00369\ }
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00371\ \ \ \ \ \}}
+\DoxyCodeLine{00372\ \ \ \ \ \textcolor{keywordflow}{case}\ 14:}
+\DoxyCodeLine{00373\ \ \ \ \ \{}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(0)));}
+\DoxyCodeLine{00375\ }
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_u_i}{UI<char>}}*\ game\_ui\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_ultimate___u_i}{Ultimate\_UI}}();}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board}{Board<char>}}*\ ultimate\_board\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_ultimate}{Ultimate}}();}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player<char>}}**\ players\ =\ game\_ui-\/>\doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\_players}}();}
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_game_manager}{GameManager<char>}}\ ultimate\_game(ultimate\_board,\ players,\ game\_ui);}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ ultimate\_game.run();}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ ultimate\_board;}
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ players[i];}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ players;}
+\DoxyCodeLine{00393\ }
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00395\ \ \ \ \ \}}
+\DoxyCodeLine{00396\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ choice.\(\backslash\)n"{}};}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00399\ \ \ \ \ \}}
+\DoxyCodeLine{00400\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00401\ \}}
+
+\end{DoxyCode}

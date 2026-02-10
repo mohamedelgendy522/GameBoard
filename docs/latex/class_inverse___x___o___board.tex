@@ -1,0 +1,656 @@
+\doxysection{Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board Class Reference}
+\hypertarget{class_inverse___x___o___board}{}\label{class_inverse___x___o___board}\index{Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}}
+
+
+Represents the board for Misère Tic-\/\+Tac-\/\+Toe (Inverse X-\/O) game.  
+
+
+
+
+{\ttfamily \+\#include $<$Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h$>$}
+
+Inheritance diagram for Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_inverse___x___o___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_inverse___x___o___board_a4b73992e4a6e5d2553d6ef33d51a8549}{Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes a 3x3 board. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_inverse___x___o___board_a2ee9de6b9a6535e46ebf6cf44403b288}{update\+\_\+board}} (\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move)
+\begin{DoxyCompactList}\small\item\em Updates the board with a player\textquotesingle{}s move. \end{DoxyCompactList}\item 
+virtual bool \doxymbox{\hyperlink{class_inverse___x___o___board_abb9bff4fb190bd92e5f0cfcb138177f4}{is\+\_\+win}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Checks if player has won (always false in Misère). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_inverse___x___o___board_a73bc5f1f55491b736709da1383f53c0e}{is\+\_\+lose}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if the player has lost (made three in a row). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_inverse___x___o___board_a6053fc43511177757da7e2b603ee94c7}{is\+\_\+draw}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if the game has ended in a draw. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_inverse___x___o___board_a840cff99e9cd0e968c634039ede0b9e5}{game\+\_\+is\+\_\+over}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Determines if the game is over (lose or draw). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_inverse___x___o___board_a6ae0bcec0c97586cb1f1e51723d6fde1}{set\+\_\+players}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}comp, \doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}human)
+\begin{DoxyCompactList}\small\item\em Sets the player pointers for the board. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_inverse___x___o___board_a0c3597d0312374c4e45aa8b9431358f3}{is\+\_\+terminal}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the current board state is a terminal state. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_inverse___x___o___board_a8c9cd8dd5b24aa3263ec156bfa123c6f}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em Evaluates the current board state for AI decision making. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_inverse___x___o___board_a080f480b6d55c918c94402e2bbae6808}{find\+\_\+best\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Finds the best move for the computer using minimax algorithm. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_inverse___x___o___board_a466a2d24631780b6fee1e3b26dd207ac}{minimax}} (bool is\+\_\+maximizing, int alpha, int beta)
+\begin{DoxyCompactList}\small\item\em Minimax algorithm with alpha-\/beta pruning for optimal move selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \doxymbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the board for Misère Tic-\/\+Tac-\/\+Toe (Inverse X-\/O) game. 
+
+This class inherits from the generic {\ttfamily \doxylink{class_board}{Board}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} class and implements the specific logic required for Misère Tic-\/\+Tac-\/\+Toe, where the player who makes three in a row LOSES the game.
+
+\begin{DoxyNote}{Note}
+\doxylink{class_board}{Board} size is fixed at 3x3 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Uses minimax algorithm with alpha-\/beta pruning for AI moves 
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_misere___tic___tac___toe_8h_source_l00031}{31}} of file \doxymbox{\hyperlink{_misere___tic___tac___toe_8h_source}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_inverse___x___o___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_inverse___x___o___board_a4b73992e4a6e5d2553d6ef33d51a8549}\index{Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}!Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}}
+\index{Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}!Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{Inverse\_X\_O\_Board()}{Inverse\_X\_O\_Board()}}
+{\footnotesize\ttfamily \label{class_inverse___x___o___board_a4b73992e4a6e5d2553d6ef33d51a8549} 
+Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+\+Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor that initializes a 3x3 board. 
+
+Constructs an \doxylink{class_inverse___x___o___board}{Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board} with 3x3 dimensions.
+
+Initializes all cells with the blank symbol (\textquotesingle{}.\textquotesingle{}). 
+
+Definition at line \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source_l00025}{25}} of file \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}(3,3)\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Initialize\ all\ cells\ with\ blank\_symbol}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}\ :\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}})}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ cell\ :\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}})}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ cell\ =\ blank\_symbol;}
+\DoxyCodeLine{00030\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_inverse___x___o___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_inverse___x___o___board_a8c9cd8dd5b24aa3263ec156bfa123c6f}\index{Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \label{class_inverse___x___o___board_a8c9cd8dd5b24aa3263ec156bfa123c6f} 
+int Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+evaluate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Evaluates the current board state for AI decision making. 
+
+Evaluates the board state for AI.
+
+\begin{DoxyReturn}{Returns}
+Positive score if computer is winning, negative if losing, 0 for draw.
+
+10 if human loses, -\/10 if computer loses, 0 otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_inverse___x___o___board_a8c9cd8dd5b24aa3263ec156bfa123c6f}{Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+evaluate} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source_l00133}{133}} of file \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{class_inverse___x___o___board_a73bc5f1f55491b736709da1383f53c0e}{is\_lose}}(computer\_player))}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/10;}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordflow}{if}(\doxymbox{\hyperlink{class_inverse___x___o___board_a73bc5f1f55491b736709da1383f53c0e}{is\_lose}}(human\_player))\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 10;}
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00142\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_inverse___x___o___board_a080f480b6d55c918c94402e2bbae6808}\index{Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}!find\_best\_move@{find\_best\_move}}
+\index{find\_best\_move@{find\_best\_move}!Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{find\_best\_move()}{find\_best\_move()}}
+{\footnotesize\ttfamily \label{class_inverse___x___o___board_a080f480b6d55c918c94402e2bbae6808} 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+find\+\_\+best\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Finds the best move for the computer using minimax algorithm. 
+
+Finds the best move for computer using minimax.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the best \doxylink{class_move}{Move} object for the computer.
+
+Pointer to best \doxylink{class_move}{Move} object, or any valid move if none found. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_inverse___x___o___board_a080f480b6d55c918c94402e2bbae6808}{Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+find\+\_\+best\+\_\+move} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source_l00210}{210}} of file \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{int}\ best\_score\ =\ -\/1000;}
+\DoxyCodeLine{00212\ \ \ \ \ Move<char>*\ best\_move\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3;\ i++)\ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 3;\ j++)\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ blank\_symbol)\ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Try\ move}}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ computer\_player-\/>get\_symbol();}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ score\ =\ \doxymbox{\hyperlink{class_inverse___x___o___board_a466a2d24631780b6fee1e3b26dd207ac}{minimax}}(\textcolor{keyword}{false},-\/1000,1000);}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Undo\ move}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ blank\_symbol;}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}-\/-\/;}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (score\ >\ best\_score)\ \{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ best\_score\ =\ score;}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ best\_move\ =\ \textcolor{keyword}{new}\ Move<char>(i,\ j,\ computer\_player-\/>get\_symbol());}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ \ \ \ \ \}}
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordflow}{if}\ (best\_move\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3;\ i++)\ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 3;\ j++)\ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ blank\_symbol)\ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Move<char>(i,\ j,\ computer\_player-\/>get\_symbol());}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00242\ \ \ \ \ \}}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordflow}{return}\ best\_move;}
+\DoxyCodeLine{00244\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_inverse___x___o___board_a840cff99e9cd0e968c634039ede0b9e5}\index{Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_inverse___x___o___board_a840cff99e9cd0e968c634039ede0b9e5} 
+bool Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Determines if the game is over (lose or draw). 
+
+Checks if game is over.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player to evaluate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the game has ended, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if game is won or drawn, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_inverse___x___o___board_a840cff99e9cd0e968c634039ede0b9e5}{Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+game\+\_\+is\+\_\+over} 
+\end{DoxySeeAlso}
+
+
+Implements \doxymbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source_l00104}{104}} of file \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_inverse___x___o___board_abb9bff4fb190bd92e5f0cfcb138177f4}{is\_win}}(player)\ ||\ \doxymbox{\hyperlink{class_inverse___x___o___board_a6053fc43511177757da7e2b603ee94c7}{is\_draw}}(player);}
+\DoxyCodeLine{00106\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_inverse___x___o___board_a6053fc43511177757da7e2b603ee94c7}\index{Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_inverse___x___o___board_a6053fc43511177757da7e2b603ee94c7} 
+bool Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+is\+\_\+draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the game has ended in a draw. 
+
+Checks if game is a draw.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all cells are filled and no player has lost, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player (unused, for interface compatibility). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if board is full and no player has lost, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_inverse___x___o___board_a6053fc43511177757da7e2b603ee94c7}{Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+is\+\_\+draw} 
+\end{DoxySeeAlso}
+
+
+Implements \doxymbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source_l00094}{94}} of file \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 9\ \&\&\ !\doxymbox{\hyperlink{class_inverse___x___o___board_abb9bff4fb190bd92e5f0cfcb138177f4}{is\_win}}(player));}
+\DoxyCodeLine{00096\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_inverse___x___o___board_a73bc5f1f55491b736709da1383f53c0e}\index{Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_inverse___x___o___board_a73bc5f1f55491b736709da1383f53c0e} 
+bool Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+is\+\_\+lose (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the player has lost (made three in a row). 
+
+Checks if player has lost (made three in a row).
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if player has three in a row (loses), false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if player has three consecutive symbols, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_inverse___x___o___board_a73bc5f1f55491b736709da1383f53c0e}{Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+is\+\_\+lose} 
+\end{DoxySeeAlso}
+
+
+Implements \doxymbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source_l00066}{66}} of file \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ sym\ =\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{auto}\ all\_equal\ =\ [\&](\textcolor{keywordtype}{char}\ a,\ \textcolor{keywordtype}{char}\ b,\ \textcolor{keywordtype}{char}\ c)\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (a\ ==\ b\ \&\&\ b\ ==\ c\ \&\&\ a\ !=\ blank\_symbol);}
+\DoxyCodeLine{00071\ \ \ \ \ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//\ Check\ rows\ and\ columns}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}};\ ++i)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][0]\ ==\ sym)\ ||}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][i])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][i]\ ==\ sym))}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//\ Check\ diagonals}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{if}\ ((all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][2])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1]\ ==\ sym)\ ||}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ (all\_equal(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][0])\ \&\&\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1]\ ==\ sym))}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00086\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_inverse___x___o___board_a0c3597d0312374c4e45aa8b9431358f3}\index{Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}!is\_terminal@{is\_terminal}}
+\index{is\_terminal@{is\_terminal}!Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_terminal()}{is\_terminal()}}
+{\footnotesize\ttfamily \label{class_inverse___x___o___board_a0c3597d0312374c4e45aa8b9431358f3} 
+bool Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+is\+\_\+terminal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the current board state is a terminal state. 
+
+Checks if current state is terminal (game over).
+
+\begin{DoxyReturn}{Returns}
+true if game is over (lose or board full), false otherwise.
+
+true if game is over, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_inverse___x___o___board_a0c3597d0312374c4e45aa8b9431358f3}{Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+is\+\_\+terminal} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source_l00113}{113}} of file \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_inverse___x___o___board_a73bc5f1f55491b736709da1383f53c0e}{is\_lose}}(computer\_player)\ ||\ \doxymbox{\hyperlink{class_inverse___x___o___board_a73bc5f1f55491b736709da1383f53c0e}{is\_lose}}(human\_player)\ ||\ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 9;}
+\DoxyCodeLine{00115\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_inverse___x___o___board_abb9bff4fb190bd92e5f0cfcb138177f4}\index{Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_inverse___x___o___board_abb9bff4fb190bd92e5f0cfcb138177f4} 
+virtual bool Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+is\+\_\+win (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if player has won (always false in Misère). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns false (winning is not checked in Misère). 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+In Misère Tic-\/\+Tac-\/\+Toe, we only check for losing condition. 
+\end{DoxyNote}
+
+
+Implements \doxymbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_misere___tic___tac___toe_8h_source_l00056}{56}} of file \doxymbox{\hyperlink{_misere___tic___tac___toe_8h_source}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+
+\end{DoxyCode}
+\Hypertarget{class_inverse___x___o___board_a466a2d24631780b6fee1e3b26dd207ac}\index{Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}!minimax@{minimax}}
+\index{minimax@{minimax}!Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{minimax()}{minimax()}}
+{\footnotesize\ttfamily \label{class_inverse___x___o___board_a466a2d24631780b6fee1e3b26dd207ac} 
+int Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+minimax (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+maximizing}{, }\item[{int}]{alpha}{, }\item[{int}]{beta}{}\end{DoxyParamCaption})}
+
+
+
+Minimax algorithm with alpha-\/beta pruning for optimal move selection. 
+
+Minimax algorithm with alpha-\/beta pruning.
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+\_\+maximizing} & true if current player is maximizing (computer), false if minimizing (human). \\
+\hline
+{\em alpha} & Alpha value for alpha-\/beta pruning. \\
+\hline
+{\em beta} & Beta value for alpha-\/beta pruning. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The evaluated score for the current board state.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em is\+\_\+maximizing} & true if current player is computer, false if human. \\
+\hline
+{\em alpha} & Alpha value for pruning. \\
+\hline
+{\em beta} & Beta value for pruning. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Best evaluation score for current board state. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_inverse___x___o___board_a466a2d24631780b6fee1e3b26dd207ac}{Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+minimax} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source_l00152}{152}} of file \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{comment}{//\ Base\ case}}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_inverse___x___o___board_a0c3597d0312374c4e45aa8b9431358f3}{is\_terminal}}())\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_inverse___x___o___board_a8c9cd8dd5b24aa3263ec156bfa123c6f}{evaluate}}();}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{if}\ (is\_maximizing)\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ max\_eval\ =\ -\/1000;}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3;\ i++)\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 3;\ j++)\ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ blank\_symbol)\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Try\ move}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ computer\_player-\/>get\_symbol();}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ eval\ =\ \doxymbox{\hyperlink{class_inverse___x___o___board_a466a2d24631780b6fee1e3b26dd207ac}{minimax}}(\textcolor{keyword}{false},\ alpha,\ beta);}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Undo\ move}}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ blank\_symbol;}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}-\/-\/;}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ max\_eval\ =\ max(max\_eval,\ eval);}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ alpha\ =\ max(alpha,\ eval);}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (beta\ <=\ alpha)\ \textcolor{keywordflow}{break};\ \textcolor{comment}{//\ alpha-\/beta\ pruning}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ max\_eval;}
+\DoxyCodeLine{00180\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ min\_eval\ =\ 1000;}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3;\ i++)\ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 3;\ j++)\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ blank\_symbol)\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Try\ opponent's\ move}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ human\_player-\/>get\_symbol();}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ eval\ =\ \doxymbox{\hyperlink{class_inverse___x___o___board_a466a2d24631780b6fee1e3b26dd207ac}{minimax}}(\textcolor{keyword}{true},\ alpha,\ beta);}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Undo\ move}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ blank\_symbol;}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}-\/-\/;}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\_eval\ =\ min(min\_eval,\ eval);}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ beta\ =\ min(beta,\ eval);}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (beta\ <=\ alpha)\ \textcolor{keywordflow}{break};\ \textcolor{comment}{//\ alpha-\/beta\ pruning}}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ min\_eval;}
+\DoxyCodeLine{00202\ \ \ \ \ \}}
+\DoxyCodeLine{00203\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_inverse___x___o___board_a6ae0bcec0c97586cb1f1e51723d6fde1}\index{Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}!set\_players@{set\_players}}
+\index{set\_players@{set\_players}!Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{set\_players()}{set\_players()}}
+{\footnotesize\ttfamily \label{class_inverse___x___o___board_a6ae0bcec0c97586cb1f1e51723d6fde1} 
+void Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+set\+\_\+players (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{comp}{, }\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{human}{}\end{DoxyParamCaption})}
+
+
+
+Sets the player pointers for the board. 
+
+Sets player pointers for the board.
+
+
+\begin{DoxyParams}{Parameters}
+{\em comp} & Pointer to computer player. \\
+\hline
+{\em human} & Pointer to human player.\\
+\hline
+{\em comp} & Pointer to computer player. \\
+\hline
+{\em human} & Pointer to human player. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_inverse___x___o___board_a6ae0bcec0c97586cb1f1e51723d6fde1}{Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+set\+\_\+players} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source_l00123}{123}} of file \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ computer\_player\ =\ comp;}
+\DoxyCodeLine{00125\ \ \ \ \ human\_player\ =\ human;}
+\DoxyCodeLine{00126\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_inverse___x___o___board_a2ee9de6b9a6535e46ebf6cf44403b288}\index{Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Inverse\_X\_O\_Board@{Inverse\_X\_O\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_inverse___x___o___board_a2ee9de6b9a6535e46ebf6cf44403b288} 
+bool Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+update\+\_\+board (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the board with a player\textquotesingle{}s move. 
+
+Updates the board with a move.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to \doxylink{class_move}{Move$<$char$>$} object containing move coordinates and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if move is valid and applied, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to \doxylink{class_move}{Move} object containing coordinates and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if move was valid and applied, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_inverse___x___o___board_a2ee9de6b9a6535e46ebf6cf44403b288}{Inverse\+\_\+\+X\+\_\+\+O\+\_\+\+Board::\+update\+\_\+board} 
+\end{DoxySeeAlso}
+
+
+Implements \doxymbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source_l00038}{38}} of file \doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp_source}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\doxymbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\doxymbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{char}\ mark\ =\ move-\/>\doxymbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Validate\ move\ and\ apply\ if\ valid}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(x\ <\ 0\ ||\ x\ >=\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ y\ <\ 0\ ||\ y\ >=\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})\ \&\&}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ ==\ blank\_symbol\ ||\ mark\ ==\ 0))\ \{}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mark\ ==\ 0)\ \{\ \textcolor{comment}{//\ Undo\ move}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}-\/-\/;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ blank\_symbol;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Apply\ move}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ toupper(mark);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00058\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_misere___tic___tac___toe_8h}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}\item 
+\doxymbox{\hyperlink{_misere___tic___tac___toe_8cpp}{Misere\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}\end{DoxyCompactItemize}

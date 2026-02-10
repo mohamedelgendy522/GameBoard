@@ -1,0 +1,335 @@
+\doxysection{Word\+\_\+\+UI Class Reference}
+\hypertarget{class_word___u_i}{}\label{class_word___u_i}\index{Word\_UI@{Word\_UI}}
+
+
+Handles player interaction and board display for the Word Game.  
+
+
+
+
+{\ttfamily \+\#include $<$Word\+\_\+tic\+\_\+tac\+\_\+toe.\+h$>$}
+
+Inheritance diagram for Word\+\_\+\+UI:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_word___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_word___u_i_a262c4743654620571173b72f94bb2ebf}{Word\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructs the Word Game \doxylink{class_u_i}{UI} and initializes its welcome prompt. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_word___u_i_adf7b7a1e67e1f5fae7dbae6a44aaafc1}{create\+\_\+player}} (string \&name, char symbol, \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Creates a player with the given name, symbol, and type. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_word___u_i_af531d7f4e2ed7ac86f37fe17c2f83365}{get\+\_\+move}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Retrieves the next move entered by a player. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_word___u_i_a7daefd59b03ebf1ec00106f950b530b4}{display\+\_\+board}} (\doxymbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*}board)
+\begin{DoxyCompactList}\small\item\em Displays the current board contents in a formatted grid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, char symbol, \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \doxymbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \doxymbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles player interaction and board display for the Word Game. 
+
+Responsibilities:\+
+\begin{DoxyItemize}
+\item Creating human and computer players ~\newline
+
+\item Taking moves from players ~\newline
+
+\item Printing the board state in a formatted layout ~\newline
+
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_u_i}{UI} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8h_source_l00118}{118}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8h_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_word___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_word___u_i_a262c4743654620571173b72f94bb2ebf}\index{Word\_UI@{Word\_UI}!Word\_UI@{Word\_UI}}
+\index{Word\_UI@{Word\_UI}!Word\_UI@{Word\_UI}}
+\doxysubsubsection{\texorpdfstring{Word\_UI()}{Word\_UI()}}
+{\footnotesize\ttfamily \label{class_word___u_i_a262c4743654620571173b72f94bb2ebf} 
+Word\+\_\+\+UI::\+\+Word\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs the Word Game \doxylink{class_u_i}{UI} and initializes its welcome prompt. 
+
+Constructs the \doxylink{class_u_i}{UI} for the Word Tic-\/\+Tac-\/\+Toe game.
+
+Seeds the random generator for AI randomness. 
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source_l00174}{174}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI<char>}}(\textcolor{stringliteral}{"{}Welcome\ to\ Word\ Tic-\/tac-\/toe\ Game"{}},\ 3)\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(\textcolor{keyword}{nullptr})));}
+\DoxyCodeLine{00176\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_word___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_word___u_i_adf7b7a1e67e1f5fae7dbae6a44aaafc1}\index{Word\_UI@{Word\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Word\_UI@{Word\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_word___u_i_adf7b7a1e67e1f5fae7dbae6a44aaafc1} 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Word\+\_\+\+UI::\+create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{\doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Creates a player with the given name, symbol, and type. 
+
+Creates a player and prints a creation message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player} name. \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player}\textquotesingle{}s representative character. \\
+\hline
+{\em type} & Human or Computer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created \doxylink{class_player}{Player} object.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player} name. \\
+\hline
+{\em symbol} & Display symbol. \\
+\hline
+{\em type} & HUMAN or COMPUTER. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Newly allocated \doxylink{class_player}{Player$<$char$>$}. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source_l00186}{186}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ playerNumber\ =\ 1;}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Creating\ Player\ "{}}\ <<\ playerNumber}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ (type\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}}\ ?\ \textcolor{stringliteral}{"{}Human"{}}\ :\ \textcolor{stringliteral}{"{}Computer"{}})\ <<\ \textcolor{stringliteral}{"{}):\ "{}}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ <<\ name\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ playerNumber++;}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Player<char>(name,\ symbol,\ type);}
+\DoxyCodeLine{00195\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_word___u_i_a7daefd59b03ebf1ec00106f950b530b4}\index{Word\_UI@{Word\_UI}!display\_board@{display\_board}}
+\index{display\_board@{display\_board}!Word\_UI@{Word\_UI}}
+\doxysubsubsection{\texorpdfstring{display\_board()}{display\_board()}}
+{\footnotesize\ttfamily \label{class_word___u_i_a7daefd59b03ebf1ec00106f950b530b4} 
+void Word\+\_\+\+UI::\+display\+\_\+board (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Displays the current board contents in a formatted grid. 
+
+Prints the board in a clean 3×3 grid format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Pointer to the active board.\\
+\hline
+{\em b} & Pointer to the board. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source_l00279}{279}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00280\ \ \ \ \ Word\_Board*\ board\ =\ \textcolor{keyword}{dynamic\_cast<}Word\_Board*\textcolor{keyword}{>}(b);}
+\DoxyCodeLine{00281\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nCurrent\ Board:\(\backslash\)n"{}};}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ board-\/>\doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\_rows}}();\ ++i)\ \{}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ board-\/>\doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\_columns}}();\ ++j)\ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ val\ =\ board-\/>\doxymbox{\hyperlink{class_word___board_a12b49f8bc530920c5052d90bd2566039}{get\_cell}}(i,\ j);}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ setw(4)\ <<\ val;}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00289\ \ \ \ \ \}}
+\DoxyCodeLine{00290\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_word___u_i_af531d7f4e2ed7ac86f37fe17c2f83365}\index{Word\_UI@{Word\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Word\_UI@{Word\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_word___u_i_af531d7f4e2ed7ac86f37fe17c2f83365} 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Word\+\_\+\+UI::\+get\+\_\+move (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the next move entered by a player. 
+
+Retrieves the next move from either a human or AI player.
+
+
+\begin{DoxyItemize}
+\item Human players enter (x, y, character) manually. ~\newline
+
+\item Computer players generate a move automatically. ~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \doxylink{class_player}{Player} whose move is requested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a newly allocated \doxylink{class_move}{Move$<$char$>$}.
+\end{DoxyReturn}
+HUMAN:\+
+\begin{DoxyItemize}
+\item Prompts user for x, y, and a character ~\newline
+
+\end{DoxyItemize}
+
+COMPUTER:\+
+\begin{DoxyItemize}
+\item Tries all possible empty spots and letters to find an immediate winning move ~\newline
+
+\item If none found, selects a random move ~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \doxylink{class_player}{Player} whose move is requested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Newly created \doxylink{class_move}{Move$<$char$>$}. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source_l00210}{210}} of file \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_source}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{char}\ val;}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{comment}{//\ HUMAN\ MOVE}}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordflow}{if}\ (player-\/>\doxymbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ <<\ player-\/>\doxymbox{\hyperlink{class_player_aed2af19790ba73190e3ebeea589518e1}{get\_name}}()\ <<\ \textcolor{stringliteral}{"{},\ please\ enter\ your\ move\ (x,y,char):\ "{}};}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ cin\ >>\ x\ >>\ y\ >>\ val;}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ val\ =\ toupper(val);}
+\DoxyCodeLine{00219\ \ \ \ \ \}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \ \textcolor{comment}{//\ COMPUTER\ MOVE}}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ Word\_Board*\ board\ =\ \textcolor{keyword}{dynamic\_cast<}Word\_Board*\textcolor{keyword}{>}(player-\/>\doxymbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}());}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ found\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Try\ to\ find\ a\ winning\ move}}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ board-\/>\doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\_rows}}()\ \&\&\ !found;\ ++i)\ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ board-\/>\doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\_columns}}()\ \&\&\ !found;\ ++j)\ \{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (board-\/>\doxymbox{\hyperlink{class_word___board_a12b49f8bc530920c5052d90bd2566039}{get\_cell}}(i,\ j)\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ c\ =\ \textcolor{charliteral}{'A'};\ c\ <=\ \textcolor{charliteral}{'Z'}\ \&\&\ !found;\ ++c)\ \{}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Word\_Board\ tempBoard\ =\ *board;}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Move<char>\ tempMove(i,\ j,\ c);}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempBoard.\doxymbox{\hyperlink{class_word___board_a38df9f9c8ee882efe6be49caa8f49e17}{update\_board}}(\&tempMove);}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tempBoard.\doxymbox{\hyperlink{class_word___board_ae979d62a555279816687e1f7cfa0ccee}{is\_win}}(\textcolor{keyword}{nullptr}))\ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ i;\ y\ =\ j;\ val\ =\ c;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ No\ winning\ move\ found\ →\ play\ random}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!found)\ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ attempts\ =\ 0;\ attempts\ <\ 50\ \&\&\ !found;\ ++attempts)\ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ rand()\ \%\ 3;}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ rand()\ \%\ 3;}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (board-\/>\doxymbox{\hyperlink{class_word___board_a12b49f8bc530920c5052d90bd2566039}{get\_cell}}(x,\ y)\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ val\ =\ \textcolor{charliteral}{'A'}\ +\ (rand()\ \%\ 26);}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Safety\ fallback}}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!found)\ \{}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ \&\&\ !found;\ i++)}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 3\ \&\&\ !found;\ j++)}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (board-\/>\doxymbox{\hyperlink{class_word___board_a12b49f8bc530920c5052d90bd2566039}{get\_cell}}(i,\ j)\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ i;\ y\ =\ j;}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ val\ =\ \textcolor{charliteral}{'A'}\ +\ (rand()\ \%\ 26);}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Computer\ chooses:\ "{}}\ <<\ x\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ y\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ val\ <<\ endl;}
+\DoxyCodeLine{00269\ \ \ \ \ \}}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Move<char>(x,\ y,\ val);}
+\DoxyCodeLine{00272\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_word__tic__tac__toe_8h}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+h}}\item 
+\doxymbox{\hyperlink{_word__tic__tac__toe_8cpp}{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}}\end{DoxyCompactItemize}

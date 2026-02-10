@@ -1,0 +1,199 @@
+\doxysection{Word\+\_\+tic\+\_\+tac\+\_\+toe.\+cpp}
+\hypertarget{_word__tic__tac__toe_8cpp_source}{}\label{_word__tic__tac__toe_8cpp_source}\doxymbox{\hyperlink{_word__tic__tac__toe_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_word__tic__tac__toe_8h}{Word\_tic\_tac\_toe.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00019}00019\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00024}\doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}{00024}}\ unordered\_set<string>\ \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}{dict}};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00032}\doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_adb94773229c162b29c55e45a5e7a1b4e}{00032}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_adb94773229c162b29c55e45a5e7a1b4e}{load\_dict}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00033}00033\ \ \ \ \ ifstream\ fin(\textcolor{stringliteral}{"{}dic.txt"{}});}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{string}\ w;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{while}\ (fin\ >>\ w)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}{dict}}.insert(w);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00040}00040\ \textcolor{comment}{/*============================================================}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00041}00041\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Word\_Board\ Implementation}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00042}00042\ \textcolor{comment}{=============================================================*/}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00052}\doxymbox{\hyperlink{class_word___board_a333451cc4551290f7cbc5fcc85c3d4dc}{00052}}\ \doxymbox{\hyperlink{class_word___board_a333451cc4551290f7cbc5fcc85c3d4dc}{Word\_Board::Word\_Board}}()\ :\ \doxymbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>(3,\ 3)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00053}00053\ \ \ \ \ \doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_adb94773229c162b29c55e45a5e7a1b4e}{load\_dict}}();}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}}\ :\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}})}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ cell\ :\ \doxymbox{\hyperlink{_ultimate_8cpp_af1d3cff2e4538e23400e260bae3dadad}{row}})}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ cell\ =\ \textcolor{charliteral}{'.'};\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00059}00059\ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00060}00060\ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00072}\doxymbox{\hyperlink{class_word___board_a38df9f9c8ee882efe6be49caa8f49e17}{00072}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_word___board_a38df9f9c8ee882efe6be49caa8f49e17}{Word\_Board::update\_board}}(\doxymbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\doxymbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00074}00074\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\doxymbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordtype}{char}\ val\ =\ move-\/>\doxymbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{comment}{//\ Bounds\ check}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00078}00078\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0\ ||\ x\ >=\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ y\ <\ 0\ ||\ y\ >=\ \doxymbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\ Invalid\ move!\ Position\ ("{}}\ <<\ x\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ y\ <<\ \textcolor{stringliteral}{"{})\ is\ outside\ the\ board.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00083}00083\ \ \ \ \ \textcolor{comment}{//\ Occupied\ cell\ check}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ !=\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\ Invalid\ move!\ Cell\ ("{}}\ <<\ x\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ y\ <<\ \textcolor{stringliteral}{"{})\ is\ already\ filled.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00089}00089\ \ \ \ \ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ val;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00090}00090\ \ \ \ \ \doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00093}00093\ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00106}\doxymbox{\hyperlink{class_word___board_ae979d62a555279816687e1f7cfa0ccee}{00106}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_word___board_ae979d62a555279816687e1f7cfa0ccee}{Word\_Board::is\_win}}(\doxymbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00107}00107\ \ \ \ \ \textcolor{keyword}{auto}\ ValidWord\ =\ [\&](\textcolor{keywordtype}{char}\ a,\ \textcolor{keywordtype}{char}\ b,\ \textcolor{keywordtype}{char}\ c)\ -\/>\ \textcolor{keywordtype}{string}\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ s;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ s.push\_back(a);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ s.push\_back(b);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ s.push\_back(c);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ s;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00113}00113\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00115}00115\ \ \ \ \ \textcolor{comment}{//\ Check\ rows\ and\ columns}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00116}00116\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}};\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ rowWord\ =\ ValidWord(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][2]);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}{dict}}.count(rowWord))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ colWord\ =\ ValidWord(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][i],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][i]);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}{dict}}.count(colWord))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00122}00122\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00124}00124\ \ \ \ \ \textcolor{comment}{//\ Check\ diagonals}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00125}00125\ \ \ \ \ \textcolor{keywordtype}{string}\ d1\ =\ ValidWord(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][0],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][2]);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00126}00126\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}{dict}}.count(d1))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00128}00128\ \ \ \ \ \textcolor{keywordtype}{string}\ d2\ =\ ValidWord(\doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[0][2],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[1][1],\ \doxymbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[2][0]);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00129}00129\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{_word__tic__tac__toe_8cpp_a9faf0bdab22e620d39425bb02afa150f}{dict}}.count(d2))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00131}00131\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00132}00132\ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00141}\doxymbox{\hyperlink{class_word___board_a2711a5163435141ff7e87bee962306b2}{00141}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_word___board_a2711a5163435141ff7e87bee962306b2}{Word\_Board::is\_draw}}(\doxymbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00142}00142\ \ \ \ \ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 9\ \&\&\ !\doxymbox{\hyperlink{class_word___board_ae979d62a555279816687e1f7cfa0ccee}{is\_win}}(\textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00143}00143\ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00152}\doxymbox{\hyperlink{class_word___board_a21bcd59e08df0a5bdc8c82070e3b1cc0}{00152}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_word___board_a21bcd59e08df0a5bdc8c82070e3b1cc0}{Word\_Board::game\_is\_over}}(\doxymbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00153}00153\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_word___board_ae979d62a555279816687e1f7cfa0ccee}{is\_win}}(player)\ ||\ \doxymbox{\hyperlink{class_word___board_a2711a5163435141ff7e87bee962306b2}{is\_draw}}(player);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00154}00154\ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00161}\doxymbox{\hyperlink{class_word___board_a0f959cb00d8bfa37c69930e6bf46d3ba}{00161}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_word___board_a0f959cb00d8bfa37c69930e6bf46d3ba}{Word\_Board::is\_lose}}(\doxymbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00162}00162\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00163}00163\ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00165}00165\ \textcolor{comment}{/*============================================================}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00166}00166\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Word\_UI\ Implementation}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00167}00167\ \textcolor{comment}{=============================================================*/}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00174}\doxymbox{\hyperlink{class_word___u_i_a262c4743654620571173b72f94bb2ebf}{00174}}\ \doxymbox{\hyperlink{class_word___u_i_a262c4743654620571173b72f94bb2ebf}{Word\_UI::Word\_UI}}()\ :\ \doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>(\textcolor{stringliteral}{"{}Welcome\ to\ Word\ Tic-\/tac-\/toe\ Game"{}},\ 3)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00175}00175\ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(\textcolor{keyword}{nullptr})));}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00176}00176\ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00186}\doxymbox{\hyperlink{class_word___u_i_adf7b7a1e67e1f5fae7dbae6a44aaafc1}{00186}}\ \doxymbox{\hyperlink{class_player}{Player<char>}}*\ \doxymbox{\hyperlink{class_word___u_i_adf7b7a1e67e1f5fae7dbae6a44aaafc1}{Word\_UI::create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00187}00187\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ playerNumber\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00189}00189\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Creating\ Player\ "{}}\ <<\ playerNumber}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00190}00190\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ (type\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}}\ ?\ \textcolor{stringliteral}{"{}Human"{}}\ :\ \textcolor{stringliteral}{"{}Computer"{}})\ <<\ \textcolor{stringliteral}{"{}):\ "{}}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00191}00191\ \ \ \ \ \ \ \ \ \ <<\ name\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00193}00193\ \ \ \ \ playerNumber++;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00194}00194\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_player}{Player<char>}}(name,\ symbol,\ type);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00195}00195\ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00210}\doxymbox{\hyperlink{class_word___u_i_af531d7f4e2ed7ac86f37fe17c2f83365}{00210}}\ \doxymbox{\hyperlink{class_move}{Move<char>}}*\ \doxymbox{\hyperlink{class_word___u_i_af531d7f4e2ed7ac86f37fe17c2f83365}{Word\_UI::get\_move}}(\doxymbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00211}00211\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00212}00212\ \ \ \ \ \textcolor{keywordtype}{char}\ val;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00213}00213\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00214}00214\ \ \ \ \ \textcolor{comment}{//\ HUMAN\ MOVE}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00215}00215\ \ \ \ \ \textcolor{keywordflow}{if}\ (player-\/>\doxymbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ <<\ player-\/>\doxymbox{\hyperlink{class_player_aed2af19790ba73190e3ebeea589518e1}{get\_name}}()\ <<\ \textcolor{stringliteral}{"{},\ please\ enter\ your\ move\ (x,y,char):\ "{}};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ cin\ >>\ x\ >>\ y\ >>\ val;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ val\ =\ toupper(val);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00219}00219\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00221}00221\ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \ \textcolor{comment}{//\ COMPUTER\ MOVE}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_word___board}{Word\_Board}}*\ board\ =\ \textcolor{keyword}{dynamic\_cast<}\doxymbox{\hyperlink{class_word___board}{Word\_Board}}*\textcolor{keyword}{>}(player-\/>\doxymbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}());}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ found\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00225}00225\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Try\ to\ find\ a\ winning\ move}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00226}00226\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ board-\/>\doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\_rows}}()\ \&\&\ !found;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ board-\/>\doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\_columns}}()\ \&\&\ !found;\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (board-\/>\doxymbox{\hyperlink{class_word___board_a12b49f8bc530920c5052d90bd2566039}{get\_cell}}(i,\ j)\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ c\ =\ \textcolor{charliteral}{'A'};\ c\ <=\ \textcolor{charliteral}{'Z'}\ \&\&\ !found;\ ++c)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00230}00230\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_word___board}{Word\_Board}}\ tempBoard\ =\ *board;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_move}{Move<char>}}\ tempMove(i,\ j,\ c);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempBoard.\doxymbox{\hyperlink{class_word___board_a38df9f9c8ee882efe6be49caa8f49e17}{update\_board}}(\&tempMove);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00235}00235\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tempBoard.\doxymbox{\hyperlink{class_word___board_ae979d62a555279816687e1f7cfa0ccee}{is\_win}}(\textcolor{keyword}{nullptr}))\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ i;\ y\ =\ j;\ val\ =\ c;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00243}00243\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00244}00244\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00245}00245\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ No\ winning\ move\ found\ →\ play\ random}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00246}00246\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!found)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ attempts\ =\ 0;\ attempts\ <\ 50\ \&\&\ !found;\ ++attempts)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ rand()\ \%\ 3;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ rand()\ \%\ 3;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (board-\/>\doxymbox{\hyperlink{class_word___board_a12b49f8bc530920c5052d90bd2566039}{get\_cell}}(x,\ y)\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ val\ =\ \textcolor{charliteral}{'A'}\ +\ (rand()\ \%\ 26);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00255}00255\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Safety\ fallback}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!found)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3\ \&\&\ !found;\ i++)}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 3\ \&\&\ !found;\ j++)}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (board-\/>\doxymbox{\hyperlink{class_word___board_a12b49f8bc530920c5052d90bd2566039}{get\_cell}}(i,\ j)\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00261}00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ i;\ y\ =\ j;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ val\ =\ \textcolor{charliteral}{'A'}\ +\ (rand()\ \%\ 26);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00266}00266\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00267}00267\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00268}00268\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Computer\ chooses:\ "{}}\ <<\ x\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ y\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ val\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00269}00269\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00270}00270\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00271}00271\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_move}{Move<char>}}(x,\ y,\ val);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00272}00272\ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00273}00273\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00279}\doxymbox{\hyperlink{class_word___u_i_a7daefd59b03ebf1ec00106f950b530b4}{00279}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_word___u_i_a7daefd59b03ebf1ec00106f950b530b4}{Word\_UI::display\_board}}(\doxymbox{\hyperlink{class_board}{Board<char>}}*\ b)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00280}00280\ \ \ \ \ \doxymbox{\hyperlink{class_word___board}{Word\_Board}}*\ board\ =\ \textcolor{keyword}{dynamic\_cast<}\doxymbox{\hyperlink{class_word___board}{Word\_Board}}*\textcolor{keyword}{>}(b);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00281}00281\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nCurrent\ Board:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00282}00282\ }
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00283}00283\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ board-\/>\doxymbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\_rows}}();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00284}00284\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ board-\/>\doxymbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\_columns}}();\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ val\ =\ board-\/>\doxymbox{\hyperlink{class_word___board_a12b49f8bc530920c5052d90bd2566039}{get\_cell}}(i,\ j);}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ setw(4)\ <<\ val;}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00287}00287\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00288}00288\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00289}00289\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_word__tic__tac__toe_8cpp_source_l00290}00290\ \}}
+
+\end{DoxyCode}

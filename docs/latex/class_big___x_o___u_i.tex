@@ -1,0 +1,299 @@
+\doxysection{Big\+\_\+\+XO\+\_\+\+UI Class Reference}
+\hypertarget{class_big___x_o___u_i}{}\label{class_big___x_o___u_i}\index{Big\_XO\_UI@{Big\_XO\_UI}}
+
+
+Represents a 5×5 board for the Big X-\/O Tic-\/\+Tac-\/\+Toe game.  
+
+
+
+
+{\ttfamily \+\#include $<$Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h$>$}
+
+Inheritance diagram for Big\+\_\+\+XO\+\_\+\+UI:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_big___x_o___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_big___x_o___u_i_afbcbc202fcc7503dc607330195b40360}{Big\+\_\+\+XO\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructs the \doxylink{class_u_i}{UI} for the Big Tic-\/\+Tac-\/\+Toe game. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_big___x_o___u_i_ad3a40a754c344f5b012c6fcd3e8b4db5}{create\+\_\+player}} (string \&name, char symbol, \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Creates a player of the given type with name and symbol. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_big___x_o___u_i_a3d71efffb5a8e3e440bfa24b9ecb2a5e}{get\+\_\+move}} (\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Retrieves the next move from a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \doxymbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, char symbol, \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \doxymbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \doxymbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a 5×5 board for the Big X-\/O Tic-\/\+Tac-\/\+Toe game. 
+
+Handles input/\+output operations for the Big Tic-\/\+Tac-\/\+Toe game.
+
+The board:\+
+\begin{DoxyItemize}
+\item Uses a 5×5 grid initialized with \textquotesingle{}.\textquotesingle{} ~\newline
+
+\item Validates moves ~\newline
+
+\item Counts sequences of identical symbols ~\newline
+
+\item Detects win /\+ draw /\+ end-\/game states ~\newline
+
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board}
+\end{DoxySeeAlso}
+Responsibilities:\+
+\begin{DoxyItemize}
+\item Creating players ~\newline
+
+\item Requesting user moves ~\newline
+
+\item Supporting human and computer interactions ~\newline
+
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_u_i}{UI} 
+\end{DoxySeeAlso}
+
+
+Definition at line \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8h_source_l00126}{126}} of file \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8h_source}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_big___x_o___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_big___x_o___u_i_afbcbc202fcc7503dc607330195b40360}\index{Big\_XO\_UI@{Big\_XO\_UI}!Big\_XO\_UI@{Big\_XO\_UI}}
+\index{Big\_XO\_UI@{Big\_XO\_UI}!Big\_XO\_UI@{Big\_XO\_UI}}
+\doxysubsubsection{\texorpdfstring{Big\_XO\_UI()}{Big\_XO\_UI()}}
+{\footnotesize\ttfamily \label{class_big___x_o___u_i_afbcbc202fcc7503dc607330195b40360} 
+Big\+\_\+\+XO\+\_\+\+UI::\+\+Big\+\_\+\+XO\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs the \doxylink{class_u_i}{UI} for the Big Tic-\/\+Tac-\/\+Toe game. 
+
+Constructs the Big X-\/O \doxylink{class_u_i}{UI} with welcome message. 
+
+Definition at line \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source_l00171}{171}} of file \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00171\ :\ \doxymbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI<char>}}(\textcolor{stringliteral}{"{}Welcome\ to\ 5\ x\ 5\ Tic\ Tac\ Toe\ X-\/O\ Game"{}},\ 3)\ \{\}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_big___x_o___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_big___x_o___u_i_ad3a40a754c344f5b012c6fcd3e8b4db5}\index{Big\_XO\_UI@{Big\_XO\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Big\_XO\_UI@{Big\_XO\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_big___x_o___u_i_ad3a40a754c344f5b012c6fcd3e8b4db5} 
+\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Big\+\_\+\+XO\+\_\+\+UI::\+create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{\doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Creates a player of the given type with name and symbol. 
+
+Creates a human or AI player.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player}\textquotesingle{}s name. \\
+\hline
+{\em symbol} & Character symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}). \\
+\hline
+{\em type} & \doxylink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type} (Human or Computer). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to allocated \doxylink{class_player}{Player} object.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player} name. \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player} symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}). \\
+\hline
+{\em type} & \doxylink{class_player}{Player} type (HUMAN/\+\+COMPUTER). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to new \doxylink{class_player}{Player} object. 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source_l00181}{181}} of file \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Creating\ "{}}\ <<\ (type\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}}\ ?\ \textcolor{stringliteral}{"{}human"{}}\ :\ \textcolor{stringliteral}{"{}computer(AI)"{}})}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ player:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ symbol\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Player<char>(name,\ symbol,\ type);}
+\DoxyCodeLine{00185\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_big___x_o___u_i_a3d71efffb5a8e3e440bfa24b9ecb2a5e}\index{Big\_XO\_UI@{Big\_XO\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Big\_XO\_UI@{Big\_XO\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_big___x_o___u_i_a3d71efffb5a8e3e440bfa24b9ecb2a5e} 
+\doxymbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Big\+\_\+\+XO\+\_\+\+UI::\+get\+\_\+move (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the next move from a player. 
+
+Gets the next move from a player (human input or AI).
+
+
+\begin{DoxyItemize}
+\item Human players manually enter coordinates ~\newline
+
+\item Computer players generate a move automatically ~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player making the move. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Newly allocated \doxylink{class_move}{Move$<$char$>$}.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \doxylink{class_player}{Player} making the move. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_move}{Move$<$char$>$} object, or nullptr if game over. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+Definition at line \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source_l00193}{193}} of file \doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp_source}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ Big\_XO\_Board*\ xb\ =\ \textcolor{keyword}{dynamic\_cast<}Big\_XO\_Board*\textcolor{keyword}{>}(player-\/>\doxymbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}());}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordflow}{if}\ (xb\ \&\&\ xb-\/>\doxymbox{\hyperlink{class_big___x_o___board_a03d98c34ac708ff3d3215f075fd03c08}{get\_n\_moves}}()\ >=\ 24)\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Game\ over!\ No\ more\ moves\ allowed.\(\backslash\)n"{}};}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ HUMAN\ INPUT\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordflow}{if}\ (player-\/>\doxymbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\_type}}()\ ==\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ cout\ <<\ player-\/>\doxymbox{\hyperlink{class_player_aed2af19790ba73190e3ebeea589518e1}{get\_name}}()\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}()\ <<\ \textcolor{stringliteral}{"{})\ enter\ your\ move\ x\ y:\ "{}};}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ cin\ >>\ x\ >>\ y;}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Move<char>(x,\ y,\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}());}
+\DoxyCodeLine{00206\ \ \ \ \ \}}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ AI\ LOGIC\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00209\ \ \ \ \ Board<char>*\ b\ =\ player-\/>\doxymbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\_board\_ptr}}();}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keyword}{auto}\ mat\ =\ b-\/>\doxymbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\_board\_matrix}}();}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfa0a40e3c91a3a55c9a37428c6d194d0e5}{AI}}\ =\ player-\/>\doxymbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\_symbol}}();}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{char}\ OP\ =\ (\doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfa0a40e3c91a3a55c9a37428c6d194d0e5}{AI}}\ ==\ \textcolor{charliteral}{'X'}\ ?\ \textcolor{charliteral}{'O'}\ :\ \textcolor{charliteral}{'X'});}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{int}\ bestX\ =\ -\/1,\ bestY\ =\ -\/1,\ bestScore\ =\ -\/1;}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keyword}{auto}\ countSeqAt\ =\ [\&](\textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{int}\ j,\ \textcolor{keywordtype}{char}\ sym)\ -\/>\ \textcolor{keywordtype}{int}\ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cnt\ =\ 0;}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dx[]\ =\ \{1,0,1,1\};}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dy[]\ =\ \{0,1,1,-\/1\};}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ dir\ =\ 0;\ dir\ <\ 4;\ dir++)\ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ c\ =\ 1;}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nx\ =\ i\ +\ dx[dir],\ ny\ =\ j\ +\ dy[dir];}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (nx\ >=\ 0\ \&\&\ nx\ <\ 5\ \&\&\ ny\ >=\ 0\ \&\&\ ny\ <\ 5\ \&\&\ mat[nx][ny]\ ==\ sym)\ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c++;\ nx\ +=\ dx[dir];\ ny\ +=\ dy[dir];}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ nx\ =\ i\ -\/\ dx[dir];\ ny\ =\ j\ -\/\ dy[dir];}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (nx\ >=\ 0\ \&\&\ nx\ <\ 5\ \&\&\ ny\ >=\ 0\ \&\&\ ny\ <\ 5\ \&\&\ mat[nx][ny]\ ==\ sym)\ \{}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c++;\ nx\ -\/=\ dx[dir];\ ny\ -\/=\ dy[dir];}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (c\ >=\ 3)\ cnt++;}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cnt;}
+\DoxyCodeLine{00237\ \ \ \ \ \};}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 5;\ i++)}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 5;\ j++)}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mat[i][j]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat[i][j]\ =\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfa0a40e3c91a3a55c9a37428c6d194d0e5}{AI}};}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ scoreAI\ =\ countSeqAt(i,\ j,\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfa0a40e3c91a3a55c9a37428c6d194d0e5}{AI}});}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat[i][j]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat[i][j]\ =\ OP;}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ scoreOP\ =\ countSeqAt(i,\ j,\ OP);}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat[i][j]\ =\ \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ totalScore\ =\ scoreAI*2\ +\ scoreOP;}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (totalScore\ >\ bestScore)\ \{\ bestScore\ =\ totalScore;\ bestX\ =\ i;\ bestY\ =\ j;\ \}}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordflow}{if}\ (bestX\ ==\ -\/1)\ \{}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mat[2][2]\ ==\ \textcolor{charliteral}{'.'})\ \{\ bestX\ =\ 2;\ bestY\ =\ 2;\ \}}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 5;\ i++)}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 5;\ j++)}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mat[i][j]\ ==\ \textcolor{charliteral}{'.'})\ \{\ bestX\ =\ i;\ bestY\ =\ j;\ \textcolor{keywordflow}{goto}\ RETURN\_MOVE;\ \}}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00261\ \ \ \ \ \}}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ RETURN\_MOVE:}
+\DoxyCodeLine{00264\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}AI\ plays\ at:\ "{}}\ <<\ bestX\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ bestY\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Move<char>(bestX,\ bestY,\ \doxymbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfa0a40e3c91a3a55c9a37428c6d194d0e5}{AI}});}
+\DoxyCodeLine{00266\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8h}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+h}}\item 
+\doxymbox{\hyperlink{_big___x_o___tic___tac___toe_8cpp}{Big\+\_\+\+XO\+\_\+\+Tic\+\_\+\+Tac\+\_\+\+Toe.\+cpp}}\end{DoxyCompactItemize}
