@@ -1,3 +1,0 @@
-C:/Users/ab163/CLionProjects/BoardGameFramework/cmake-build-debug/CMakeFiles/BoardGameFramework.dir
-C:/Users/ab163/CLionProjects/BoardGameFramework/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/ab163/CLionProjects/BoardGameFramework/cmake-build-debug/CMakeFiles/rebuild_cache.dir
